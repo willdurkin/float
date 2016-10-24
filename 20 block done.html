@@ -1,0 +1,2885 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>local scroll adventure</title>
+	<link rel='stylesheet' type='text/css' href='styles/reset.css'>
+	<link rel='stylesheet' type='text/css' href='styles/style.css'>
+    
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:100,400,700|Raleway' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
+</head>
+<body>
+	<!-- <div id='floater'></div>
+	<div id='float2'></div>
+	<img id='img' src="img/ie.png"> -->
+	
+	<!-- slides -->
+	<div id='content'>
+
+		<ul class='row' id='row1'>
+			<li class='slide' id='a1'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#down1' class='text prev'><</a>
+			        <a href='#b1' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='b1'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#a1' class='text prev'><</a>
+			        <a href='#c1' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='c1'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#b1' class='text prev'><</a>
+			        <a href='#d1' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='d1'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#c1' class='text prev'><</a>
+			        <a href='#e1' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='e1'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#d1' class='text prev'><</a>
+			        <a href='#f1' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='f1'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#e1' class='text prev'><</a>
+			        <a href='#g1' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='g1'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#f1' class='text prev'><</a>
+			        <a href='#h1' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='h1'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#g1' class='text prev'><</a>
+			        <a href='#i1' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='i1'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#h1' class='text prev'><</a>
+			        <a href='#j1' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='j1'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#i1' class='text prev'><</a>
+			        <a href='#k1' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='k1'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#j1' class='text prev'><</a>
+			        <a href='#l1' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='l1'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#k1' class='text prev'><</a>
+			        <a href='#m1' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='m1'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#l1' class='text prev'><</a>
+			        <a href='#n1' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='n1'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#m1' class='text prev'><</a>
+			        <a href='#o1' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='o1'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#n1' class='text prev'><</a>
+			        <a href='#p1' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='p1'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#o1' class='text prev'><</a>
+			        <a href='#q1' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='q1'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#p1' class='text prev'><</a>
+			        <a href='#r1' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='r1'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#q1' class='text prev'><</a>
+			        <a href='#s1' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='s1'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#r1' class='text prev'><</a>
+			        <a href='#t1' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='t1'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#s1' class='text prev'><</a>
+			        <a href='#up1' class='text next'>></a>
+				</div>
+			</li>
+		</ul>
+		<ul class='row' id='row2'>
+			<li class='slide' id='a2'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#down2' class='text prev'><</a>
+			        <a href='#b2' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='b2'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#a2' class='text prev'><</a>
+			        <a href='#c2' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='c2'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#b2' class='text prev'><</a>
+			        <a href='#d2' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='d2'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#c2' class='text prev'><</a>
+			        <a href='#e2' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='e2'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#d2' class='text prev'><</a>
+			        <a href='#f2' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='f2'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#e2' class='text prev'><</a>
+			        <a href='#g2' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='g2'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#f2' class='text prev'><</a>
+			        <a href='#h2' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='h2'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#g2' class='text prev'><</a>
+			        <a href='#i2' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='i2'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#h2' class='text prev'><</a>
+			        <a href='#j2' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='j2'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#i2' class='text prev'><</a>
+			        <a href='#k2' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='k2'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#j2' class='text prev'><</a>
+			        <a href='#l2' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='l2'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#k2' class='text prev'><</a>
+			        <a href='#m2' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='m2'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#l2' class='text prev'><</a>
+			        <a href='#n2' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='n2'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#m2' class='text prev'><</a>
+			        <a href='#o2' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='o2'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#n2' class='text prev'><</a>
+			        <a href='#p2' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='p2'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#o2' class='text prev'><</a>
+			        <a href='#q2' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='q2'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#p2' class='text prev'><</a>
+			        <a href='#r2' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='r2'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#q2' class='text prev'><</a>
+			        <a href='#s2' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='s2'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#r2' class='text prev'><</a>
+			        <a href='#t2' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='t2'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#s2' class='text prev'><</a>
+			        <a href='#up2' class='text next'>></a>
+				</div>
+			</li>
+		</ul>
+		<ul class='row' id='row3'>
+			<li class='slide' id='a3'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#down3' class='text prev'><</a>
+			        <a href='#b3' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='b3'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#a3' class='text prev'><</a>
+			        <a href='#c3' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='c3'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#b3' class='text prev'><</a>
+			        <a href='#d3' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='d3'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#c3' class='text prev'><</a>
+			        <a href='#e3' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='e3'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#d3' class='text prev'><</a>
+			        <a href='#f3' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='f3'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#e3' class='text prev'><</a>
+			        <a href='#g3' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='g3'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#f3' class='text prev'><</a>
+			        <a href='#h3' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='h3'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#g3' class='text prev'><</a>
+			        <a href='#i3' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='i3'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#h3' class='text prev'><</a>
+			        <a href='#j3' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='j3'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#i3' class='text prev'><</a>
+			        <a href='#k3' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='k3'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#j3' class='text prev'><</a>
+			        <a href='#l3' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='l3'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#k3' class='text prev'><</a>
+			        <a href='#m3' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='m3'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#l3' class='text prev'><</a>
+			        <a href='#n3' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='n3'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#m3' class='text prev'><</a>
+			        <a href='#o3' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='o3'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#n3' class='text prev'><</a>
+			        <a href='#p3' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='p3'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#o3' class='text prev'><</a>
+			        <a href='#q3' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='q3'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#p3' class='text prev'><</a>
+			        <a href='#r3' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='r3'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#q3' class='text prev'><</a>
+			        <a href='#s3' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='s3'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#r3' class='text prev'><</a>
+			        <a href='#t3' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='t3'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#s3' class='text prev'><</a>
+			        <a href='#up3' class='text next'>></a>
+				</div>
+			</li>
+		</ul>
+		<ul class='row' id='row4'>
+			<li class='slide' id='a4'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#down4' class='text prev'><</a>
+			        <a href='#b4' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='b4'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#a4' class='text prev'><</a>
+			        <a href='#c4' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='c4'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#b4' class='text prev'><</a>
+			        <a href='#d4' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='d4'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#c4' class='text prev'><</a>
+			        <a href='#e4' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='e4'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#d4' class='text prev'><</a>
+			        <a href='#f4' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='f4'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#e4' class='text prev'><</a>
+			        <a href='#g4' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='g4'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#f4' class='text prev'><</a>
+			        <a href='#h4' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='h4'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#g4' class='text prev'><</a>
+			        <a href='#i4' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='i4'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#h4' class='text prev'><</a>
+			        <a href='#j4' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='j4'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#i4' class='text prev'><</a>
+			        <a href='#k4' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='k4'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#j4' class='text prev'><</a>
+			        <a href='#l4' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='l4'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#k4' class='text prev'><</a>
+			        <a href='#m4' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='m4'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#l4' class='text prev'><</a>
+			        <a href='#n4' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='n4'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#m4' class='text prev'><</a>
+			        <a href='#o4' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='o4'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#n4' class='text prev'><</a>
+			        <a href='#p4' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='p4'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#o4' class='text prev'><</a>
+			        <a href='#q4' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='q4'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#p4' class='text prev'><</a>
+			        <a href='#r4' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='r4'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#q4' class='text prev'><</a>
+			        <a href='#s4' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='s4'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#r4' class='text prev'><</a>
+			        <a href='#t4' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='t4'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#s4' class='text prev'><</a>
+			        <a href='#up4' class='text next'>></a>
+				</div>
+			</li>
+		</ul>
+		<ul class='row' id='row5'>
+			<li class='slide' id='a5'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#down5' class='text prev'><</a>
+			        <a href='#b5' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='b5'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#a5' class='text prev'><</a>
+			        <a href='#c5' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='c5'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#b5' class='text prev'><</a>
+			        <a href='#d5' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='d5'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#c5' class='text prev'><</a>
+			        <a href='#e5' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='e5'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#d5' class='text prev'><</a>
+			        <a href='#f5' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='f5'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#e5' class='text prev'><</a>
+			        <a href='#g5' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='g5'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#f5' class='text prev'><</a>
+			        <a href='#h5' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='h5'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#g5' class='text prev'><</a>
+			        <a href='#i5' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='i5'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#h5' class='text prev'><</a>
+			        <a href='#j5' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='j5'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#i5' class='text prev'><</a>
+			        <a href='#k5' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='k5'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#j5' class='text prev'><</a>
+			        <a href='#l5' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='l5'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#k5' class='text prev'><</a>
+			        <a href='#m5' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='m5'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#l5' class='text prev'><</a>
+			        <a href='#n5' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='n5'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#m5' class='text prev'><</a>
+			        <a href='#o5' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='o5'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#n5' class='text prev'><</a>
+			        <a href='#p5' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='p5'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#o5' class='text prev'><</a>
+			        <a href='#q5' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='q5'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#p5' class='text prev'><</a>
+			        <a href='#r5' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='r5'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#q5' class='text prev'><</a>
+			        <a href='#s5' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='s5'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#r5' class='text prev'><</a>
+			        <a href='#t5' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='t5'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#s5' class='text prev'><</a>
+			        <a href='#up5' class='text next'>></a>
+				</div>
+			</li>
+		</ul>
+		<ul class='row' id='row6'>
+			<li class='slide' id='a6'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#down6' class='text prev'><</a>
+			        <a href='#b6' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='b6'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#a6' class='text prev'><</a>
+			        <a href='#c6' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='c6'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#b6' class='text prev'><</a>
+			        <a href='#d6' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='d6'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#c6' class='text prev'><</a>
+			        <a href='#e6' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='e6'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#d6' class='text prev'><</a>
+			        <a href='#f6' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='f6'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#e6' class='text prev'><</a>
+			        <a href='#g6' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='g6'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#f6' class='text prev'><</a>
+			        <a href='#h6' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='h6'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#g6' class='text prev'><</a>
+			        <a href='#i6' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='i6'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#h6' class='text prev'><</a>
+			        <a href='#j6' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='j6'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#i6' class='text prev'><</a>
+			        <a href='#k6' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='k6'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#j6' class='text prev'><</a>
+			        <a href='#l6' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='l6'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#k6' class='text prev'><</a>
+			        <a href='#m6' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='m6'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#l6' class='text prev'><</a>
+			        <a href='#n6' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='n6'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#m6' class='text prev'><</a>
+			        <a href='#o6' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='o6'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#n6' class='text prev'><</a>
+			        <a href='#p6' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='p6'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#o6' class='text prev'><</a>
+			        <a href='#q6' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='q6'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#p6' class='text prev'><</a>
+			        <a href='#r6' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='r6'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#q6' class='text prev'><</a>
+			        <a href='#s6' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='s6'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#r6' class='text prev'><</a>
+			        <a href='#t6' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='t6'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#s6' class='text prev'><</a>
+			        <a href='#up6' class='text next'>></a>
+				</div>
+			</li>
+		</ul>
+		<ul class='row' id='row7'>
+			<li class='slide' id='a7'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#down7' class='text prev'><</a>
+			        <a href='#b7' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='b7'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#a7' class='text prev'><</a>
+			        <a href='#c7' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='c7'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#b7' class='text prev'><</a>
+			        <a href='#d7' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='d7'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#c7' class='text prev'><</a>
+			        <a href='#e7' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='e7'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#d7' class='text prev'><</a>
+			        <a href='#f7' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='f7'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#e7' class='text prev'><</a>
+			        <a href='#g7' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='g7'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#f7' class='text prev'><</a>
+			        <a href='#h7' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='h7'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#g7' class='text prev'><</a>
+			        <a href='#i7' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='i7'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#h7' class='text prev'><</a>
+			        <a href='#j7' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='j7'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#i7' class='text prev'><</a>
+			        <a href='#k7' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='k7'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#j7' class='text prev'><</a>
+			        <a href='#l7' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='l7'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#k7' class='text prev'><</a>
+			        <a href='#m7' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='m7'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#l7' class='text prev'><</a>
+			        <a href='#n7' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='n7'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#m7' class='text prev'><</a>
+			        <a href='#o7' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='o7'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#n7' class='text prev'><</a>
+			        <a href='#p7' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='p7'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#o7' class='text prev'><</a>
+			        <a href='#q7' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='q7'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#p7' class='text prev'><</a>
+			        <a href='#r7' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='r7'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#q7' class='text prev'><</a>
+			        <a href='#s7' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='s7'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#r7' class='text prev'><</a>
+			        <a href='#t7' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='t7'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#s7' class='text prev'><</a>
+			        <a href='#up7' class='text next'>></a>
+				</div>
+			</li>
+		</ul>
+		<ul class='row' id='row8'>
+			<li class='slide' id='a8'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#down8' class='text prev'><</a>
+			        <a href='#b8' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='b8'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#a8' class='text prev'><</a>
+			        <a href='#c8' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='c8'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#b8' class='text prev'><</a>
+			        <a href='#d8' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='d8'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#c8' class='text prev'><</a>
+			        <a href='#e8' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='e8'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#d8' class='text prev'><</a>
+			        <a href='#f8' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='f8'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#e8' class='text prev'><</a>
+			        <a href='#g8' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='g8'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#f8' class='text prev'><</a>
+			        <a href='#h8' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='h8'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#g8' class='text prev'><</a>
+			        <a href='#i8' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='i8'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#h8' class='text prev'><</a>
+			        <a href='#j8' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='j8'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#i8' class='text prev'><</a>
+			        <a href='#k8' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='k8'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#j8' class='text prev'><</a>
+			        <a href='#l8' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='l8'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#k8' class='text prev'><</a>
+			        <a href='#m8' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='m8'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#l8' class='text prev'><</a>
+			        <a href='#n8' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='n8'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#m8' class='text prev'><</a>
+			        <a href='#o8' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='o8'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#n8' class='text prev'><</a>
+			        <a href='#p8' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='p8'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#o8' class='text prev'><</a>
+			        <a href='#q8' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='q8'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#p8' class='text prev'><</a>
+			        <a href='#r8' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='r8'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#q8' class='text prev'><</a>
+			        <a href='#s8' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='s8'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#r8' class='text prev'><</a>
+			        <a href='#t8' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='t8'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#s8' class='text prev'><</a>
+			        <a href='#up8' class='text next'>></a>
+				</div>
+			</li>
+		</ul>
+		<ul class='row' id='row9'>
+			<li class='slide' id='a9'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#down9' class='text prev'><</a>
+			        <a href='#b9' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='b9'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#a9' class='text prev'><</a>
+			        <a href='#c9' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='c9'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#b9' class='text prev'><</a>
+			        <a href='#d9' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='d9'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#c9' class='text prev'><</a>
+			        <a href='#e9' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='e9'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#d9' class='text prev'><</a>
+			        <a href='#f9' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='f9'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#e9' class='text prev'><</a>
+			        <a href='#g9' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='g9'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#f9' class='text prev'><</a>
+			        <a href='#h9' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='h9'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#g9' class='text prev'><</a>
+			        <a href='#i9' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='i9'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#h9' class='text prev'><</a>
+			        <a href='#j9' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='j9'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#i9' class='text prev'><</a>
+			        <a href='#k9' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='k9'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#j9' class='text prev'><</a>
+			        <a href='#l9' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='l9'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#k9' class='text prev'><</a>
+			        <a href='#m9' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='m9'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#l9' class='text prev'><</a>
+			        <a href='#n9' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='n9'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#m9' class='text prev'><</a>
+			        <a href='#o9' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='o9'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#n9' class='text prev'><</a>
+			        <a href='#p9' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='p9'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#o9' class='text prev'><</a>
+			        <a href='#q9' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='q9'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#p9' class='text prev'><</a>
+			        <a href='#r9' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='r9'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#q9' class='text prev'><</a>
+			        <a href='#s9' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='s9'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#r9' class='text prev'><</a>
+			        <a href='#t9' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='t9'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#s9' class='text prev'><</a>
+			        <a href='#up9' class='text next'>></a>
+				</div>
+			</li>
+		</ul>
+		<ul class='row' id='row10'>
+			<li class='slide' id='a10'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#down10' class='text prev'><</a>
+			        <a href='#b10' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='b10'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#a10' class='text prev'><</a>
+			        <a href='#c10' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='c10'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#b10' class='text prev'><</a>
+			        <a href='#d10' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='d10'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#c10' class='text prev'><</a>
+			        <a href='#e10' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='e10'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#d10' class='text prev'><</a>
+			        <a href='#f10' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='f10'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#e10' class='text prev'><</a>
+			        <a href='#g10' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='g10'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#f10' class='text prev'><</a>
+			        <a href='#h10' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='h10'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#g10' class='text prev'><</a>
+			        <a href='#i10' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='i10'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#h10' class='text prev'><</a>
+			        <a href='#j10' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='j10'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#i10' class='text prev'><</a>
+			        <a href='#k10' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='k10'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#j10' class='text prev'><</a>
+			        <a href='#l10' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='l10'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#k10' class='text prev'><</a>
+			        <a href='#m10' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='m10'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#l10' class='text prev'><</a>
+			        <a href='#n10' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='n10'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#m10' class='text prev'><</a>
+			        <a href='#o10' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='o10'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#n10' class='text prev'><</a>
+			        <a href='#p10' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='p10'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#o10' class='text prev'><</a>
+			        <a href='#q10' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='q10'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#p10' class='text prev'><</a>
+			        <a href='#r10' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='r10'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#q10' class='text prev'><</a>
+			        <a href='#s10' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='s10'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#r10' class='text prev'><</a>
+			        <a href='#t10' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='t10'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#s10' class='text prev'><</a>
+			        <a href='#up10' class='text next'>></a>
+				</div>
+			</li>
+		</ul>
+		<ul class='row' id='row11'>
+			<li class='slide' id='a11'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#down11' class='text prev'><</a>
+			        <a href='#b11' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='b11'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#a11' class='text prev'><</a>
+			        <a href='#c11' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='c11'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#b11' class='text prev'><</a>
+			        <a href='#d11' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='d11'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#c11' class='text prev'><</a>
+			        <a href='#e11' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='e11'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#d11' class='text prev'><</a>
+			        <a href='#f11' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='f11'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#e11' class='text prev'><</a>
+			        <a href='#g11' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='g11'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#f11' class='text prev'><</a>
+			        <a href='#h11' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='h11'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#g11' class='text prev'><</a>
+			        <a href='#i11' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='i11'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#h11' class='text prev'><</a>
+			        <a href='#j11' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='j11'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#i11' class='text prev'><</a>
+			        <a href='#k11' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='k11'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#j11' class='text prev'><</a>
+			        <a href='#l11' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='l11'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#k11' class='text prev'><</a>
+			        <a href='#m11' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='m11'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#l11' class='text prev'><</a>
+			        <a href='#n11' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='n11'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#m11' class='text prev'><</a>
+			        <a href='#o11' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='o11'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#n11' class='text prev'><</a>
+			        <a href='#p11' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='p11'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#o11' class='text prev'><</a>
+			        <a href='#q11' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='q11'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#p11' class='text prev'><</a>
+			        <a href='#r11' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='r11'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#q11' class='text prev'><</a>
+			        <a href='#s11' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='s11'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#r11' class='text prev'><</a>
+			        <a href='#t11' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='t11'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#s11' class='text prev'><</a>
+			        <a href='#up11' class='text next'>></a>
+				</div>
+			</li>
+		</ul>
+		<ul class='row' id='row12'>
+			<li class='slide' id='a12'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#down12' class='text prev'><</a>
+			        <a href='#b12' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='b12'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#a12' class='text prev'><</a>
+			        <a href='#c12' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='c12'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#b12' class='text prev'><</a>
+			        <a href='#d12' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='d12'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#c12' class='text prev'><</a>
+			        <a href='#e12' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='e12'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#d12' class='text prev'><</a>
+			        <a href='#f12' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='f12'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#e12' class='text prev'><</a>
+			        <a href='#g12' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='g12'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#f12' class='text prev'><</a>
+			        <a href='#h12' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='h12'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#g12' class='text prev'><</a>
+			        <a href='#i12' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='i12'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#h12' class='text prev'><</a>
+			        <a href='#j12' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='j12'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#i12' class='text prev'><</a>
+			        <a href='#k12' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='k12'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#j12' class='text prev'><</a>
+			        <a href='#l12' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='l12'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#k12' class='text prev'><</a>
+			        <a href='#m12' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='m12'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#l12' class='text prev'><</a>
+			        <a href='#n12' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='n12'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#m12' class='text prev'><</a>
+			        <a href='#o12' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='o12'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#n12' class='text prev'><</a>
+			        <a href='#p12' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='p12'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#o12' class='text prev'><</a>
+			        <a href='#q12' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='q12'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#p12' class='text prev'><</a>
+			        <a href='#r12' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='r12'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#q12' class='text prev'><</a>
+			        <a href='#s12' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='s12'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#r12' class='text prev'><</a>
+			        <a href='#t12' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='t12'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#s12' class='text prev'><</a>
+			        <a href='#up12' class='text next'>></a>
+				</div>
+			</li>
+		</ul>
+		<ul class='row' id='row13'>
+			<li class='slide' id='a13'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#down13' class='text prev'><</a>
+			        <a href='#b13' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='b13'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#a13' class='text prev'><</a>
+			        <a href='#c13' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='c13'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#b13' class='text prev'><</a>
+			        <a href='#d13' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='d13'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#c13' class='text prev'><</a>
+			        <a href='#e13' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='e13'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#d13' class='text prev'><</a>
+			        <a href='#f13' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='f13'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#e13' class='text prev'><</a>
+			        <a href='#g13' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='g13'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#f13' class='text prev'><</a>
+			        <a href='#h13' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='h13'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#g13' class='text prev'><</a>
+			        <a href='#i13' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='i13'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#h13' class='text prev'><</a>
+			        <a href='#j13' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='j13'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#i13' class='text prev'><</a>
+			        <a href='#k13' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='k13'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#j13' class='text prev'><</a>
+			        <a href='#l13' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='l13'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#k13' class='text prev'><</a>
+			        <a href='#m13' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='m13'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#l13' class='text prev'><</a>
+			        <a href='#n13' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='n13'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#m13' class='text prev'><</a>
+			        <a href='#o13' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='o13'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#n13' class='text prev'><</a>
+			        <a href='#p13' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='p13'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#o13' class='text prev'><</a>
+			        <a href='#q13' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='q13'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#p13' class='text prev'><</a>
+			        <a href='#r13' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='r13'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#q13' class='text prev'><</a>
+			        <a href='#s13' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='s13'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#r13' class='text prev'><</a>
+			        <a href='#t13' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='t13'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#s13' class='text prev'><</a>
+			        <a href='#up13' class='text next'>></a>
+				</div>
+			</li>
+		</ul>
+		<ul class='row' id='row14'>
+			<li class='slide' id='a14'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#down14' class='text prev'><</a>
+			        <a href='#b14' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='b14'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#a14' class='text prev'><</a>
+			        <a href='#c14' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='c14'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#b14' class='text prev'><</a>
+			        <a href='#d14' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='d14'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#c14' class='text prev'><</a>
+			        <a href='#e14' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='e14'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#d14' class='text prev'><</a>
+			        <a href='#f14' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='f14'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#e14' class='text prev'><</a>
+			        <a href='#g14' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='g14'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#f14' class='text prev'><</a>
+			        <a href='#h14' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='h14'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#g14' class='text prev'><</a>
+			        <a href='#i14' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='i14'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#h14' class='text prev'><</a>
+			        <a href='#j14' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='j14'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#i14' class='text prev'><</a>
+			        <a href='#k14' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='k14'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#j14' class='text prev'><</a>
+			        <a href='#l14' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='l14'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#k14' class='text prev'><</a>
+			        <a href='#m14' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='m14'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#l14' class='text prev'><</a>
+			        <a href='#n14' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='n14'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#m14' class='text prev'><</a>
+			        <a href='#o14' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='o14'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#n14' class='text prev'><</a>
+			        <a href='#p14' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='p14'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#o14' class='text prev'><</a>
+			        <a href='#q14' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='q14'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#p14' class='text prev'><</a>
+			        <a href='#r14' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='r14'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#q14' class='text prev'><</a>
+			        <a href='#s14' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='s14'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#r14' class='text prev'><</a>
+			        <a href='#t14' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='t14'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#s14' class='text prev'><</a>
+			        <a href='#up14' class='text next'>></a>
+				</div>
+			</li>
+		</ul>
+		<ul class='row' id='row15'>
+			<li class='slide' id='a15'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#down15' class='text prev'><</a>
+			        <a href='#b15' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='b15'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#a15' class='text prev'><</a>
+			        <a href='#c15' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='c15'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#b15' class='text prev'><</a>
+			        <a href='#d15' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='d15'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#c15' class='text prev'><</a>
+			        <a href='#e15' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='e15'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#d15' class='text prev'><</a>
+			        <a href='#f15' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='f15'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#e15' class='text prev'><</a>
+			        <a href='#g15' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='g15'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#f15' class='text prev'><</a>
+			        <a href='#h15' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='h15'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#g15' class='text prev'><</a>
+			        <a href='#i15' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='i15'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#h15' class='text prev'><</a>
+			        <a href='#j15' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='j15'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#i15' class='text prev'><</a>
+			        <a href='#k15' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='k15'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#j15' class='text prev'><</a>
+			        <a href='#l15' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='l15'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#k15' class='text prev'><</a>
+			        <a href='#m15' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='m15'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#l15' class='text prev'><</a>
+			        <a href='#n15' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='n15'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#m15' class='text prev'><</a>
+			        <a href='#o15' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='o15'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#n15' class='text prev'><</a>
+			        <a href='#p15' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='p15'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#o15' class='text prev'><</a>
+			        <a href='#q15' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='q15'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#p15' class='text prev'><</a>
+			        <a href='#r15' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='r15'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#q15' class='text prev'><</a>
+			        <a href='#s15' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='s15'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#r15' class='text prev'><</a>
+			        <a href='#t15' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='t15'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#s15' class='text prev'><</a>
+			        <a href='#up15' class='text next'>></a>
+				</div>
+			</li>
+		</ul>
+		<ul class='row' id='row16'>
+			<li class='slide' id='a16'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#down16' class='text prev'><</a>
+			        <a href='#b16' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='b16'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#a16' class='text prev'><</a>
+			        <a href='#c16' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='c16'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#b16' class='text prev'><</a>
+			        <a href='#d16' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='d16'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#c16' class='text prev'><</a>
+			        <a href='#e16' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='e16'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#d16' class='text prev'><</a>
+			        <a href='#f16' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='f16'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#e16' class='text prev'><</a>
+			        <a href='#g16' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='g16'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#f16' class='text prev'><</a>
+			        <a href='#h16' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='h16'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#g16' class='text prev'><</a>
+			        <a href='#i16' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='i16'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#h16' class='text prev'><</a>
+			        <a href='#j16' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='j16'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#i16' class='text prev'><</a>
+			        <a href='#k16' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='k16'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#j16' class='text prev'><</a>
+			        <a href='#l16' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='l16'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#k16' class='text prev'><</a>
+			        <a href='#m16' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='m16'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#l16' class='text prev'><</a>
+			        <a href='#n16' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='n16'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#m16' class='text prev'><</a>
+			        <a href='#o16' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='o16'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#n16' class='text prev'><</a>
+			        <a href='#p16' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='p16'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#o16' class='text prev'><</a>
+			        <a href='#q16' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='q16'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#p16' class='text prev'><</a>
+			        <a href='#r16' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='r16'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#q16' class='text prev'><</a>
+			        <a href='#s16' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='s16'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#r16' class='text prev'><</a>
+			        <a href='#t16' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='t16'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#s16' class='text prev'><</a>
+			        <a href='#up16' class='text next'>></a>
+				</div>
+			</li>
+		</ul>
+		<ul class='row' id='row17'>
+			<li class='slide' id='a17'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#down17' class='text prev'><</a>
+			        <a href='#b17' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='b17'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#a17' class='text prev'><</a>
+			        <a href='#c17' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='c17'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#b17' class='text prev'><</a>
+			        <a href='#d17' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='d17'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#c17' class='text prev'><</a>
+			        <a href='#e17' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='e17'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#d17' class='text prev'><</a>
+			        <a href='#f17' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='f17'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#e17' class='text prev'><</a>
+			        <a href='#g17' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='g17'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#f17' class='text prev'><</a>
+			        <a href='#h17' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='h17'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#g17' class='text prev'><</a>
+			        <a href='#i17' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='i17'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#h17' class='text prev'><</a>
+			        <a href='#j17' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='j17'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#i17' class='text prev'><</a>
+			        <a href='#k17' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='k17'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#j17' class='text prev'><</a>
+			        <a href='#l17' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='l17'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#k17' class='text prev'><</a>
+			        <a href='#m17' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='m17'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#l17' class='text prev'><</a>
+			        <a href='#n17' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='n17'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#m17' class='text prev'><</a>
+			        <a href='#o17' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='o17'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#n17' class='text prev'><</a>
+			        <a href='#p17' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='p17'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#o17' class='text prev'><</a>
+			        <a href='#q17' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='q17'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#p17' class='text prev'><</a>
+			        <a href='#r17' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='r17'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#q17' class='text prev'><</a>
+			        <a href='#s17' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='s17'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#r17' class='text prev'><</a>
+			        <a href='#t17' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='t17'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#s17' class='text prev'><</a>
+			        <a href='#up17' class='text next'>></a>
+				</div>
+			</li>
+		</ul>
+		<ul class='row' id='row18'>
+			<li class='slide' id='a18'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#down18' class='text prev'><</a>
+			        <a href='#b18' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='b18'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#a18' class='text prev'><</a>
+			        <a href='#c18' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='c18'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#b18' class='text prev'><</a>
+			        <a href='#d18' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='d18'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#c18' class='text prev'><</a>
+			        <a href='#e18' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='e18'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#d18' class='text prev'><</a>
+			        <a href='#f18' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='f18'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#e18' class='text prev'><</a>
+			        <a href='#g18' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='g18'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#f18' class='text prev'><</a>
+			        <a href='#h18' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='h18'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#g18' class='text prev'><</a>
+			        <a href='#i18' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='i18'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#h18' class='text prev'><</a>
+			        <a href='#j18' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='j18'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#i18' class='text prev'><</a>
+			        <a href='#k18' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='k18'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#j18' class='text prev'><</a>
+			        <a href='#l18' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='l18'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#k18' class='text prev'><</a>
+			        <a href='#m18' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='m18'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#l18' class='text prev'><</a>
+			        <a href='#n18' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='n18'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#m18' class='text prev'><</a>
+			        <a href='#o18' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='o18'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#n18' class='text prev'><</a>
+			        <a href='#p18' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='p18'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#o18' class='text prev'><</a>
+			        <a href='#q18' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='q18'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#p18' class='text prev'><</a>
+			        <a href='#r18' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='r18'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#q18' class='text prev'><</a>
+			        <a href='#s18' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='s18'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#r18' class='text prev'><</a>
+			        <a href='#t18' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='t18'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#s18' class='text prev'><</a>
+			        <a href='#up18' class='text next'>></a>
+				</div>
+			</li>
+		</ul>
+		<ul class='row' id='row19'>
+			<li class='slide' id='a19'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#down19' class='text prev'><</a>
+			        <a href='#b19' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='b19'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#a19' class='text prev'><</a>
+			        <a href='#c19' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='c19'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#b19' class='text prev'><</a>
+			        <a href='#d19' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='d19'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#c19' class='text prev'><</a>
+			        <a href='#e19' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='e19'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#d19' class='text prev'><</a>
+			        <a href='#f19' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='f19'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#e19' class='text prev'><</a>
+			        <a href='#g19' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='g19'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#f19' class='text prev'><</a>
+			        <a href='#h19' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='h19'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#g19' class='text prev'><</a>
+			        <a href='#i19' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='i19'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#h19' class='text prev'><</a>
+			        <a href='#j19' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='j19'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#i19' class='text prev'><</a>
+			        <a href='#k19' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='k19'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#j19' class='text prev'><</a>
+			        <a href='#l19' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='l19'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#k19' class='text prev'><</a>
+			        <a href='#m19' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='m19'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#l19' class='text prev'><</a>
+			        <a href='#n19' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='n19'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#m19' class='text prev'><</a>
+			        <a href='#o19' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='o19'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#n19' class='text prev'><</a>
+			        <a href='#p19' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='p19'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#o19' class='text prev'><</a>
+			        <a href='#q19' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='q19'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#p19' class='text prev'><</a>
+			        <a href='#r19' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='r19'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#q19' class='text prev'><</a>
+			        <a href='#s19' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='s19'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#r19' class='text prev'><</a>
+			        <a href='#t19' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='t19'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#s19' class='text prev'><</a>
+			        <a href='#up19' class='text next'>></a>
+				</div>
+			</li>
+		</ul>
+		<ul class='row' id='row20'>
+			<li class='slide' id='a20'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#down20' class='text prev'><</a>
+			        <a href='#b20' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='b20'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#a20' class='text prev'><</a>
+			        <a href='#c20' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='c20'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#b20' class='text prev'><</a>
+			        <a href='#d20' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='d20'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#c20' class='text prev'><</a>
+			        <a href='#e20' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='e20'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#d20' class='text prev'><</a>
+			        <a href='#f20' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='f20'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#e20' class='text prev'><</a>
+			        <a href='#g20' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='g20'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#f20' class='text prev'><</a>
+			        <a href='#h20' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='h20'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#g20' class='text prev'><</a>
+			        <a href='#i20' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='i20'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#h20' class='text prev'><</a>
+			        <a href='#j20' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='j20'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#i20' class='text prev'><</a>
+			        <a href='#k20' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='k20'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#j20' class='text prev'><</a>
+			        <a href='#l20' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='l20'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#k20' class='text prev'><</a>
+			        <a href='#m20' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='m20'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#l20' class='text prev'><</a>
+			        <a href='#n20' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='n20'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#m20' class='text prev'><</a>
+			        <a href='#o20' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='o20'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#n20' class='text prev'><</a>
+			        <a href='#p20' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='p20'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#o20' class='text prev'><</a>
+			        <a href='#q20' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='q20'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#p20' class='text prev'><</a>
+			        <a href='#r20' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='r20'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#q20' class='text prev'><</a>
+			        <a href='#s20' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='s20'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#r20' class='text prev'><</a>
+			        <a href='#t20' class='text next'>></a>
+				</div>
+			</li>
+			<li class='slide' id='t20'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#s20' class='text prev'><</a>
+			        <a href='#up20' class='text next'>></a>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+
+	<!-- music -->
+	<audio id='audio' controls autoplay>
+	  <source src="music/andras.mp3" type="audio/mpeg">
+	</audio>
+
+	<!-- jquery -->
+	<script src="http://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
+	<!-- jquery ui -->
+	<script   src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"   integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="   crossorigin="anonymous"></script>
+	<!-- scrollTo -->
+	<script src='js/jquery.scrollTo.js'></script>
+	<!-- Load LocalScroll -->
+    <script src='js/jquery.localScroll.min.js'></script> 
+    <!-- waypoints -->
+    <script type='text/javascript' src='js/noframework.waypoints.min.js'></script>
+	<!-- float -->
+	<script src='js/jqfloat.min.js'></script> 
+	<!-- rotate -->
+	<script type="text/javascript" src='js/jQueryRotate.js'></script>
+	<!-- js -->
+	<script type="text/javascript" src='js/js.js'></script>
+</body>
+</html>
