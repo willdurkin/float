@@ -1,0 +1,36 @@
+#floater {
+	
+	position: absolute;
+	top: 35%;
+	left: 35%;
+	width: 100px;
+	height: 100px;
+	background-color: #79c1e0;
+	display: block;
+	z-index: 1;
+	border-radius: 3px;
+	box-shadow: 6px 6px 6px #0b8def;
+}
+
+#float2 {
+	position: absolute;
+	top: 55%;
+	left: 55%;
+	width: 100px;
+	height: 100px;
+	background-color: #fcd2cf;
+	display: block;
+	z-index: 1;
+	border-radius: 3px;
+	box-shadow: 6px 6px 6px #0b8def;
+}
+
+#img {
+	position: absolute;
+	top: 55%;
+	left: 55%;
+	width: 100px;
+	height: 100px;
+	display: block;
+	z-index: 1;	
+}
