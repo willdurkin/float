@@ -115,43 +115,6 @@ a:clicked {
 	margin: auto;
 }
 
-/*Individual Items*********/
-
-/*Slide a1***/
-
-
-
-#a1 .container{
-	flex-direction: column;
-}
-
-#title {
-	color: white;
-	font-family: 'Bungee Inline', cursive;
-	font-size: 42px;
-	letter-spacing: 2px;
-	margin: auto;
-	padding-bottom: 95px;
-	
-}
-
-#start {
-	margin: auto;
-	padding-bottom: 32%;
-	font-size: 34px;
-}
-
-/*Slide b1*******/
-
-#b1 .container p {
-	margin: auto;
-}
-
-
-#b1 {
-	background-image: url(../img/akira.gif);
-}
-
 .floater {
 	position: absolute;
 	top: 35%;
@@ -192,3 +155,63 @@ a:clicked {
 	display: block;
 	z-index: 1;	
 }
+
+/*Individual Items*********/
+
+/*Slide a1***/
+
+
+
+#a1 .container{
+	flex-direction: column;
+}
+
+#title {
+	color: white;
+	font-family: 'Bungee Inline', cursive;
+	font-size: 42px;
+	letter-spacing: 2px;
+	margin: auto;
+	padding-bottom: 95px;
+	
+}
+
+#start {
+	margin: auto;
+	padding-bottom: 32%;
+	font-size: 34px;
+}
+
+/*Slide b1***/
+
+#b1 .container p {
+	margin: auto;
+}
+
+
+#b1 {
+	background-image: url(../img/akira.gif);
+}
+
+/*Slide e1***/
+
+#e1 .bg {
+	height: 103vh;
+	width: 103vw;
+	margin-left: -25px;
+	}
+
+/*Slide g1***/
+#g1 .bg {
+	 -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+}
+
+#i1 .bg {
+	
+}
+
