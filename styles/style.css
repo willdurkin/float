@@ -55,6 +55,7 @@ html, body {
 	height: 100vh;
 	width: 100vw;
 	overflow: hidden;
+	position: absolute;
 }
 
 .container {
@@ -74,6 +75,7 @@ html, body {
 	font-size: 16px;
 	text-shadow: 2px 2px #333333;
 	text-decoration: none;
+	z-index: 2;
 }
 
 
@@ -94,8 +96,9 @@ a:clicked {
 	left: 40px;
 	text-shadow: 2px 2px #333333;
 	text-decoration: none;
-
+	z-index: 2;
 }
+
 .next {
 	color: white;
 	position: absolute;
@@ -103,7 +106,7 @@ a:clicked {
 	left: 70px;
 	text-shadow: 2px 2px #333333;
 	text-decoration: none;
-
+	z-index: 2
 }
 
 #audio {
@@ -124,7 +127,7 @@ a:clicked {
 	height: 100px;
 	background-color: #79c1e0;
 	display: block;
-	z-index: 1;
+	z-index: 2;
 	border-radius: 3px;
 	box-shadow: 6px 6px 6px #0b8def;
 	display: flex;
@@ -142,7 +145,7 @@ a:clicked {
 	height: 100px;
 	background-color: #fcd2cf;
 	display: block;
-	z-index: 1;
+	z-index: 2;
 	border-radius: 3px;
 	box-shadow: 6px 6px 6px #0b8def;
 }
@@ -154,7 +157,15 @@ a:clicked {
 	width: 100px;
 	height: 100px;
 	display: block;
-	z-index: 1;	
+	z-index: 2;	
+}
+
+.front-bg {
+	z-index: 1;
+}
+
+.back-bg {
+	z-index: 0;
 }
 
 /*Individual Items*********/
@@ -212,7 +223,10 @@ a:clicked {
         -ms-filter: "FlipH";
 }
 
-#i1 .bg {
-
+#i1 {
+	background-image: url(../img/effigy.gif);
+	background-repeat: no-repeat;
+	background-size: 100vw auto;
+	background-position-y: 40%; 
 }
 

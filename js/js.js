@@ -25,29 +25,12 @@ $(document).ready(function() {
 	    }, 2500);
 	};
 
-	// function bounce() {
-	// 	var elem = document.getElementById("small-float");
-	// 	  var width = 0;
-	// 	  var id = setInterval(frame, 10);
-	// 	  function frame() {
-		    
-	// 	  }
-	// }
-
 	bounce("#small-float");
-	
-
-	// $('.small-float').jqFloat({
-	// 	width: 1,
-	// 	height: 20,
-	// 	speed: 900
-	// })
 
 	// Rotate ////////////
 
 	$(".float2").rotate({bind:{
 	  click: function(){
-	  	console.log('rotate');
 	    $(this).rotate({	
 	      duration:6000,
 	      angle: 0,
@@ -91,13 +74,45 @@ $(document).ready(function() {
 	  }
 	});
 
+	function fadeOut(id) {
+		$(id).fadeOut(400);
+	}
+
+	$('.spin1').on('click', function() {
+		var spinners = document.getElementsByClassName('spin1');
+		$(spinners).rotate({
+			angle: 90,
+			animateTo: 900,
+			duration:4000,
+			callback: function() {
+				$(this).fadeOut();
+			}
+		});
+		$('#spin2').rotate({
+			angle: 90,
+			animateTo: 90000,
+			duration:4000000,
+		})
+	})
+
+	$('#spin2').on('click', function() {
+		$('#spin3').rotate({
+			angle: 90,
+			animateTo: 900,
+			duration:4000,
+			callback: function() {
+				$(this).fadeOut();
+			}
+		});
+		$('#spin2').fadeOut();
+	});
 
 
 	
 	// document.getElementById('audio').autoplay;
 
 	var audio = document.getElementById('audio');
-	audio.autoplay;
+	// audio.autoplay;
 	audio.loop = true;
 
 	// LocalScroll /////////////////
