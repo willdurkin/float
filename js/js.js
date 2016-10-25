@@ -1,25 +1,51 @@
 $(document).ready(function() {
-	$('#floater').jqFloat({
+	$('.floater').jqFloat({
 		width: 500,
 		height: 50,
 		speed: 5000
 	});
 
-	$('#float2').jqFloat({
-		width: 900,
-		height: 900,
+	$('.float2').jqFloat({
+		width: 800,
+		height: 800,
 		speed: 5000,
-		minHeight: 50
+		minHeight: 125
 	});
 
-	$('#img').jqFloat({
-		width: 900,
-		height: 900,
+	$('.img').jqFloat({
+		width: 1000,
+		height: 1000,
 		speed: 5000,
-		minHeight: 50
+		minHeight: 125
 	});
 
-	$("#float2").rotate({bind:{
+	function bounce(id) {
+	    setInterval(function() {
+	    	$(id).effect( "bounce", { distance: 5, times: 2 }, id, 1000)
+	    }, 3000);
+	};
+
+	// function bounce() {
+	// 	var elem = document.getElementById("small-float");
+	// 	  var width = 0;
+	// 	  var id = setInterval(frame, 10);
+	// 	  function frame() {
+		    
+	// 	  }
+	// }
+
+	bounce("#small-float");
+	
+
+	// $('.small-float').jqFloat({
+	// 	width: 1,
+	// 	height: 20,
+	// 	speed: 900
+	// })
+
+	// Rotate ////////////
+
+	$(".float2").rotate({bind:{
 	  click: function(){
 	  	console.log('rotate');
 	    $(this).rotate({	
@@ -33,7 +59,7 @@ $(document).ready(function() {
 
 
 	var rotation = function (){
-	  $("#img").rotate({
+	  $(".img").rotate({
 	    angle:0,
 	    animateTo:360,
 	    duration:3000,
@@ -44,7 +70,7 @@ $(document).ready(function() {
 	  });
 	}
 
-	$("#img").rotate({
+	$(".img").rotate({
 	  bind:
 	  {
 	    mouseover : function() {
@@ -63,14 +89,53 @@ $(document).ready(function() {
 	    $(this).rotate({animateTo:0})
 	    }
 	  }
-
 	});
 
+
+
 	
-	document.getElementById('audio').autoplay;
+	// document.getElementById('audio').autoplay;
 
 	var audio = document.getElementById('audio');
 	audio.autoplay;
 	audio.loop = true;
+
+	// LocalScroll /////////////////
 	
+	jQuery(function( $ ){
+        /**
+         * Most jQuery.localScroll's settings, actually belong to jQuery.ScrollTo, check it's demo for an example of each option.
+         * @see http://flesler.demos.com/jquery/scrollTo/
+         * You can use EVERY single setting of jQuery.ScrollTo, in the settings hash you send to jQuery.LocalScroll.
+         */
+        
+        // The default axis is 'y', but in this demo, I want to scroll both
+        // You can modify any default like this
+        $.localScroll.defaults.axis = 'xy';
+        
+        // Scroll initially if there's a hash (.something) in the url 
+        $.localScroll.hash({
+            target: '#content', // Could be a selector or a jQuery object too.
+            queue:true,
+            duration:1200,
+            easing: 'easeOutBounce'
+        });
+        
+        /**
+         * NOTE: I use $.localScroll instead of $('#navigation').localScroll() so I
+         * also affect the >> and << links. I want every link in the page to scroll.
+         */
+        $.localScroll({
+            target: '#content', // could be a selector or a jQuery object too.
+            queue:true,
+            duration:1200,
+            hash:true,
+            onBefore:function( e, anchor, $target ){
+                    // The 'this' is the settings object, can be modified
+            },
+            onAfter:function( anchor, settings ){
+                    // The 'this' contains the scrolled element (#content)
+            }
+        });
+	});
 });

@@ -27,7 +27,7 @@ html, body {
 	height: 100vh;
 	letter-spacing: 1px;
 	overflow: hidden;
-	font-family: 'Raleway', sans-serif;
+	font-family: sans-serif;
 }
 
 .row {
@@ -44,10 +44,10 @@ html, body {
 	justify-content: center;
 	margin-right: 40px;
 	position: relative;
-	background-image: url(../img/another-world.gif);
+	/*background-image: url(../img/another-world.gif);
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: center;
+	background-position: center;*/
 }
 
 .bg {
@@ -92,7 +92,7 @@ a:clicked {
 	top: 30px;
 	left: 40px;
 	text-shadow: 2px 2px #333333;
-		text-decoration: none;
+	text-decoration: none;
 
 }
 .next {
@@ -105,31 +105,24 @@ a:clicked {
 
 }
 
-.down{
-	-ms-transform: rotate(90deg); /* IE 9 */
-    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
-    transform: rotate(90deg);
-}
-
-.up {
-	-ms-transform: rotate(270deg); /* IE 9 */
-    -webkit-transform: rotate(270deg); /* Chrome, Safari, Opera */
-    transform: rotate(270deg);
-}
-
 #audio {
 	position: absolute;
-	top:90%;
-	left: 90%;
+	bottom: 0;
+	right: 0;
 }
 
-/*Individual Items********************************/
+.center {
+	margin: auto;
+}
 
-/*Slide a1*****************/
+/*Individual Items*********/
+
+/*Slide a1***/
+
+
 
 #a1 .container{
 	flex-direction: column;
-
 }
 
 #title {
@@ -138,7 +131,7 @@ a:clicked {
 	font-size: 42px;
 	letter-spacing: 2px;
 	margin: auto;
-	padding-bottom: 115px;
+	padding-bottom: 95px;
 	
 }
 
@@ -148,46 +141,18 @@ a:clicked {
 	font-size: 34px;
 }
 
-
-.center {
-	margin: auto;
-}
-
-/*Slide b1*/
+/*Slide b1*******/
 
 #b1 .container p {
 	margin: auto;
 }
 
-/*Slide f1*/
-
-/*#f1 .bg {
-	bottom: -110px;
-	position: absolute;
-}*/
-
-/*Slide r1*/
-
-#r1 .container {
-	flex-direction: column;
-}
-
-#r1 .container a.down {
-	margin: auto;
-	padding-left: 55%;
-}
-
-#a10 .up {
-	margin: auto;
-	padding-left: 55%;
-}
 
 #b1 {
 	background-image: url(../img/akira.gif);
 }
 
-#floater {
-	
+.floater {
 	position: absolute;
 	top: 35%;
 	left: 35%;
@@ -198,9 +163,14 @@ a:clicked {
 	z-index: 1;
 	border-radius: 3px;
 	box-shadow: 6px 6px 6px #0b8def;
+	display: flex;
 }
 
-#float2 {
+.floater p {
+	margin: auto;
+}
+
+.float2 {
 	position: absolute;
 	top: 55%;
 	left: 55%;
@@ -213,7 +183,7 @@ a:clicked {
 	box-shadow: 6px 6px 6px #0b8def;
 }
 
-#img {
+.img {
 	position: absolute;
 	top: 55%;
 	left: 55%;
