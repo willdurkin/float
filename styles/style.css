@@ -4,6 +4,7 @@ html, body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	overflow: hidden;
 }
 
 #left-rail a{
@@ -202,7 +203,7 @@ a:clicked {
 	}
 
 /*Slide g1***/
-#g1 .bg {
+#h1 .bg {
 	 -moz-transform: scaleX(-1);
         -o-transform: scaleX(-1);
         -webkit-transform: scaleX(-1);
@@ -212,6 +213,6 @@ a:clicked {
 }
 
 #i1 .bg {
-	
+
 }
 

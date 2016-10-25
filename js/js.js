@@ -22,7 +22,7 @@ $(document).ready(function() {
 	function bounce(id) {
 	    setInterval(function() {
 	    	$(id).effect( "bounce", { distance: 5, times: 2 }, id, 1000)
-	    }, 3000);
+	    }, 2500);
 	};
 
 	// function bounce() {
