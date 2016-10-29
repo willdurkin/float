@@ -12,13 +12,23 @@
 <body>
 	<!-- slides -->
 	<div id='content'>
-		<div class='floater'>
+		<div id='float1'>
 			<p class='text'>: ^ |</p>
 		</div>
-		<div class='float2'>
+		
+		<div id='float2'>
 			<p class='text'>: p</p>
 		</div>
-		<img class='img' src="img/ie.png">
+		
+		<img id='ie' src="img/ie.png">
+	
+		<div id="car">
+			<div class="flat" id="box1"></div>
+			<div class="vert" id="box2"></div>
+			<div class="flat" id="box3"></div>
+			<div class="vert" id="box4"></div>
+		</div>
+
 		<ul class='row' id='row1'>
 			<li class='slide' id='a1'>
 				<img class="bg" src='img/another-world.gif'>
@@ -88,8 +98,11 @@
 				</div>
 			</li>
 			<li class='slide' id='i1'>
-				<!-- <img class='bg back-bg' src="img/effigy.gif"> -->
-				<img class="bg front-bg" id='spin3' src='img/cubetunnel.gif'>
+				<div id='eye'>
+					<div id='pupil'></div>
+				</div>
+				<a href="#i10" class='down text' id='down'>^</a>
+				<img class="bg" id='spin3' src='img/cubetunnel.gif'>
 				<div class='container'>
 			        <a href='#i1' class='text prev spin1'><</a>
 			        <a href='#i1' class='text next spin1'>></a>
@@ -705,7 +718,7 @@
 				</div>
 			</li>
 			<li class='slide' id='d9'>
-				<img class="bg" src='img/another-world.gif'>
+				<img class="bg" src='img/bike-swerve.gif'>
 				<div class='container'>
 			        <a href='#c9' class='text prev'><</a>
 			        <a href='#e9' class='text next'>></a>
@@ -713,7 +726,7 @@
 				</div>
 			</li>
 			<li class='slide' id='e9'>
-				<img class="bg" src='img/another-world.gif'>
+				<img class="bg" src='img/bike-traffic.gif'>
 				<div class='container'>
 			        <a href='#d9' class='text prev'><</a>
 			        <a href='#f9' class='text next'>></a>
@@ -721,7 +734,7 @@
 				</div>
 			</li>
 			<li class='slide' id='f9'>
-				<img class="bg" src='img/another-world.gif'>
+				<img class="bg" src='img/city-ad.gif'>
 				<div class='container'>
 			        <a href='#e9' class='text prev'><</a>
 			        <a href='#g9' class='text next'>></a>
@@ -729,7 +742,7 @@
 				</div>
 			</li>
 			<li class='slide' id='g9'>
-				<img class="bg" src='img/another-world.gif'>
+				<img class="bg" src='img/akira3.gif'>
 				<div class='container'>
 			        <a href='#f9' class='text prev'><</a>
 			        <a href='#h9' class='text next'>></a>
@@ -737,7 +750,7 @@
 				</div>
 			</li>
 			<li class='slide' id='h9'>
-				<img class="bg" src='img/another-world.gif'>
+				<img class="bg" src='img/akira2.gif'>
 				<div class='container'>
 			        <a href='#g9' class='text prev'><</a>
 			        <a href='#i9' class='text next'>></a>
@@ -745,7 +758,7 @@
 				</div>
 			</li>
 			<li class='slide' id='i9'>
-				<img class="bg" src='img/another-world.gif'>
+				<img class="bg" src='img/bike-rev.gif'>
 				<div class='container'>
 			        <a href='#h9' class='text prev'><</a>
 			        <a href='#j9' class='text next'>></a>
@@ -753,7 +766,7 @@
 				</div>
 			</li>
 			<li class='slide' id='j9'>
-				<img class="bg" src='img/another-world.gif'>
+				<img class="bg" src='img/bike-eyes.gif'>
 				<div class='container'>
 			        <a href='#i9' class='text prev'><</a>
 			        <a href='#k9' class='text next'>></a>
@@ -763,15 +776,15 @@
 		</ul>
 		<ul class='row' id='row10'>
 			<li class='slide' id='a10'>
-				<img class="bg" src='img/another-world.gif'>
+				<img class="bg" src='img/city-raindrops.gif'>
 				<div class='container'>
-			        <a href='#down10' class='text prev'><</a>
+			        <a href='#a9' class='text prev'><</a>
 			        <a href='#b10' class='text next'>></a>
 			        <p class='center text'>90</p>
 				</div>
 			</li>
 			<li class='slide' id='b10'>
-				<img class="bg" src='img/another-world.gif'>
+				<img class="bg" src='img/city-rain-umbrella.gif'>
 				<div class='container'>
 			        <a href='#a10' class='text prev'><</a>
 			        <a href='#c10' class='text next'>></a>
@@ -779,7 +792,7 @@
 				</div>
 			</li>
 			<li class='slide' id='c10'>
-				<img class="bg" src='img/another-world.gif'>
+				<img class="bg" src='img/city-rainy-street.gif'>
 				<div class='container'>
 			        <a href='#b10' class='text prev'><</a>
 			        <a href='#d10' class='text next'>></a>
@@ -787,7 +800,7 @@
 				</div>
 			</li>
 			<li class='slide' id='d10'>
-				<img class="bg" src='img/another-world.gif'>
+				<img class="bg" src='img/city-flying-cars.gif'>
 				<div class='container'>
 			        <a href='#c10' class='text prev'><</a>
 			        <a href='#e10' class='text next'>></a>
@@ -795,7 +808,7 @@
 				</div>
 			</li>
 			<li class='slide' id='e10'>
-				<img class="bg" src='img/another-world.gif'>
+				<img class="bg" src='img/bike-triangles.gif'>
 				<div class='container'>
 			        <a href='#d10' class='text prev'><</a>
 			        <a href='#f10' class='text next'>></a>
@@ -803,7 +816,7 @@
 				</div>
 			</li>
 			<li class='slide' id='f10'>
-				<img class="bg" src='img/another-world.gif'>
+				<img class="bg" src='img/akira.gif'>
 				<div class='container'>
 			        <a href='#e10' class='text prev'><</a>
 			        <a href='#g10' class='text next'>></a>
@@ -811,7 +824,7 @@
 				</div>
 			</li>
 			<li class='slide' id='g10'>
-				<img class="bg" src='img/another-world.gif'>
+				<img class="bg" src='img/city-lights.gif'>
 				<div class='container'>
 			        <a href='#f10' class='text prev'><</a>
 			        <a href='#h10' class='text next'>></a>
@@ -819,7 +832,7 @@
 				</div>
 			</li>
 			<li class='slide' id='h10'>
-				<img class="bg" src='img/another-world.gif'>
+				<img class="bg" src='img/city-approach.gif'>
 				<div class='container'>
 			        <a href='#g10' class='text prev'><</a>
 			        <a href='#i10' class='text next'>></a>
@@ -827,11 +840,18 @@
 				</div>
 			</li>
 			<li class='slide' id='i10'>
-				<img class="bg" src='img/another-world.gif'>
+				<img class="bg" src='img/city-approach.png'>
 				<div class='container'>
 			        <a href='#h10' class='text prev'><</a>
 			        <a href='#j10' class='text next'>></a>
 			        <p class='center text'>98</p>
+			        <!-- <div id="carl-box">
+			        	
+			        </div>
+			        <div id="carl-button">
+			        	
+			        </div> -->
+
 				</div>
 			</li>
 			<li class='slide' id='j10'>
@@ -840,6 +860,13 @@
 			        <a href='#i10' class='text prev'><</a>
 			        <a href='#k10' class='text next'>></a>
 			        <p class='center text'>99</p>
+				</div>
+			</li>
+			<li class='slide' id='k10'>
+				<img class="bg" src='img/another-world.gif'>
+				<div class='container'>
+			        <a href='#j10' class='text prev'><</a>
+			        <p class='center text'>100</p>
 				</div>
 			</li>
 		</ul>
@@ -867,6 +894,8 @@
     <script type='text/javascript' src='js/noframework.waypoints.min.js'></script>
 	<!-- rotate -->
 	<script type="text/javascript" src='js/jQueryRotate.js'></script>
+	<!-- eye -->
+	<script type="text/javascript" src="js/jqeye.js"></script>
 	<!-- js -->
 	<script type="text/javascript" src='js/js.js'></script>
 </body>
