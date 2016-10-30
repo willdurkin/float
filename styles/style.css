@@ -41,17 +41,16 @@ html, body {
 .slide {
 	width: 100vw;
 	height: 100vh;
-	border: black 1px solid;
-	justify-content: center;
-	margin-right: 40px;
+	/*margin-right: 40px;*/
 	position: relative;
-	display: flex;
+	
 }
 
 .bg {
 	height: 100vh;
 	width: 100vw;
 	overflow: hidden;
+	position: absolute;
 }
 
 .container {
@@ -61,7 +60,7 @@ html, body {
 	left: 0;
 	height: 100vh;
 	width: 100vw;
-	justify-content: center;
+	display: flex;
 }
 
 
@@ -103,9 +102,18 @@ a:clicked {
 
 .down {
 	position: absolute;
-	left: 50%;
-	bottom: 20px;
-	display: none;
+	top: 48px;
+	left: 55px;
+	font-family: 'Catamaran';
+	font-size: 24px;
+}
+
+.up {
+	position: absolute;
+	top: 38px;
+	left: 55px;
+	font-family: 'Catamaran';
+	font-size: 24px;
 }
 
 #audio {
@@ -231,6 +239,46 @@ a:clicked {
 	top: -43px !important;
 	left: -9px !important;
 }
+.flip-h {
+	-moz-transform: scaleX(-1);
+	 -o-transform: scaleX(-1);
+	 -webkit-transform: scaleX(-1);
+	 transform: scaleX(-1);
+	 filter: FlipH;
+	 -ms-filter: "FlipH";
+}
+
+.flip-v {
+	-moz-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+    filter: FlipV;
+    -ms-filter: "FlipV";
+}
+
+.flip-hv {
+	-moz-transform: scale(-1, -1);
+    -o-transform: scale(-1, -1);
+    -webkit-transform: scale(-1, -1);
+    transform: scale(-1, -1);
+}
+
+.rot-90 {
+	-webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.rot-270 {
+	-webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
 
 /*Individual Items*********/
 
@@ -288,16 +336,20 @@ a:clicked {
 }
 
 #i1 {
-	background-image: url(../img/effigy.gif);
+	background-image: url(../img/carl_corner.png);
 	background-repeat: no-repeat;
-	background-size: 100vw auto;
-	background-position-y: 40%; 
+	background-size: 100vw 100vh;
+	/*background-position-y: 40%;*/ 
 }
 
 /*#i1*****/
 
 #i1 .bg {
 	margin: auto; 
+}
+
+#i1down {
+	display: none;
 }
 
 #spin2:hover {
@@ -337,6 +389,14 @@ a:clicked {
 	     transform: scaleX(-1);
 	     filter: FlipH;
 	     -ms-filter: "FlipH";
+}
+
+#i10wp {
+	height: 10px;
+	width: 10px;
+	position: relative;
+	top: 0;
+	left:0;
 }
 
 #carl-box {

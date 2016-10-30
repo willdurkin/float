@@ -1,5 +1,13 @@
 $(document).ready(function() {
 
+	// WAYPOINTS ////
+
+	var $i10wp = $('#i10wp');
+
+	$i10wp.waypoint(function() {
+		console.log('waypoint!');
+	})
+
 	// LocalScroll /////////////////
 	
 	jQuery(function( $ ){
@@ -48,39 +56,39 @@ $(document).ready(function() {
 
 	// FLOATERS ///////
 	
-	$('#float1').jqFloat({
-		width: 500,
-		height: 50,
-		speed: 5000
-	});
+	// $('#float1').jqFloat({
+	// 	width: 500,
+	// 	height: 50,
+	// 	speed: 5000
+	// });
 
-	$('#float2').jqFloat({
-		width: 800,
-		height: 800,
-		speed: 5000,
-		minHeight: 125
-	});
+	// $('#float2').jqFloat({
+	// 	width: 800,
+	// 	height: 800,
+	// 	speed: 5000,
+	// 	minHeight: 125
+	// });
 
-	$('#ie').jqFloat({
-		width: 1000,
-		height: 1000,
-		speed: 5000,
-		minHeight: 125
-	});
+	// $('#ie').jqFloat({
+	// 	width: 1000,
+	// 	height: 1000,
+	// 	speed: 5000,
+	// 	minHeight: 125
+	// });
 
-	function bounce(id) {
-	    setInterval(function() {
-	    	$(id).effect( "bounce", { distance: 15, times: 1 }, id, 100)
-	    }, 500);
-	};
+	// function bounce(id) {
+	//     setInterval(function() {
+	//     	$(id).effect( "bounce", { distance: 15, times: 1 }, id, 100)
+	//     }, 500);
+	// };
 
-	bounce("#small-float");
+	// bounce("#small-float");
 
-	$('#car').jqFloat({
-		width: 3000,
-		height: 30,
-		speed: 2000,
-	});
+	// $('#car').jqFloat({
+	// 	width: 3000,
+	// 	height: 30,
+	// 	speed: 2000,
+	// });
 
 	// Draggable
 
@@ -115,7 +123,7 @@ $(document).ready(function() {
 	$("#ie").rotate({
 	  bind:
 	  {
-	    mouseover : function() {
+	    click : function() {
 	    $(this).rotate({
 	    	angle:0,
 	    	animateTo:360,
@@ -127,7 +135,7 @@ $(document).ready(function() {
 	    })
 	    rotation();
 	  },
-	  mouseout : function() {
+	  click : function() {
 	    $(this).rotate({animateTo:0})
 	    }
 	  }
@@ -165,8 +173,7 @@ $(document).ready(function() {
 		})
 		$('#spin3').fadeOut(9000);
 		$('#spin2').fadeOut(9000);
-		$('.down').fadeIn(9000);
-		location.href = "#i10";
+		$('#i1down').fadeIn(12000);
 	});
 
 	// car
@@ -206,4 +213,17 @@ $(document).ready(function() {
 	// 	})
 	// })
 });
+
+
+
+console.log('hi');
+
+// var waypoint = new Waypoint({
+//   element: document.getElementById('i10'),
+//   handler: function(direction) {
+//   	console.log('hi');
+//     notify('Direction: ' + direction)
+//   },
+//   offset: '5%'
+// })
 
