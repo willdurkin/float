@@ -47,8 +47,6 @@ $(document).ready(function() {
 	});
 
 	// EYE ////////
-
-	$('#small-bounce').animate
 	
 	$('#pupil').jqEye(function() {
 		console.log('eye');
@@ -76,13 +74,13 @@ $(document).ready(function() {
 	// 	minHeight: 125
 	// });
 
-	// function bounce(id) {
-	//     setInterval(function() {
-	//     	$(id).effect( "bounce", { distance: 15, times: 1 }, id, 100)
-	//     }, 500);
-	// };
+	function bounce(id) {
+	    setInterval(function() {
+	    	$(id).effect( "bounce", { distance: 15, times: 1 }, id, 100)
+	    }, 500);
+	};
 
-	// bounce("#small-float");
+	bounce("#small-float");
 
 	// $('#car').jqFloat({
 	// 	width: 3000,
@@ -93,6 +91,104 @@ $(document).ready(function() {
 	// Draggable
 
 	// $('#float1').Draggable()
+
+	var $i10prev = $('#i10prev')
+
+
+	$('.spin1').on('click', function() {
+		var spinners = document.getElementsByClassName('spin1');
+		$(spinners).rotate({
+			angle: 0,
+			animateTo: 9000,
+			duration: 200000,
+		});
+		$(spinners).fadeOut(4500);
+		$('#spin2').rotate({
+			angle: 0,
+			animateTo: 90000,
+			duration:4000000,
+		});
+	});
+
+	function right() {
+
+	}
+
+	$('#spin2').on('click', function() {
+		// $('#spin3').animate({height: '100vw'}, 2000);
+		// $('#spin3').animate({width: '100vh'}, 2000);
+		// $('#spin3').animate({width: '2400px'}, 6000);
+		// $('#spin3').animate({bottom: '300px'}, 2000);
+		// $('#spin3').animate({right: '300px'}, 2000);
+		$('#spin3').rotate({
+			angle: 0,
+			animateTo: 9000,
+			duration: 900000,
+		})
+		$('#spin3').fadeOut(1000);
+		$('#spin2').fadeOut(1000);
+		$('#smile1').delay(3000).fadeIn(100)
+			.animate({'left': '+=60%'}, 5000, 'linear')
+			
+			
+			
+			
+		// $('#i10prev').jqFloat({
+		// 	width: 100,
+		// 	height: 100,
+		// 	speed: 4000,
+		// });
+	});
+
+	$('#smile1').click(function(){
+		$(this).effect( "bounce", { distance: 15, times: 3}).fadeOut(400);
+		$('#smile2').delay(1000).fadeIn(400).effect( "bounce", { distance: 15, times: 3});
+	})
+
+	$('#smile2').click(function(){
+		$(this).effect( "bounce", { distance: 15, times: 3}).fadeOut(400);
+		$('#smile3').delay(1000).fadeIn(400).effect( "bounce", { distance: 15, times: 3});
+	})
+
+	$('#smile3').click(function(){
+		$(this).effect( "bounce", { distance: 15, times: 3}).fadeOut(400);
+		$('#smile4').delay(1000).fadeIn(400).effect( "bounce", { distance: 15, times: 3});
+		$('#smile5').delay(1000).fadeIn(400).effect( "bounce", { distance: 15, times: 3});
+		$('#smile6').delay(1000).fadeIn(400).delay(100).effect( "bounce", { distance: 15, times: 3});
+		$('#smile7').delay(1000).fadeIn(400).effect( "bounce", { distance: 15, times: 3});
+		$('#smile8').delay(1000).fadeIn(400).effect( "bounce", { distance: 15, times: 3});
+		$('#smile9').delay(1000).fadeIn(400).delay(100).effect( "bounce", { distance: 15, times: 3});
+		$('#smile10').delay(1000).fadeIn(400).delay(200).effect( "bounce", { distance: 15, times: 3});
+		$('#smile11').delay(1000).fadeIn(400).delay(300).effect( "bounce", { distance: 15, times: 3});
+		$('#smile12').delay(1000).fadeIn(400).effect( "bounce", { distance: 15, times: 3});
+		$('#smile13').delay(1000).fadeIn(400).delay(200).effect( "bounce", { distance: 15, times: 3});
+	})
+
+	var smileCount = 0;
+
+	
+	var $clickRemove = $('.clickRemove')
+
+	$clickRemove.click(function(){
+		$(this).fadeOut();
+		smileCount ++;
+		console.log(smileCount);
+		if (smileCount === 10) {
+			$('#i10prev').delay(1000).fadeIn(400);
+		}
+
+	})
+
+	// car
+
+	$('#car').mouseenter(function(){
+		console.log('open');
+		$('#box1').addClass('open');
+	})
+	$('#car').mouseleave(function(){
+		$('#box1').removeClass('open');
+	})
+	
 
 	// Rotate ////////////
 
@@ -145,46 +241,6 @@ $(document).ready(function() {
 		$(id).fadeOut(400);
 	}
 
-	$('.spin1').on('click', function() {
-		var spinners = document.getElementsByClassName('spin1');
-		$(spinners).rotate({
-			angle: 0,
-			animateTo: 9000,
-			duration: 200000,
-		});
-		$(spinners).fadeOut(4500);
-		$('#spin2').rotate({
-			angle: 0,
-			animateTo: 90000,
-			duration:4000000,
-		});
-	});
-
-	$('#spin2').on('click', function() {
-		// $('#spin3').animate({height: '100vw'}, 2000);
-		// $('#spin3').animate({width: '100vh'}, 2000);
-		// $('#spin3').animate({width: '2400px'}, 6000);
-		// $('#spin3').animate({bottom: '300px'}, 2000);
-		// $('#spin3').animate({right: '300px'}, 2000);
-		$('#spin3').rotate({
-			angle: 0,
-			animateTo: 9000,
-			duration: 900000,
-		})
-		$('#spin3').fadeOut(9000);
-		$('#spin2').fadeOut(9000);
-		$('#i1down').fadeIn(12000);
-	});
-
-	// car
-
-	$('#car').mouseenter(function(){
-		console.log('open');
-		$('#box1').addClass('open');
-	})
-	$('#car').mouseleave(function(){
-		$('#box1').removeClass('open');
-	})
 	
 	// document.getElementById('audio').autoplay;
 
