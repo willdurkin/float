@@ -76,8 +76,8 @@ $(document).ready(function() {
 
 	function bounce(id) {
 	    setInterval(function() {
-	    	$(id).effect( "bounce", { distance: 15, times: 1 }, id, 100)
-	    }, 500);
+	    	$(id).effect( "bounce", { distance: 10, times: 2 }, id, 100)
+	    }, 1500);
 	};
 
 	bounce("#small-float");
@@ -110,35 +110,30 @@ $(document).ready(function() {
 		});
 	});
 
-	function right() {
-
-	}
-
 	$('#spin2').on('click', function() {
-		// $('#spin3').animate({height: '100vw'}, 2000);
-		// $('#spin3').animate({width: '100vh'}, 2000);
-		// $('#spin3').animate({width: '2400px'}, 6000);
-		// $('#spin3').animate({bottom: '300px'}, 2000);
-		// $('#spin3').animate({right: '300px'}, 2000);
 		$('#spin3').rotate({
 			angle: 0,
 			animateTo: 9000,
 			duration: 900000,
 		})
-		$('#spin3').fadeOut(1000);
-		$('#spin2').fadeOut(1000);
-		$('#smile1').delay(3000).fadeIn(100)
+		$('.spin1').rotate({
+			angle: 0,
+			animateTo: 9000,
+			duration: 200000,
+		});
+		$('.spin1').fadeOut(4500);
+		$('#spin2').rotate({
+			angle: 0,
+			animateTo: 90000,
+			duration:4000000,
+		});
+		$('#spin3').fadeOut(5000);
+		$('#spin2').fadeOut(5000);
+		$('#smile1').delay(8000).fadeIn(100)
 			.animate({'left': '+=60%'}, 5000, 'linear')
-			
-			
-			
-			
-		// $('#i10prev').jqFloat({
-		// 	width: 100,
-		// 	height: 100,
-		// 	speed: 4000,
-		// });
 	});
+
+	// SMILES ////
 
 	$('#smile1').click(function(){
 		$(this).effect( "bounce", { distance: 15, times: 3}).fadeOut(400);
@@ -179,6 +174,16 @@ $(document).ready(function() {
 
 	})
 
+	//bird
+
+	$('#bird').click(function() {
+		$(this).effect( "bounce", { distance: 15, times: 3}).fadeOut(400);
+		$('#h10prev').delay(1000).fadeIn(400);
+	})
+
+	$('#tree1').click(function() {
+		$(this).effect( "bounce", { distance: 15, times: 3})
+	})
 	// car
 
 	$('#car').mouseenter(function(){

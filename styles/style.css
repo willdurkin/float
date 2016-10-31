@@ -386,6 +386,47 @@ a:clicked {
 	cursor: 
 }
 
+/*h10****/
+
+#h10prev {
+	display: none;
+}
+
+#side-tree {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 400px;
+}
+
+#tree1 {
+	position: absolute;
+	top: 270px;
+	left: 110px;
+	width: 200px;
+}
+
+#tree2 {
+	position: absolute;
+	top: 400px;
+	left: 400px;
+	width: 400px;
+}
+
+#tree3 {
+	position: absolute;
+	top: 250px;
+	left: 420px;
+	width: 50px;
+}
+
+#bird {
+	position: absolute;
+	top: 255px;
+	right: 95px;
+	width: 50px;
+}
+
 /*i10****/
 
 #i10 .bg {
