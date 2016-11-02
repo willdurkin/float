@@ -203,7 +203,7 @@ $(document).ready(function() {
 	});
 
 	// rock
-
+	
 
 	$ie.click(function() {
 		$('#ie').delay(1000).jqFloat({
@@ -212,6 +212,7 @@ $(document).ready(function() {
 			speed: 5000,
 			minHeight: 125
 		});
+		$('#ieAudio')[0].play();
 	});
 
 	$('#rock').click(function() {
@@ -265,23 +266,31 @@ $(document).ready(function() {
 	  });
 	}
 
+	var ieSpin = false;
+
 	$("#ie").rotate({
 	  bind:
 	  {
 	    click : function() {
-	    $(this).rotate({
-	    	animateTo:360,
-	    	duration:3000,
-	    	callback: rotation,
-	    	easing: function (x,t,b,c,d){        // t: current time, b: begInnIng value, c: change In value, d: duration
-	    	  return c*(t/d)+b;
-	    	}
-	    })
-	   
-	  },
-	  mouseleave : function() {
-	    $(this).rotate({animateTo:0})
-	    }
+			if(ieSpin === false) {
+				console.log('if');    
+			    $(this).rotate({
+			    	animateTo:360,
+			    	duration:3000,
+			    	callback: rotation,
+			    	easing: function (x,t,b,c,d){        // t: current time, b: begInnIng value, c: change In value, d: duration
+			    	  return c*(t/d)+b;
+			    	}
+			    })
+			   	ieSpin = true;
+			} else {
+				console.log('else')
+				$(this).rotate({
+					animateTo:0
+				});
+				ieSpin = false;
+			}
+		}
 	  }
 	});
 
