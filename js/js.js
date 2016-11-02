@@ -221,7 +221,9 @@ $(document).ready(function() {
 			.animate({'top':'-=200px'})
 			.animate({'top':'+=300px'})
 			.animate({'left':'-=20px'})
-			.effect( "bounce", { distance: 15, times: 3});
+			.effect( "bounce", { distance: 15, times: 3})
+			.prependTo('#content');
+			
 
 		$('#rock').css('z-index', 1);
 	});

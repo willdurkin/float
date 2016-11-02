@@ -110,8 +110,8 @@ a:clicked {
 	position: absolute;
 	top: 56px;
 	left: 65.5px;
-	font-family: 'Catamaran';
-	font-size: 24px;
+/*	font-family: 'Catamaran';
+*/	font-size: 24px;
 	-moz-transform: scaleY(-1);
     -o-transform: scaleY(-1);
     -webkit-transform: scaleY(-1);
