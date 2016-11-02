@@ -273,7 +273,7 @@ $(document).ready(function() {
 	  {
 	    click : function() {
 			if(ieSpin === false) {
-				console.log('if');    
+				console.log('if')    
 			    $(this).rotate({
 			    	animateTo:360,
 			    	duration:3000,
@@ -285,8 +285,9 @@ $(document).ready(function() {
 			   	ieSpin = true;
 			} else {
 				console.log('else')
+				$(this).stopRotate();
 				$(this).rotate({
-					animateTo:0
+					animate: 0
 				});
 				ieSpin = false;
 			}

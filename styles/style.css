@@ -70,7 +70,7 @@ html, body {
 	z-index: 1;
 }
 
-.speak {
+.speech {
 	color: white;
 	font-family: sans-serif;
 	font-size: 20px;
@@ -359,7 +359,7 @@ a:clicked {
 
 /*i2*/
 
-#i2 .speak {
+#i2 .speech {
 	top: 65%;
 	left: 65%;
 }
@@ -375,7 +375,7 @@ a:clicked {
 	top: 282px;
 	left: 359px;
 	width: 300px; 
-	
+	z-index: 3;
 }
 
 /*h10*/
