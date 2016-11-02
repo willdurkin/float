@@ -12,16 +12,13 @@
 <body>
 	<!-- slides -->
 	<div id='content'>
-	<!-- 	<div id='float1'>
+		<div id='float1'>
 			<p class='text'>: ^ |</p>
 		</div>
-		
-		<div id='float2'>
+		<!-- <div id='float2'>
 			<p class='text'>: p</p>
 		</div>
-		
-		<img id='ie' src="img/ie.png">
-	
+			
 		<div id="car">
 			<div class="flat" id="box1"></div>
 			<div class="vert" id="box2"></div>
@@ -34,7 +31,8 @@
 				<img class="bg" src='img/another-world.gif'>
 				<div class='container'>
 			        <!-- <a href='#down1' class='text prev'><</a> -->
-			        <a href='#b1' id='small-float' class='text next'>></a>
+			        <!-- <a href='#b1' id='start' class='text next'>></a> -->
+			        <a href='#b1' class='text next' id='start'>></a>
 			        <p class='text' id='title'>odyssee</p>	
 				</div>
 			</li>
@@ -186,12 +184,16 @@
 			<li class='slide' id='i2'>
 				<img class="bg" src='img/effigy.gif'>
 				<div class='container'>
-			        <a href='#i10' class='text down'>^</a>
+					<a href='#i10' class='text down'>^</a>
 			        <p class='center text'>18</p>
+			        <p class='speak point' id='welcome'>Welcome</p>
+			        <audio id='welcomeAudio'>
+			          <source src="speech/Welcome.m4a" type="audio/mpeg">
+			        </audio>
 				</div>
 			</li>
 			<li class='slide' id='j2'>
-				<img class="bg" src='img/city-lights.gif'>
+				<img class="bg" src='img/another-world.gif'>
 				<div class='container'>
 			        <a href='#i2' class='text prev'><</a>
 			        <a href='#k2' class='text next'>></a>
@@ -799,7 +801,7 @@
 			<li class='slide' id='d10'>
 				<img class="bg" src='img/another-world.gif'>
 				<div class='container'>
-			        <!-- <a href='#d4' class='text prev'><</a> -->
+			        <a href='#c10' class='text prev'><</a>
 			        <a href='#e10' class='text next'>></a>
 			        <p class='center text'>93</p>
 				</div>
@@ -821,21 +823,24 @@
 				</div>
 			</li>
 			<li class='slide' id='g10'>
-				<img class="bg" src='img/another-world.gif'>
 				<div class='container'>
+					<img id='ie' src="img/ie.png">
+					<img id='rock' class='point' src="img2/rock2.png">
 			        <a href='#f10' class='text prev'><</a>
-			        <a href='#g5' class='text next'>></a>
-			        <p class='center text'>96</p>
+			        <a href='#h10' class='text next'>></a>
 				</div>
 			</li>
 			<li class='slide' id='h10'>
 				<div class='container'>
-			        <a href='#h9' id='h10prev' class='text prev'><</a>
+			        <a href='#g10' id='h10prev' class='text prev'><</a>
+			        <img id='cloud1' src="img2/cloud-flat.png">
+			        <img id='cloud2' src="img2/cloud-tall.png">
 			        <img id='side-tree' src="img2/side-tree.png">
-			        <img id='tree1' src="img2/tree1.png">
-			        <img id='tree2' src="img2/tree2.png">
-			        <img id='tree3' src="img2/tree3.png">
-			        <img id='bird' src="img2/bird.png">
+			        <img id='tree1' class='point' src="img2/tree1.png">
+			        <img id='tree2' class='point' src="img2/tree2.png">
+			        <img id='tree3' class='point' src="img2/tree3.png">
+			        <img id='bird' class='point flip-h' src="img2/bird.png">
+			        <img id='cloud3' class='point'  src="img2/cloud-light.png">
 				</div>
 			</li>
 			<li class='slide' id='i10'>

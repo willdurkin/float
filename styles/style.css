@@ -1,9 +1,6 @@
 html, body {
 	height: 100vh;
 	width: 100vw;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	overflow: hidden;
 }
 
@@ -43,6 +40,7 @@ html, body {
 	height: 100vh;
 	/*margin-right: 40px;*/
 	position: relative;
+	overflow: hidden;
 	
 }
 
@@ -60,7 +58,6 @@ html, body {
 	left: 0;
 	height: 100vh;
 	width: 100vw;
-	display: flex;
 }
 
 
@@ -73,7 +70,16 @@ html, body {
 	z-index: 1;
 }
 
-
+.speak {
+	color: white;
+	font-family: sans-serif;
+	font-size: 20px;
+	text-shadow: 2px 2px #333333;
+	text-decoration: none;
+	z-index: 1;
+	font-style: italic;
+	position: absolute;
+}
 
 .content a {
 	color: white;
@@ -139,11 +145,10 @@ a:clicked {
 	width: 100px;
 	height: 100px;
 	background-color: #79c1e0;
-	display: block;
+	display: none;
 	z-index: 2;
 	border-radius: 3px;
 	box-shadow: 6px 6px 6px #0b8def;
-	display: flex;
 }
 
 #float1 p {
@@ -152,8 +157,8 @@ a:clicked {
 
 #float2 {
 	position: absolute;
-	top: 55%;
-	left: 55%;
+	top: 300px !important;
+	left: 450px !important;
 	width: 100px;
 	height: 100px;
 	background-color: #fcd2cf;
@@ -170,15 +175,19 @@ a:clicked {
 
 #ie {
 	position: absolute;
-	top: 55%;
-	left: 55%;
+	top: 300px;
+	left: 450px;
 	width: 100px;
 	height: 100px;
-	display: block;
+	display: none;
 	z-index: 2;	
 }
 
 #float1, #float2, #ie:hover {
+	cursor: pointer;
+}
+
+.point {
 	cursor: pointer;
 }
 
@@ -245,6 +254,7 @@ a:clicked {
 	top: -43px !important;
 	left: -9px !important;
 }
+
 .flip-h {
 	-moz-transform: scaleX(-1);
 	 -o-transform: scaleX(-1);
@@ -290,8 +300,6 @@ a:clicked {
 
 /*Slide a1***/
 
-
-
 #a1 .container{
 	flex-direction: column;
 }
@@ -307,9 +315,10 @@ a:clicked {
 }
 
 #start {
-	margin: auto;
-	padding-bottom: 32%;
-	font-size: 34px;
+	top: 50%;
+	left:50%;
+	text-decoration: none;
+	z-index: 2;
 }
 
 /*Slide b1***/
@@ -348,48 +357,52 @@ a:clicked {
 	/*background-position-y: 40%;*/ 
 }
 
-/*#i1*****/
+/*i2*/
 
-#i1 .bg {
-	margin: auto; 
+#i2 .speak {
+	top: 65%;
+	left: 65%;
 }
 
-#i1down {
+#i2 .down {
 	display: none;
 }
 
-#spin2:hover {
-	cursor: pointer;
-}
+/*g10*/
 
-#spin3 {
+#rock {
 	position: absolute;
+	top: 282px;
+	left: 359px;
+	width: 300px; 
+	
 }
 
-#eye {
-	width:50px; 
-	height:50px;
-	position:absolute;
-	border:1px solid gray; 
-	border-radius:25px;
-	bottom: 15px;
-	left: 47.5%; 
-}
-#pupil {
-	width:10px; 
-	height:10px; 
-	left:20px; 
-	top:20px; 
-	border-radius:5px;
-	background-color: gray;
-	position:relative;
-	cursor: 
-}
-
-/*h10****/
+/*h10*/
 
 #h10prev {
 	display: none;
+}
+
+#cloud1 {
+	position: absolute;
+	top: 65px;
+	left: 110px;
+	width: 200px;
+}
+
+#cloud2 {
+	position: absolute;
+	top: 65px;
+	left: 500px;
+	width: 250px;
+}
+
+#cloud3 {
+	position: absolute;
+	top: 150px;
+	left: -800px;
+	width: 1500px;
 }
 
 #side-tree {
@@ -402,14 +415,14 @@ a:clicked {
 #tree1 {
 	position: absolute;
 	top: 270px;
-	left: 110px;
+	left: 130px;
 	width: 200px;
 }
 
 #tree2 {
 	position: absolute;
-	top: 400px;
-	left: 400px;
+	top: 420px;
+	left: 520px;
 	width: 400px;
 }
 
@@ -422,8 +435,8 @@ a:clicked {
 
 #bird {
 	position: absolute;
-	top: 255px;
-	right: 95px;
+	top: 265px;
+	right: 132px;
 	width: 50px;
 }
 
@@ -546,6 +559,16 @@ a:clicked {
 	display: none;
 
 }
+
+#spin2:hover {
+	cursor: pointer;
+}
+
+#spin3 {
+	position: absolute;
+}
+
+/*carl*/
 
 #carl-box {
 	position: absolute;

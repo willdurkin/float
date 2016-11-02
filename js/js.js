@@ -1,12 +1,13 @@
 $(document).ready(function() {
+	var $ie = $('#ie');
 
 	// WAYPOINTS ////
 
-	var $i10wp = $('#i10wp');
+	// var $i10wp = $('#i10wp');
 
-	$i10wp.waypoint(function() {
-		console.log('waypoint!');
-	})
+	// $i10wp.waypoint(function() {
+	// 	console.log('waypoint!');
+	// })
 
 	// LocalScroll /////////////////
 	
@@ -48,9 +49,9 @@ $(document).ready(function() {
 
 	// EYE ////////
 	
-	$('#pupil').jqEye(function() {
-		console.log('eye');
-	});
+	// $('#pupil').jqEye(function() {
+	// 	console.log('eye');
+	// });
 
 	// FLOATERS ///////
 	
@@ -67,20 +68,13 @@ $(document).ready(function() {
 	// 	minHeight: 125
 	// });
 
-	// $('#ie').jqFloat({
-	// 	width: 1000,
-	// 	height: 1000,
-	// 	speed: 5000,
-	// 	minHeight: 125
-	// });
-
 	function bounce(id) {
 	    setInterval(function() {
-	    	$(id).effect( "bounce", { distance: 10, times: 2 }, id, 100)
+	    	$(id).effect( "bounce", { distance: 5, times: 2 }, id, 100)
 	    }, 1500);
 	};
 
-	bounce("#small-float");
+	bounce("#start");
 
 	// $('#car').jqFloat({
 	// 	width: 3000,
@@ -112,7 +106,6 @@ $(document).ready(function() {
 
 	$('#spin2').on('click', function() {
 		$('#spin3').rotate({
-			angle: 0,
 			animateTo: 9000,
 			duration: 900000,
 		})
@@ -130,7 +123,7 @@ $(document).ready(function() {
 		$('#spin3').fadeOut(5000);
 		$('#spin2').fadeOut(5000);
 		$('#smile1').delay(8000).fadeIn(100)
-			.animate({'left': '+=60%'}, 5000, 'linear')
+			.animate({'left': '+=58%'}, 5000, 'linear')
 	});
 
 	// SMILES ////
@@ -177,13 +170,64 @@ $(document).ready(function() {
 	//bird
 
 	$('#bird').click(function() {
-		$(this).effect( "bounce", { distance: 15, times: 3}).fadeOut(400);
+		$(this).removeClass('flip-h').animate({'right':'+=3000px'}, 1500, 'linear').fadeOut();
 		$('#h10prev').delay(1000).fadeIn(400);
 	})
 
 	$('#tree1').click(function() {
 		$(this).effect( "bounce", { distance: 15, times: 3})
 	})
+
+	$('#tree2').click(function() {
+		$(this).effect( "bounce", { distance: 15, times: 3})
+	})
+
+	$('#tree3').click(function() {
+		$(this).effect( "bounce", { distance: 15, times: 3})
+	});
+
+	$('#cloud3').click(function() {
+		$(this).animate({'left':'+=3000px'}, 25000, 'linear').fadeOut();
+	});
+
+	$('#cloud1').jqFloat({
+		width: 500,
+		height: 10,
+		speed: 20000
+	});
+
+	$('#cloud2').jqFloat({
+		width: 500,
+		height: 10,
+		speed: 17000
+	});
+
+	// rock
+
+
+	$ie.click(function() {
+		$('#ie').delay(1000).jqFloat({
+			width: 1000,
+			height: 1000,
+			speed: 5000,
+			minHeight: 125
+		});
+	});
+
+	$('#rock').click(function() {
+		$('#ie')
+			.css('display', 'block')
+			.animate({'top':'-=200px'})
+			.animate({'top':'+=300px'})
+			.animate({'left':'-=20px'})
+			.effect( "bounce", { distance: 15, times: 3});
+
+		$('#rock').css('z-index', 1);
+	});
+
+
+
+
 	// car
 
 	$('#car').mouseenter(function(){
@@ -226,7 +270,6 @@ $(document).ready(function() {
 	  {
 	    click : function() {
 	    $(this).rotate({
-	    	angle:0,
 	    	animateTo:360,
 	    	duration:3000,
 	    	callback: rotation,
@@ -234,9 +277,9 @@ $(document).ready(function() {
 	    	  return c*(t/d)+b;
 	    	}
 	    })
-	    rotation();
+	   
 	  },
-	  click : function() {
+	  mouseleave : function() {
 	    $(this).rotate({animateTo:0})
 	    }
 	  }
@@ -252,6 +295,17 @@ $(document).ready(function() {
 	var audio = document.getElementById('audio');
 	audio.autoplay;
 	audio.loop = true;
+
+		
+	
+	// bounce('#welcome');
+	
+
+	$('#welcome').click(function(){
+		$('#welcomeAudio')[0].play();
+		$('#i2 div .down').delay(1000).fadeIn(400);
+	})
+
 
 	// CARL ///////
 
