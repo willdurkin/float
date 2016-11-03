@@ -111,7 +111,8 @@ a:clicked {
 	top: 56px;
 	left: 65.5px;
 /*	font-family: 'Catamaran';
-*/	font-size: 24px;
+	font-size: 24px;*/
+	font-size: 20px;
 	-moz-transform: scaleY(-1);
     -o-transform: scaleY(-1);
     -webkit-transform: scaleY(-1);
@@ -124,8 +125,9 @@ a:clicked {
 	position: absolute;
 	top: 20px;
 	left: 65.5px;
-	font-family: 'Catamaran';
-	font-size: 24px;
+	/*font-family: 'Catamaran';
+	font-size: 24px;*/
+	font-size: 20px;
 }
 
 #audio {
@@ -145,7 +147,6 @@ a:clicked {
 	width: 100px;
 	height: 100px;
 	background-color: #79c1e0;
-	display: none;
 	z-index: 2;
 	border-radius: 3px;
 	box-shadow: 6px 6px 6px #0b8def;
@@ -157,12 +158,11 @@ a:clicked {
 
 #float2 {
 	position: absolute;
-	top: 300px !important;
-	left: 450px !important;
+	top: 300px;
+	left: 450px;
 	width: 100px;
 	height: 100px;
 	background-color: #fcd2cf;
-	display: block;
 	z-index: 2;
 	border-radius: 3px;
 	box-shadow: 6px 6px 6px #0b8def;
@@ -171,16 +171,6 @@ a:clicked {
 #float2 p {
 /*	padding-left: 5px;
 	padding-top: 5px;*/
-}
-
-#ie {
-	position: absolute;
-	top: 300px;
-	left: 450px;
-	width: 100px;
-	height: 100px;
-	display: none;
-	z-index: 2;	
 }
 
 #float1, #float2, #ie:hover {
@@ -364,18 +354,40 @@ a:clicked {
 	left: 65%;
 }
 
-#i2 .down {
+/*#i2 .down {
 	display: none;
-}
+}*/
 
 /*g10*/
 
+#bird2 {
+	position: absolute;
+	top: 412px;
+	left: 435px;
+	width: 50px;
+	z-index: 3;
+}
+
 #rock {
 	position: absolute;
-	top: 282px;
+	top: 432px;
 	left: 359px;
 	width: 300px; 
-	z-index: 3;
+	z-index: 1;
+}
+
+#ie {
+	position: absolute;
+	top: 450px;
+	left: 470px;
+	width: 100px;
+	height: 100px;
+	display: none;
+	z-index: 1;	
+}
+
+#g10 .prev {
+	display:none;
 }
 
 /*h10*/

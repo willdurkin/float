@@ -47,6 +47,27 @@ $(document).ready(function() {
         });
 	});
 
+	// EYE ////////
+	
+	// $('#pupil').jqEye(function() {
+	// 	console.log('eye');
+	// });
+
+	// FLOATERS ///////
+	
+	// $('#float1').jqFloat({
+	// 	width: 500,
+	// 	height: 50,
+	// 	speed: 5000
+	// });
+
+	// $('#float2').jqFloat({
+	// 	width: 800,
+	// 	height: 800,
+	// 	speed: 5000,
+	// 	minHeight: 125
+	// });
+
 	function bounce(id) {
 	    setInterval(function() {
 	    	$(id).effect( "bounce", { distance: 5, times: 2 }, id, 100)
@@ -55,7 +76,18 @@ $(document).ready(function() {
 
 	bounce("#start");
 
+	// $('#car').jqFloat({
+	// 	width: 3000,
+	// 	height: 30,
+	// 	speed: 2000,
+	// });
+
+	// Draggable
+
+	// $('#float1').Draggable()
+
 	var $i10prev = $('#i10prev')
+
 
 	$('.spin1').on('click', function() {
 		var spinners = document.getElementsByClassName('spin1');
@@ -121,6 +153,7 @@ $(document).ready(function() {
 	})
 
 	var smileCount = 0;
+
 	
 	var $clickRemove = $('.clickRemove')
 
@@ -131,6 +164,7 @@ $(document).ready(function() {
 		if (smileCount === 10) {
 			$('#i10prev').delay(1000).fadeIn(400);
 		}
+
 	})
 
 	//bird
@@ -153,14 +187,7 @@ $(document).ready(function() {
 	});
 
 	$('#cloud3').click(function() {
-		$(this)
-		.css('pointer-events', 'none')
-		.animate({'left':'+=25px'}, 1000, 'linear')
-		.animate({'top':'+=25px'}, 1000, 'linear')
-		.animate({'left':'+=50px'}, 2000, 'linear')
-		.animate({'top':'+=50px'}, 2000, 'linear')
-		.animate({'left':'+=2000px'}, 25000, 'linear')
-		.fadeOut(3000);
+		$(this).animate({'left':'+=3000px'}, 25000, 'linear').fadeOut();
 	});
 
 	$('#cloud1').jqFloat({
@@ -177,30 +204,69 @@ $(document).ready(function() {
 
 	// rock
 	
-	var birdClick = 0;
-
-	$('#bird2').click(function() {
-		if(birdClick === 4) {
-			$('#bird2').animate({'left':'-=1000px'}).fadeOut();
-		} else {
-			$(this).toggleClass('flip-h');
-			birdClick++;	
-		}
-	});
-
-	// ie
 
 	$ie.click(function() {
-		$('#ie').jqFloat({
+		$('#ie').delay(1000).jqFloat({
 			width: 1000,
 			height: 1000,
 			speed: 5000,
 			minHeight: 125
-		}).css('z-index', 2);
+		});
 		$('#ieAudio')[0].play();
-		$('#g10 .prev').delay(1000).fadeIn()
 	});
 
+	$('#rock').click(function() {
+		$('#ie')
+			.css('display', 'block')
+			.animate({'top':'-=200px'})
+			.animate({'top':'+=300px'})
+			.animate({'left':'-=20px'})
+			.effect( "bounce", { distance: 15, times: 3})
+			.prependTo('#content');
+			
+
+		$('#rock').css('z-index', 1);
+	});
+
+
+
+
+	// car
+
+	$('#car').mouseenter(function(){
+		console.log('open');
+		$('#box1').addClass('open');
+	})
+	$('#car').mouseleave(function(){
+		$('#box1').removeClass('open');
+	})
+	
+
+	// Rotate ////////////
+
+	$("#float2").rotate({bind:{
+	  click: function(){
+	    $(this).rotate({	
+	      duration:6000,
+	      angle: 0,
+	      animateTo:360
+	      })
+	    }
+	  }
+	});
+
+
+	var rotation = function (){
+	  $("#ie").rotate({
+	    angle:0,
+	    animateTo:360,
+	    duration:3000,
+	    callback: rotation,
+	    easing: function (x,t,b,c,d){        // t: current time, b: begInnIng value, c: change In value, d: duration
+	      return c*(t/d)+b;
+	    }
+	  });
+	}
 
 	var ieSpin = false;
 
@@ -230,85 +296,6 @@ $(document).ready(function() {
 		}
 	  }
 	});
-
-	var ieFloat = false;
-
-	$('#rock').click(function() {
-		if(ieFloat === false) {
-			$('#ie')
-				.css('display', 'block')
-				.animate({'top':'-=300px'}, 'fast')
-				.animate({'left':'+=150px'}, 'fast')
-				.animate({'top':'+=80px'}, 'fast')
-				.animate({'left':'+=600px'}, 'fast')
-				.animate({'left':'-=750px'}, 'fast')
-				.effect( "bounce", { distance: 15, times: 3})
-				.prependTo('#content')
-			ieFloat = true;
-		} 
-	});
-
-	// FLOATERS
-
-	$('#floater1').jqFloat({
-		width: 500,
-		height: 50,
-		speed: 5000
-	});
-
-	$('#floater2').jqFloat({
-		width: 800,
-		height: 800,
-		speed: 5000,
-		minHeight: 125
-	});
-
-	$('#floater1').click(function() {
-		$(this).css()
-	})
-
-	// car
-
-	// $('#car').mouseenter(function(){
-	// 	console.log('open');
-	// 	$('#box1').addClass('open');
-	// })
-	// $('#car').mouseleave(function(){
-	// 	$('#box1').removeClass('open');
-	// })
-	
-	// $('#car').jqFloat({
-	// 	width: 3000,
-	// 	height: 30,
-	// 	speed: 2000,
-	// });
-
-	// Rotate ////////////
-
-	$("#floater2").rotate({bind:{
-	  click: function(){
-	    $(this).rotate({	
-	      duration:6000,
-	      angle: 0,
-	      animateTo:360
-	      })
-	    }
-	  }
-	});
-
-
-	var rotation = function (){
-	  $("#ie").rotate({
-	    angle:0,
-	    animateTo:360,
-	    duration:3000,
-	    callback: rotation,
-	    easing: function (x,t,b,c,d){        // t: current time, b: begInnIng value, c: change In value, d: duration
-	      return c*(t/d)+b;
-	    }
-	  });
-	}
-
 
 	function fadeOut(id) {
 		$(id).fadeOut(400);
