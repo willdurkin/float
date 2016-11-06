@@ -175,17 +175,36 @@ $(document).ready(function() {
 		speed: 17000
 	});
 
-	// rock
+	// bird
 	
 	var birdClick = 0;
 
 	$('#bird2').click(function() {
 		if(birdClick === 4) {
-			$('#bird2').animate({'left':'-=1000px'}).fadeOut();
+			$(this).toggleClass('flip-h').animate({'left':'+=1000px'}).fadeOut();
 		} else {
 			$(this).toggleClass('flip-h');
 			birdClick++;	
 		}
+	});
+
+	// rock
+
+	var ieFloat = false;
+
+	$('#rock').click(function() {
+		if(ieFloat === false) {
+			$('#ie')
+				.css('display', 'block')
+				.animate({'top':'-=300px'}, 'fast')
+				.animate({'left':'+=150px'}, 'fast')
+				.animate({'top':'+=80px'}, 'fast')
+				.animate({'left':'-=1500px'}, 'fast')
+				.animate({'left':'+=1350px'}, 'fast')
+				.effect( "bounce", { distance: 15, times: 3})
+				.prependTo('#content')
+			ieFloat = true;
+		} 
 	});
 
 	// ie
@@ -201,6 +220,17 @@ $(document).ready(function() {
 		$('#g10 .prev').delay(1000).fadeIn()
 	});
 
+	var rotation = function (){
+	  $("#ie").rotate({
+	    angle:0,
+	    animateTo:360,
+	    duration:3000,
+	    callback: rotation,
+	    easing: function (x,t,b,c,d){        // t: current time, b: begInnIng value, c: change In value, d: duration
+	      return c*(t/d)+b;
+	    }
+	  });
+	}
 
 	var ieSpin = false;
 
@@ -214,7 +244,8 @@ $(document).ready(function() {
 			    	animateTo:360,
 			    	duration:3000,
 			    	callback: rotation,
-			    	easing: function (x,t,b,c,d){        // t: current time, b: begInnIng value, c: change In value, d: duration
+			    	easing: function (x,t,b,c,d){        
+			    	// t: current time, b: begInnIng value, c: change In value, d: duration
 			    	  return c*(t/d)+b;
 			    	}
 			    })
@@ -229,23 +260,6 @@ $(document).ready(function() {
 			}
 		}
 	  }
-	});
-
-	var ieFloat = false;
-
-	$('#rock').click(function() {
-		if(ieFloat === false) {
-			$('#ie')
-				.css('display', 'block')
-				.animate({'top':'-=300px'}, 'fast')
-				.animate({'left':'+=150px'}, 'fast')
-				.animate({'top':'+=80px'}, 'fast')
-				.animate({'left':'+=600px'}, 'fast')
-				.animate({'left':'-=750px'}, 'fast')
-				.effect( "bounce", { distance: 15, times: 3})
-				.prependTo('#content')
-			ieFloat = true;
-		} 
 	});
 
 	// FLOATERS
@@ -264,7 +278,12 @@ $(document).ready(function() {
 	});
 
 	$('#floater1').click(function() {
-		$(this).css()
+		$(this).prependTo('#content')
+		$(this).rotate(360);
+	})
+
+	$('#floater2').click(function() {
+		$(this).prependTo('#content')
 	})
 
 	// car
@@ -296,41 +315,36 @@ $(document).ready(function() {
 	  }
 	});
 
-
-	var rotation = function (){
-	  $("#ie").rotate({
-	    angle:0,
-	    animateTo:360,
-	    duration:3000,
-	    callback: rotation,
-	    easing: function (x,t,b,c,d){        // t: current time, b: begInnIng value, c: change In value, d: duration
-	      return c*(t/d)+b;
-	    }
-	  });
-	}
-
-
 	function fadeOut(id) {
 		$(id).fadeOut(400);
 	}
-
 	
-	// document.getElementById('audio').autoplay;
+
+	// e10
+
+	var $e10prev = $('.e10prev');
+
+	$e10prev.rotate({bind:{
+	  click: function(){
+	    $e10prev.rotate({	
+	      duration:6000,
+	      angle: 0,
+	      animateTo:360
+	      })
+	    }
+	  }
+	});
 
 	var audio = document.getElementById('audio');
 	audio.autoplay;
 	audio.loop = true;
-
-		
 	
 	// bounce('#welcome');
-	
 
 	$('#welcome').click(function(){
 		$('#welcomeAudio')[0].play();
 		// $('#i2 div .down').delay(1000).fadeIn(400);
 	})
-
 
 	// CARL ///////
 
