@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>local scroll adventure</title>
+	<link rel='stylesheet' type='text/css' href='styles/reset.css'>
+	<link rel='stylesheet' type='text/css' href='styles/style.css'>
+    
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:100,400,700|Raleway' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Catamaran" rel="stylesheet">
+</head>
+<body>
+	<!-- slides -->
+	<div id='content'>
+			
+<!-- 		<div id="car">
+			<div class="flat" id="box1"></div>
+			<div class="vert" id="box2"></div>
+			<div class="flat" id="box3"></div>
+			<div class="vert" id="box4"></div>
+		</div> -->
+
+		<ul class='row' id='row1'>
+			<li class='slide' id='a1'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <!-- <a href='#down1' class='text prev'><</a> -->
+			        <!-- <a href='#b1' id='start' class='text next'>></a> -->
+			        <a href='#b1' class='text next' id='start'>></a>
+			        <p class='text' id='title'>odyssee</p>	
+				</div>
+			</li>
+			<li class='slide' id='b1'>
+				<img class="bg" src='bg/orbs.gif'>
+				<div class='container'>
+			        <a href='#a1' class='text prev'><</a>
+			        <a href='#c1' class='text next'>></a>
+			        <p class='center text'>1</p>
+				</div>
+			</li>
+			<li class='slide' id='c1'>
+				<img class="bg" src='bg/globulus.gif'>
+				<div class='container'>
+			        <a href='#b1' class='text prev'><</a>
+			        <a href='#d1' class='text next'>></a>
+			        <p class='center text'>2</p>
+				</div>
+			</li>
+			<li class='slide' id='d1'>
+				<img class="bg" src='bg/hand.gif'>
+				<div class='container'>
+			        <a href='#c1' class='text prev'><</a>
+			        <a href='#d2' class='text down'>^</a>
+			        <p class='center text'>3</p>
+				</div>
+			</li>
+			<li class='slide' id='e1'>
+				<img class="bg" src='bg/eye-close.gif'>
+				<div class='container'>
+			        <a href='#d1' class='text prev'><</a>
+			        <a href='#f1' class='text next'>></a>
+			        <p class='center text'>4</p>
+				</div>
+			</li>
+			<li class='slide' id='f1'>
+				<img class="bg" src='bg/sunset-lines.gif'>
+				<div class='container'>
+			        <a href='#e1' class='text prev'><</a>
+			        <a href='#g1' class='text next'>></a>
+			        <p class='center text'>5</p>
+				</div>
+			</li>
+			<li class='slide' id='g1'>
+				<img class="bg" src='bg/run-lines.gif'>
+				<div class='container'>
+			        <a href='#f1' class='text prev'><</a>
+			        <a href='#h1' class='text next'>></a>
+			        <p class='center text'>6</p>
+				</div>
+			</li>
+			<li class='slide' id='h1'>
+				<img class="bg" src='bg/run.gif'>
+				<div class='container'>
+			        <a href='#g1' class='text prev'><</a>
+			        <a href='#i1' class='text next'>></a>
+			        <p class='center text'>7</p>
+				</div>
+			</li>
+			<li class='slide' id='i1'>
+				<!-- <div id='eye'>
+					<div id='pupil'></div>
+				</div> -->
+				<a href="#i10wp" class='down text' id='i1down'>^</a>
+				<img class="bg" src='bg/cubetunnel.gif'>
+				<div class='container'>
+			        <a href='#i1' class='text prev spin1'><</a>
+			        <a href='#i1' class='text next spin1'>></a>
+			        <p class='center text'>8</p>
+				</div>
+			</li>
+			<li class='slide' id='j1'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#i1' class='text prev'><</a>
+			        <a href='#k1' class='text next'>></a>
+			        <p class='center text'>9</p>
+				</div>
+			</li>
+		</ul>
+		<ul class='row' id='row2'>
+			<li class='slide' id='a2'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#down2' class='text prev'><</a>
+			        <a href='#b2' class='text next'>></a>
+			        <p class='center text'>10</p>
+				</div>
+			</li>
+			<li class='slide' id='b2'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#a2' class='text prev'><</a>
+			        <a href='#c2' class='text next'>></a>
+			        <p class='center text'>11</p>
+				</div>
+			</li>
+			<li class='slide' id='c2'>
+				<img class="bg" src='bg/hand.gif'>
+				<div class='container'>
+			        <a href='#b2' class='text prev'><</a>
+			        <a href='#d2' class='text next'>></a>
+			        <p class='center text'>12</p>
+				</div>
+			</li>
+			<li class='slide' id='d2'>
+				<img class="bg" src='bg/eye-close.gif'>
+				<div class='container'>
+			        <a href='#e2' class='text next'>></a>
+			        <a href='#d1' class='text up'>^</a>
+<!-- 			        <a href='#e2' class='text next'>></a>
+ -->			        <p class='center text'>13</p>
+				</div>
+			</li>
+			<li class='slide' id='e2'>
+				<img class="bg" src='bg/burning-triangle.gif'>
+				<div class='container'>
+			        <a href='#d2' class='text prev'><</a>
+			        <a href='#f2' class='text next'>></a>
+			        <p class='center text'>14</p>
+				</div>
+			</li>
+			<li class='slide' id='f2'>
+				<img class="bg" src='bg/run-lines.gif'>
+				<div class='container'>
+			        <a href='#e2' class='text prev'><</a>
+			        <a href='#g2' class='text next'>></a>
+			        <p class='center text'>15</p>
+				</div>
+			</li>
+			<li class='slide' id='g2'>
+				<img class="bg flip-h" src='bg/run.gif'>
+				<div class='container'>
+			        <a href='#f2' class='text prev'><</a>
+			        <a href='#h2' class='text next'>></a>
+			        <p class='center text'>16</p>
+				</div>
+			</li>
+			<li class='slide' id='h2'>
+				<img class="bg" src='bg/sunset-lines.gif'>
+				<div class='container'>
+			        <a href='#g2' class='text prev'><</a>
+			        <a href='#i2' class='text next'>></a>
+			        <p class='center text'>17</p>
+				</div>
+			</li>
+			<li class='slide' id='i2'>
+				<img class="bg" src='bg/effigy.gif'>
+				<div class='container'>
+					<a href='#i10' class='text down'>^</a>
+			        <p class='center text'>18</p>
+			        <p class='speech point' id='welcome'>Welcome</p>
+			        <audio id='welcomeAudio'>
+			          <source src="speech/Welcome.m4a" type="audio/mpeg">
+			        </audio>
+				</div>
+			</li>
+			<li class='slide' id='j2'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#i2' class='text prev'><</a>
+			        <a href='#k2' class='text next'>></a>
+			        <p class='center text'>19</p>
+				</div>
+			</li>
+		</ul>
+		<ul class='row' id='row3'>
+			<li class='slide' id='a3'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#down3' class='text prev'><</a>
+			        <a href='#b3' class='text next'>></a>
+			        <p class='center text'>20</p>
+				</div>
+			</li>
+			<li class='slide' id='b3'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#a3' class='text prev'><</a>
+			        <a href='#c3' class='text next'>></a>
+			        <p class='center text'>21</p>
+				</div>
+			</li>
+			<li class='slide' id='c3'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#b3' class='text prev'><</a>
+			        <a href='#d3' class='text next'>></a>
+			        <p class='center text'>22</p>
+				</div>
+			</li>
+			<li class='slide' id='d3'>
+				<img class="bg" src='bg/bike-rev.gif'>
+				<div class='container'>
+			        <a href='#d9' class='text down'>^</a>
+			        <p class='center text'>23</p>
+				</div>
+			</li>
+			<li class='slide' id='e3'>
+				<img class="bg" src='bg/bike-eyes.gif'>
+				<div class='container'>
+			        <a href='#d3' class='text prev'><</a>
+			        <a href='#f3' class='text next'>></a>
+			        <p class='center text'>24</p>
+				</div>
+			</li>
+			<li class='slide' id='f3'>
+				<img class="bg" src='bg/city-raindrops.gif'>
+				<div class='container'>
+			        <a href='#e3' class='text prev'><</a>
+			        <a href='#g3' class='text next'>></a>
+			        <p class='center text'>25</p>
+				</div>
+			</li>
+			<li class='slide' id='g3'>
+				<img class="bg" src='bg/city-rain-umbrella.gif'>
+				<div class='container'>
+			        <a href='#f3' class='text prev'><</a>
+			        <a href='#h3' class='text next'>></a>
+			        <p class='center text'>26</p>
+				</div>
+			</li>
+			<li class='slide' id='h3'>
+				<img class="bg" src='bg/akira.gif'>
+				<div class='container'>
+			        <a href='#g3' class='text prev'><</a>
+			        <a href='#i3' class='text next'>></a>
+			        <p class='center text'>27</p>
+				</div>
+			</li>
+			<li class='slide' id='i3'>
+				<img class="bg" src='bg/city-flying-cars.gif'>
+				<div class='container'>
+			        <a href='#h3' class='text prev'><</a>
+			        <a href='#j3' class='text next'>></a>
+			        <p class='center text'>28</p>
+				</div>
+			</li>
+			<li class='slide' id='j3'>
+				<img class="bg" src='bg/city-lights.gif'>
+				<div class='container'>
+			        <a href='#i3' class='text prev'><</a>
+			        <a href='#k3' class='text next'>></a>
+			        <p class='center text'>29</p>
+				</div>
+			</li>
+		</ul>
+		<ul class='row' id='row4'>
+			<li class='slide' id='a4'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <!-- <a href='#down4' class='text prev'><</a> -->
+			        <a href='#b4' class='text next'>></a>
+			        <p class='center text'>30</p>
+				</div>
+			</li>
+			<li class='slide' id='b4'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#a4' class='text prev'><</a>
+			        <a href='#c4' class='text next'>></a>
+			        <p class='center text'>31</p>
+				</div>
+			</li>
+			<li class='slide' id='c4'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#b4' class='text prev'><</a>
+			        <a href='#d4' class='text next'>></a>
+			        <p class='center text'>32</p>
+				</div>
+			</li>
+			<li class='slide' id='d4'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#c4' class='text prev'><</a>
+			        <a href='#e4' class='text next'>></a>
+			        <p class='center text'>33</p>
+				</div>
+			</li>
+			<li class='slide' id='e4'>
+				<img class="bg flip-h" src='bg/eye.gif'>
+				<div class='container'>
+			        <a href='#d4' class='text prev'><</a>
+			        <a href='#f4' class='text next'>></a>
+			        <p class='center text'>34</p>
+				</div>
+			</li>
+			<li class='slide' id='f4'>
+				<img class="bg" src='bg/bike-girl-kaneda.gif'>
+				<div class='container'>
+			        <a href='#e4' class='text prev'><</a>
+			        <a href='#g4' class='text next'>></a>
+			        <p class='center text'>35</p>
+				</div>
+			</li>
+			<li class='slide' id='g4'>
+				<img class="bg" src='bg/bike-girl.gif'>
+				<div class='container'>
+			        <a href='#f4' class='text prev'><</a>
+			        <p class='center text'>36</p>
+				</div>
+			</li>
+			<li class='slide' id='h4'>
+				<img class="bg flip-h" src='bg/bike-trash.gif'>
+				<div class='container'>
+			        <a href='#g4' class='text prev'><</a>
+			        <a href='#i4' class='text next'>></a>
+			        <p class='center text'>37</p>
+				</div>
+			</li>
+			<li class='slide' id='i4'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#h4' class='text prev'><</a>
+			        <a href='#j4' class='text next'>></a>
+			        <p class='center text'>38</p>
+				</div>
+			</li>
+			<li class='slide' id='j4'>
+				<img class="bg flip-h" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#i4' class='text prev'><</a>
+			        <a href='#k4' class='text next'>></a>
+			        <p class='center text'>39</p>
+				</div>
+			</li>
+		</ul>
+		<ul class='row' id='row5'>
+			<li class='slide' id='a5'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#down5' class='text prev'><</a>
+			        <a href='#b5' class='text next'>></a>
+			        <p class='center text'>40</p>
+				</div>
+			</li>
+			<li class='slide' id='b5'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#a5' class='text prev'><</a>
+			        <a href='#c5' class='text next'>></a>
+			        <p class='center text'>41</p>
+				</div>
+			</li>
+			<li class='slide' id='c5'>
+				<img class="bg" src='bg/eye.gif'>
+				<div class='container'>
+			        <a href='#b5' class='text prev'><</a>
+			        <a href='#d5' class='text next'>></a>
+			        <p class='center text'>42</p>
+				</div>
+			</li>
+			<li class='slide' id='d5'>
+				<img class="bg" src='bg/bike-girl-kaneda.gif'>
+				<div class='container'>
+			        <a href='#c5' class='text prev'><</a>
+			        <a href='#e5' class='text next'>></a>
+			        <p class='center text'>43</p>
+				</div>
+			</li>
+			<li class='slide' id='e5'>
+				<img class="bg" src='bg/bike-girl.gif'>
+				<div class='container'>
+			        <a href='#d5' class='text prev'><</a>
+			        <a href='#f5' class='text next'>></a>
+			        <p class='center text'>44</p>
+				</div>
+			</li>
+			<li class='slide' id='f5'>
+				<img class="bg " src='img/bike-swerve.gif'>
+				<div class='container'>
+			        <a href='#e5' class='text prev'><</a>
+			        <a href='#g5' class='text next'>></a>
+			        <p class='center text'>45</p>
+				</div>
+			</li>
+			<li class='slide' id='g5'>
+				<img class="bg" src='bg/bike-trash.gif'>
+				<div class='container'>
+			        <a href='#f5' class='text prev'><</a>
+			        <<!-- a href='#h5' class='text next'>></a> -->
+			        <p class='center text'>46</p>
+				</div>
+			</li>
+			<li class='slide' id='h5'>
+				<img class="bg" src='bg/bike-swerve.gif'>
+				<div class='container'>
+			        <a href='#g5' class='text prev'><</a>
+			        <!-- <a href='#i5' class='text next'>></a> -->
+			        <p class='center text'>47</p>
+				</div>
+			</li>
+			<li class='slide' id='i5'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#h5' class='text prev'><</a>
+			        <a href='#j5' class='text next'>></a>
+			        <p class='center text'>48</p>
+				</div>
+			</li>
+			<li class='slide' id='j5'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#i5' class='text prev'><</a>
+			        <a href='#k5' class='text next'>></a>
+			        <p class='center text'>49</p>
+				</div>
+			</li>
+		</ul>
+		<ul class='row' id='row6'>
+			<li class='slide' id='a6'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#down6' class='text prev'><</a>
+			        <a href='#b6' class='text next'>></a>
+			        <p class='center text'>50</p>
+				</div>
+			</li>
+			<li class='slide' id='b6'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#a6' class='text prev'><</a>
+			        <a href='#c6' class='text next'>></a>
+			        <p class='center text'>51</p>
+				</div>
+			</li>
+			<li class='slide' id='c6'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#b6' class='text prev'><</a>
+			        <a href='#d6' class='text next'>></a>
+			        <p class='center text'>52</p>
+				</div>
+			</li>
+			<li class='slide' id='d6'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#c6' class='text prev'><</a>
+			        <a href='#e6' class='text next'>></a>
+			        <p class='center text'>53</p>
+				</div>
+			</li>
+			<li class='slide' id='e6'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#d6' class='text prev'><</a>
+			        <a href='#f6' class='text next'>></a>
+			        <p class='center text'>54</p>
+				</div>
+			</li>
+			<li class='slide' id='f6'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#e6' class='text prev'><</a>
+			        <a href='#g6' class='text next'>></a>
+			        <p class='center text'>55</p>
+				</div>
+			</li>
+			<li class='slide' id='g6'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#f6' class='text prev'><</a>
+			        <a href='#h6' class='text next'>></a>
+			        <p class='center text'>56</p>
+				</div>
+			</li>
+			<li class='slide' id='h6'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#g6' class='text prev'><</a>
+			        <a href='#i6' class='text next'>></a>
+			        <p class='center text'>57</p>
+				</div>
+			</li>
+			<li class='slide' id='i6'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#h6' class='text prev'><</a>
+			        <a href='#j6' class='text next'>></a>
+			        <p class='center text'>58</p>
+				</div>
+			</li>
+			<li class='slide' id='j6'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#i6' class='text prev'><</a>
+			        <a href='#k6' class='text next'>></a>
+			        <p class='center text'>59</p>
+				</div>
+			</li>
+		</ul>
+		<ul class='row' id='row7'>
+			<li class='slide' id='a7'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#down7' class='text prev'><</a>
+			        <a href='#b7' class='text next'>></a>
+			        <p class='center text'>60</p>
+				</div>
+			</li>
+			<li class='slide' id='b7'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#a7' class='text prev'><</a>
+			        <a href='#c7' class='text next'>></a>
+			        <p class='center text'>61</p>
+				</div>
+			</li>
+			<li class='slide' id='c7'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#b7' class='text prev'><</a>
+			        <a href='#d7' class='text next'>></a>
+			        <p class='center text'>62</p>
+				</div>
+			</li>
+			<li class='slide' id='d7'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#c7' class='text prev'><</a>
+			        <a href='#e7' class='text next'>></a>
+			        <p class='center text'>63</p>
+				</div>
+			</li>
+			<li class='slide' id='e7'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#d7' class='text prev'><</a>
+			        <a href='#f7' class='text next'>></a>
+			        <p class='center text'>64</p>
+				</div>
+			</li>
+			<li class='slide' id='f7'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#e7' class='text prev'><</a>
+			        <a href='#g7' class='text next'>></a>
+			        <p class='center text'>65</p>
+				</div>
+			</li>
+			<li class='slide' id='g7'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#f7' class='text prev'><</a>
+			        <a href='#h7' class='text next'>></a>
+			        <p class='center text'>66</p>
+				</div>
+			</li>
+			<li class='slide' id='h7'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#g7' class='text prev'><</a>
+			        <a href='#i7' class='text next'>></a>
+			        <p class='center text'>67</p>
+				</div>
+			</li>
+			<li class='slide' id='i7'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#h7' class='text prev'><</a>
+			        <a href='#j7' class='text next'>></a>
+			        <p class='center text'>68</p>
+				</div>
+			</li>
+			<li class='slide' id='j7'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#i7' class='text prev'><</a>
+			        <a href='#k7' class='text next'>></a>
+			        <p class='center text'>69</p>
+				</div>
+			</li>
+		</ul>
+		<ul class='row' id='row8'>
+			<li class='slide' id='a8'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#down8' class='text prev'><</a>
+			        <a href='#b8' class='text next'>></a>
+			        <p class='center text'>70</p>
+				</div>
+			</li>
+			<li class='slide' id='b8'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#a8' class='text prev'><</a>
+			        <a href='#c8' class='text next'>></a>
+			        <p class='center text'>71</p>
+				</div>
+			</li>
+			<li class='slide' id='c8'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#b8' class='text prev'><</a>
+			        <a href='#d8' class='text next'>></a>
+			        <p class='center text'>72</p>
+				</div>
+			</li>
+			<li class='slide' id='d8'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#c8' class='text prev'><</a>
+			        <a href='#e8' class='text next'>></a>
+			        <p class='center text'>73</p>
+				</div>
+			</li>
+			<li class='slide' id='e8'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#d8' class='text prev'><</a>
+			        <a href='#f8' class='text next'>></a>
+			        <p class='center text'>74</p>
+				</div>
+			</li>
+			<li class='slide' id='f8'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#e8' class='text prev'><</a>
+			        <a href='#g8' class='text next'>></a>
+			        <p class='center text'>75</p>
+				</div>
+			</li>
+			<li class='slide' id='g8'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#f8' class='text prev'><</a>
+			        <a href='#h8' class='text next'>></a>
+			        <p class='center text'>76</p>
+				</div>
+			</li>
+			<li class='slide' id='h8'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#g8' class='text prev'><</a>
+			        <a href='#i8' class='text next'>></a>
+			        <p class='center text'>77</p>
+				</div>
+			</li>
+			<li class='slide' id='i8'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#h8' class='text prev'><</a>
+			        <a href='#j8' class='text next'>></a>
+			        <p class='center text'>78</p>
+				</div>
+			</li>
+			<li class='slide' id='j8'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#i8' class='text prev'><</a>
+			        <a href='#k8' class='text next'>></a>
+			        <p class='center text'>79</p>
+				</div>
+			</li>
+		</ul>
+		<ul class='row' id='row9'>
+			<li class='slide' id='a9'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#down9' class='text prev'><</a>
+			        <a href='#b9' class='text next'>></a>
+			        <p class='center text'>80</p>
+				</div>
+			</li>
+			<li class='slide' id='b9'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#a9' class='text prev'><</a>
+			        <a href='#c9' class='text next'>></a>
+			        <p class='center text'>81</p>
+				</div>
+			</li>
+			<li class='slide' id='c9'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#b9' class='text prev'><</a>
+			        <a href='#d9' class='text next'>></a>
+			        <p class='center text'>82</p>
+				</div>
+			</li>
+			<li class='slide' id='d9'>
+				<img class="bg" src='bg/akira2.gif'>
+				<div class='container'>
+			        <a href='#c9' class='text prev'><</a>
+			        <a href='#e9' class='text next'>></a>
+			        <p class='center text'>83</p>
+				</div>
+			</li>
+			<li class='slide' id='e9'>
+				<img class="bg" src='bg/akira3.gif'>
+				<div class='container'>
+			        <a href='#d9' class='text prev'><</a>
+			        <a href='#f9' class='text next'>></a>
+			        <p class='center text'>84</p>
+				</div>
+			</li>
+			<li class='slide' id='f9'>
+				<img class="bg" src='bg/city-ad.gif'>
+				<div class='container'>
+			        <a href='#e9' class='text prev'><</a>
+			        <a href='#g9' class='text next'>></a>
+			        <p class='center text'>85</p>
+				</div>
+			</li>
+			<li class='slide' id='g9'>
+				<img class="bg" src='bg/bike-traffic.gif'>
+				<div class='container'>
+			        <a href='#f9' class='text prev'><</a>
+			        <a href='#h9' class='text next'>></a>
+			        <p class='center text'>86</p>
+				</div>
+			</li>
+			<li class='slide' id='h9'>
+				<img class="bg" src='bg/bike-swerve.gif'>
+				<div class='container'>
+			        <!-- <a href='#g9' class='text prev'><</a> -->
+			        <a href='#h4' class='text next'>^</a>
+			        <p class='center text'>87</p>
+				</div>
+			</li>
+			<li class='slide' id='i9'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#h9' class='text prev'><</a>
+			        <a href='#j9' class='text next'>></a>
+			        <p class='center text'>88</p>
+				</div>
+			</li>
+			<li class='slide' id='j9'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#i9' class='text prev'><</a>
+			        <a href='#k9' class='text next'>></a>
+			        <p class='center text'>89</p>
+				</div>
+			</li>
+		</ul>
+		<ul class='row' id='row10'>
+			<li class='slide' id='a10'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+					<div id="eye1"></div>
+					<div id="eye2"></div>
+					<div id="mouth"></div>
+			        <a href='#a9' class='text prev'><</a>
+			        <a href='#b10' class='text next'>></a>
+			        <p class='center text'>90</p>
+				</div>
+			</li>
+			<li class='slide' id='b10'>
+				<div class='container'>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#a10" class="text prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#e10" class="text prev e10prev"><</a>					
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href="#b10" class="text prev b10prev"><</a>
+					<a href=b#e10" class="text preb e10prev"><</a>
+				</div>
+			</li>
+			<li class='slide' id='c10'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#b10' class='text prev'><</a>
+			        <a href='#d10' class='text next'>></a>
+			        <a href='#c9' class='text up'>^</a>
+			        <p class='center text'>92</p>
+				</div>
+			</li>
+			<li class='slide' id='d10'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#c10' class='text prev'><</a>
+			        <a href='#e10' class='text next'>></a>
+			        <a href='#d9' class='text up'>^</a>
+			        <p class='center text'>93</p>
+				</div>
+			</li>
+			<li class='slide' id='e10'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#d10' class='text prev'><</a>
+			        <a href='#f10' class='text next'>></a>
+			        <a href='#e9' class='text up'>^</a>
+			        <p class='center text'>94</p>
+				</li>
+			<li class='slide' id='f10'>
+				<div class='container'>
+			        <div id="hide1"></div>
+			        <div id="hide2"></div>
+			        <div class='point' id='floater1'>
+			        	<p class='text'>: ^ |</p>
+			        </div>
+			        <div class='point' id='floater2'>
+			        	<p class='text'>: p</p>
+			        </div>
+			        <a href='#e10' class='text prev'><</a>
+			        <a href='#f9' class='text up'>^</a>
+				</div>
+			</li>
+			<li class='slide' id='g10'>
+				<div class='container'>
+					<img class='point' id='ie' src="img2/ie.png">
+					<img id='rock' class='point' src="img2/rock2.png">
+					<img id='bird2' class='point' src="img2/bird.png">
+			        <a href='#f10' class='text prev'><</a>
+				</div>
+			</li>
+			<li class='slide' id='h10'>
+				<div class='container'>
+			        <img id='cloud1' src="img2/cloud-flat.png">
+			        <img id='cloud2' src="img2/cloud-tall.png">
+			        <img id='side-tree' src="img2/side-tree.png">
+			        <img id='tree1' class='point' src="img2/tree1.png">
+			        <img id='tree2' class='point' src="img2/tree2.png">
+			        <img id='tree3' class='point' src="img2/tree3.png">
+			        <img id='bird' class='point flip-h' src="img2/bird.png">
+			        <img id='cloud3' class='point'  src="img2/cloud-light.png">
+			        <a href='#g10' id='h10prev' class='text prev'><</a>
+				</div>
+			</li>
+			<li class='slide' id='i10'>
+				<img class="bg" id='spin3' src='bg/cubetunnel.gif'>
+				<div class='container'>	
+					<a href='#i10' class='text' id='smile1'>:)</a>
+					<a href='#i10' class='text' id='smile2'>:)</a>
+					<a href='#i10' class='text' id='smile3'>:)</a>
+					<a href='#i10' class='text clickRemove' id='smile4'>:)</a>
+					<a href='#i10' class='text clickRemove' id='smile5'>:)</a>
+					<a href='#i10' class='text clickRemove' id='smile6'>:)</a>
+					<a href='#i10' class='text clickRemove' id='smile7'>:)</a>
+					<a href='#i10' class='text clickRemove' id='smile8'>:)</a>
+					<a href='#i10' class='text clickRemove' id='smile9'>:)</a>
+					<a href='#i10' class='text clickRemove' id='smile10'>:)</a>
+					<a href='#i10' class='text clickRemove' id='smile11'>:)</a>
+					<a href='#i10' class='text clickRemove' id='smile12'>:)</a>
+					<a href='#i10' class='text clickRemove' id='smile13'>:)</a>
+					<a href='#h10' class='text prev' id='i10prev'><</a>       
+			        <a href='#i10' class='text prev spin1'><</a>
+			        <a href='#i10' class='text next spin1'>></a>
+
+			        <p class='center text' id='spin2'>?</p>
+				</div>
+			</li>
+			<li class='slide' id='j10'>
+				<img class="bg" src='bg/bike-triangles.gif'>
+				<div class='container'>
+			        <a href='#j2' class='text up'>^</a>
+			        
+			        <p class='center text'>99</p>
+				</div>
+			</li>
+			<li class='slide' id='kkk10'>
+				<img class="bg" src='bg/another-world.gif'>
+				<div class='container'>
+			        <a href='#j10' class='text prev'><</a>
+			        <p class='center text'>100</p>
+				</div>
+			</li>
+		</ul>
+		
+	</div>
+
+	<!-- music -->
+	<audio id='audio'>
+	  <source src="music/andras.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id='ieAudio' >
+	  <source src="speech/ie3.m4a" type="audio/mpeg">
+	  <source src="speech/Welcome.m4a" type="audio/mpeg">
+	</audio>
+
+	<!-- jquery -->
+	<!-- <script src="http://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script> -->
+	<script type="text/javascript" src='js/jquery-3.1.1.js'></script>
+		<!-- float -->
+	<script type='text/javascript' src='js/jqfloat.js'></script> 
+
+	<!-- jquery ui -->
+	<script   src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"   integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="   crossorigin="anonymous"></script>
+	<!-- waypoints -->
+	<script type='text/javascript' src='js/jquery.waypoints.js'></script>
+	<!-- scrollTo -->
+	<script type='text/javascript' src='js/jquery.scrollTo.js'></script>
+	<!-- Load LocalScroll -->
+    <script type='text/javascript' src='js/jquery.localScroll.min.js'></script> 
+	<!-- rotate -->
+	<script type="text/javascript" src='js/jQueryRotate.js'></script>
+	<!-- eye -->
+	<script type="text/javascript" src="js/jqeye.js"></script>
+	<!-- js -->
+	<script type="text/javascript" src='js/js.js'></script>
+</body>
+</html>

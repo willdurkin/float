@@ -188,6 +188,8 @@ $(document).ready(function() {
 		}
 	});
 
+	// g10
+
 	// rock
 
 	var ieFloat = false;
@@ -209,15 +211,19 @@ $(document).ready(function() {
 
 	// ie
 
+	var ieFloat2 = false;
+
 	$ie.click(function() {
-		$('#ie').jqFloat({
-			width: 1000,
-			height: 1000,
-			speed: 5000,
-			minHeight: 125
-		}).css('z-index', 2);
-		$('#ieAudio')[0].play();
-		$('#g10 .prev').delay(1000).fadeIn()
+		if(ieFloat2 === false) {
+			$('#ie').jqFloat({
+				width: 1000,
+				height: 1000,
+				speed: 5000,
+				minHeight: 125
+			}).css('z-index', 2);
+			$('#ieAudio')[0].play();
+			$('#g10 .prev').delay(1000).fadeIn()
+		};
 	});
 
 	var rotation = function (){
@@ -262,25 +268,47 @@ $(document).ready(function() {
 	  }
 	});
 
-	// FLOATERS
+	// f10
 
-	$('#floater1').jqFloat({
-		width: 500,
-		height: 50,
-		speed: 5000
+	var float1Click = 1;
+
+	$('#floater1').click(function() {
+		if(float1Click === 1){
+			$(this)	
+				.animate({'left':'-=300px'}, 'slow')
+				.delay(250)
+				.animate({'top':'-=50px'}, 1200)
+				.prependTo('#content')
+				$('#hide1').fadeOut();
+			float1Click++;
+		// } else if(float1Click === 2) {
+		// 	$('#face1')
+		// 		.addClass('flip-h')
+		// 		.delay(1000)
+		// 		.removeClass('flip-h');
+		// 	
+		// 	console.log(float1Click);
+		// 	float1Click++;
+		} else {
+			$(this).jqFloat({
+				width: 500,
+				height: 500,
+				speed: 5000
+			});
+			$('#floater2').animate({'left':'+=20px'})
+		}
 	});
 
-	$('#floater2').jqFloat({
+	
+
+	$('#floater2').click().jqFloat({
 		width: 800,
 		height: 800,
 		speed: 5000,
 		minHeight: 125
 	});
 
-	$('#floater1').click(function() {
-		$(this).prependTo('#content')
-		$(this).rotate(360);
-	})
+	
 
 	$('#floater2').click(function() {
 		$(this).prependTo('#content')
@@ -322,11 +350,11 @@ $(document).ready(function() {
 
 	// e10
 
-	var $e10prev = $('.e10prev');
+	var $b10prev = $('.b10prev');
 
-	$e10prev.rotate({bind:{
+	$b10prev.rotate({bind:{
 	  click: function(){
-	    $e10prev.rotate({	
+	    $b10prev.rotate({	
 	      duration:6000,
 	      angle: 0,
 	      animateTo:360

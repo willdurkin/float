@@ -108,7 +108,7 @@ a:clicked {
 
 .down {
 	position: absolute;
-	top: 56px;
+	top: 60px;
 	left: 65.5px;
 /*	font-family: 'Catamaran';
 	font-size: 24px;*/
@@ -288,13 +288,13 @@ a:clicked {
 
 /*e10*/
 
-#e10 .container {
+#b10 .container {
 	position: absolute;
 	flex-wrap: wrap;
 	background-color: #00E9DA;
 }
 
-#e10 .prev {
+#b10 .prev {
 	position: relative;
 	flex: 0 1 auto;
 	top: 0;
@@ -304,11 +304,35 @@ a:clicked {
 
 /*f10*/
 
-#floater1 {
-	display: none;
+/*#f10 .container {
+	background-image: url(../img/woods.jpg);
+	background-size: cover;
+}*/
+
+#hide1 {
 	position: absolute;
-	top: 350px;
-	left: 350px;
+	top: 434px;
+	left: 622px;
+	background-image: url(../img2/woods-thumb.png);
+	background-size: cover;
+	height: 200px;
+	width: 200px;
+	z-index: 3;
+}
+
+/*#hide2 {
+	position: absolute;
+	top: 300px;
+	left: 600px;
+	background-color: gray;
+	height: 200px;
+	width: 200px;
+}*/
+
+#floater1 {
+	position: absolute;
+	top: 450px;
+	left: 605px;
 	width: 100px;
 	height: 100px;
 	background-color: #79c1e0;
@@ -349,6 +373,7 @@ a:clicked {
 	width: 100px;
 	height: 100px;
 	z-index: 1;	
+
 }
 
 #bird2 {
