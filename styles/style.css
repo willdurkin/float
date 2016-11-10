@@ -130,6 +130,10 @@ a:clicked {
 	font-size: 20px;
 }
 
+.none {
+	display: none;
+}
+
 #audio {
 	position: absolute;
 	bottom: 0;
@@ -249,7 +253,7 @@ a:clicked {
 
 /*i2*/
 
-#i2 .speech {
+#h2 .speech {
 	top: 65%;
 	left: 65%;
 }
@@ -304,34 +308,9 @@ a:clicked {
 
 /*f10*/
 
-/*#f10 .container {
-	background-image: url(../img/woods.jpg);
-	background-size: cover;
-}*/
-
-#hide1 {
-	position: absolute;
-	top: 434px;
-	left: 622px;
-	background-image: url(../img2/woods-thumb.png);
-	background-size: cover;
-	height: 200px;
-	width: 200px;
-	z-index: 3;
-}
-
-/*#hide2 {
-	position: absolute;
-	top: 300px;
-	left: 600px;
-	background-color: gray;
-	height: 200px;
-	width: 200px;
-}*/
-
 #floater1 {
 	position: absolute;
-	top: 450px;
+	top: 95%;
 	left: 605px;
 	width: 100px;
 	height: 100px;
@@ -346,10 +325,9 @@ a:clicked {
 }
 
 #floater2 {
-	display: none;
 	position: absolute;
-	top: 300px;
-	left: 450px;
+	top: 30%;
+	left: -110px;
 	width: 100px;
 	height: 100px;
 	background-color: #fcd2cf;
@@ -359,11 +337,13 @@ a:clicked {
 }
 
 #floater2 p {
-/*	padding-left: 5px;
-	padding-top: 5px;*/
+	position: absolute;
+	left: 73%;
+	top: 2%;
+	transform: rotate(90deg);
 }
 
-/*g10*/
+/*f10*/
 
 #ie {
 	display: none;
@@ -393,13 +373,13 @@ a:clicked {
 }
 
 
-#g10 .prev {
+#f10 .prev {
 	display:none;
 }
 
-/*h10*/
+/*g10*/
 
-#h10prev {
+#g10prev {
 	display: none;
 }
 
@@ -459,9 +439,9 @@ a:clicked {
 	width: 50px;
 }
 
-/*i10****/
+/*h10*/
 
-#i10 .bg {
+#h10 .bg {
 	-moz-transform: scaleX(-1);
 	     -o-transform: scaleX(-1);
 	     -webkit-transform: scaleX(-1);
@@ -574,9 +554,8 @@ a:clicked {
 
 }
 
-#i10prev {
+#h10prev {
 	display: none;
-
 }
 
 #spin2:hover {
@@ -589,7 +568,7 @@ a:clicked {
 
 /*carl*/
 
-#carl-box {
+/*#carl-box {
 	position: absolute;
 	bottom: 200px;
 	left: 200px;
@@ -611,11 +590,11 @@ a:clicked {
 	width: 200px;
 	border: 1px solid white;
 	z-index: 1;
-}
+}*/
 
 /*car*/
 
-#car {
+/*#car {
 	position: absolute;
 	left: 150px;
 	top: 150px;
@@ -667,4 +646,4 @@ a:clicked {
 	transform: rotate(-25deg);
 	top: -43px !important;
 	left: -9px !important;
-}
+}*/

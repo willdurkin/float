@@ -1,4 +1,7 @@
 $(document).ready(function() {
+	var audio = document.getElementById('audio');
+	audio.autoplay;
+	audio.loop = true;
 	var $ie = $('#ie');
 
 	// WAYPOINTS ////
@@ -55,7 +58,7 @@ $(document).ready(function() {
 
 	bounce("#start");
 
-	var $i10prev = $('#i10prev')
+	var $h10prev = $('#h10prev')
 
 	$('.spin1').on('click', function() {
 		var spinners = document.getElementsByClassName('spin1');
@@ -129,7 +132,7 @@ $(document).ready(function() {
 		smileCount ++;
 		console.log(smileCount);
 		if (smileCount === 10) {
-			$('#i10prev').delay(1000).fadeIn(400);
+			$('#h10prev').delay(1000).fadeIn(400);
 		}
 	})
 
@@ -203,8 +206,8 @@ $(document).ready(function() {
 				.animate({'top':'+=80px'}, 'fast')
 				.animate({'left':'-=1500px'}, 'fast')
 				.animate({'left':'+=1350px'}, 'fast')
-				.effect( "bounce", { distance: 15, times: 3})
 				.prependTo('#content')
+				.effect( "bounce", { distance: 15, times: 3})
 			ieFloat = true;
 		} 
 	});
@@ -216,7 +219,7 @@ $(document).ready(function() {
 	$ie.click(function() {
 		if(ieFloat2 === false) {
 			$('#ie').jqFloat({
-				width: 1000,
+				width: 1500,
 				height: 1000,
 				speed: 5000,
 				minHeight: 125
@@ -275,9 +278,10 @@ $(document).ready(function() {
 	$('#floater1').click(function() {
 		if(float1Click === 1){
 			$(this)	
-				.animate({'left':'-=300px'}, 'slow')
-				.delay(250)
-				.animate({'top':'-=50px'}, 1200)
+				.animate({'top':'-=2%'}, 'slow')
+				.delay(500)
+				.animate({'top':'-=55%'},'fast')
+				.animate({'left':'-=100px'}, 300)
 				.prependTo('#content')
 				$('#hide1').fadeOut();
 			float1Click++;
@@ -295,24 +299,36 @@ $(document).ready(function() {
 				height: 500,
 				speed: 5000
 			});
-			$('#floater2').animate({'left':'+=20px'})
+			$('#floater2').delay(1000).animate({'left':'+=39px'}, 1000)
 		}
 	});
 
-	
-
-	$('#floater2').click().jqFloat({
-		width: 800,
-		height: 800,
-		speed: 5000,
-		minHeight: 125
-	});
-
-	
+	var float2Click = 1;
 
 	$('#floater2').click(function() {
-		$(this).prependTo('#content')
-	})
+		if(float2Click === 1){
+			$(this)	
+				.animate({'left':'+=50%'}, 1200, 'linear')
+				.animate({'top':'+=10%'},'slow')
+				.animate({'left':'-=5%'},'slow')
+				.prependTo('#content')
+			float2Click++;
+		// } else if(float1Click === 2) {
+		// 	$('#face1')
+		// 		.addClass('flip-h')
+		// 		.delay(1000)
+		// 		.removeClass('flip-h');
+		// 	
+		// 	console.log(float1Click);
+		// 	float1Click++;
+		} else {
+			$(this).jqFloat({
+				width: 800,
+				height: 800,
+				speed: 5000
+			});
+		}
+	});
 
 	// car
 
@@ -363,9 +379,7 @@ $(document).ready(function() {
 	  }
 	});
 
-	var audio = document.getElementById('audio');
-	audio.autoplay;
-	audio.loop = true;
+	
 	
 	// bounce('#welcome');
 
