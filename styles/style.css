@@ -348,8 +348,8 @@ a:clicked {
 #ie {
 	display: none;
 	position: absolute;
-	top: 450px;
-	left: 470px;
+	top: 550px;
+	left: 615px;
 	width: 100px;
 	height: 100px;
 	z-index: 1;	
@@ -358,16 +358,17 @@ a:clicked {
 
 #bird2 {
 	position: absolute;
-	top: 412px;
-	left: 435px;
+	top: 277px;
+	left: 615px;
 	width: 50px;
 	z-index: 2;
 }
 
 #rock {
+	display: none;
 	position: absolute;
-	top: 432px;
-	left: 359px;
+	top: 405px;
+	left: 390px;
 	width: 300px; 
 	z-index: 1;
 }
