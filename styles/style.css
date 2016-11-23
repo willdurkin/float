@@ -60,6 +60,9 @@ html, body {
 	width: 100vw;
 }
 
+.none {
+	display: none;
+}
 
 .text {
 	color: white;
@@ -73,12 +76,13 @@ html, body {
 .speech {
 	color: white;
 	font-family: sans-serif;
+	font-style: italic;
 	font-size: 20px;
 	text-shadow: 2px 2px #333333;
 	text-decoration: none;
 	z-index: 1;
 	font-style: italic;
-	position: absolute;
+	
 }
 
 .content a {
@@ -128,10 +132,6 @@ a:clicked {
 	/*font-family: 'Catamaran';
 	font-size: 24px;*/
 	font-size: 20px;
-}
-
-.none {
-	display: none;
 }
 
 #audio {
@@ -251,9 +251,10 @@ a:clicked {
 	/*background-position-y: 40%;*/ 
 }
 
-/*i2*/
+/*22*/
 
 #h2 .speech {
+	position: absolute;
 	top: 65%;
 	left: 65%;
 }
@@ -288,6 +289,26 @@ a:clicked {
 	background-color: black;
 	top: 500px;
 	left: 350px;
+}
+
+/*d10*/
+
+#d10prev2{
+	position: absolute;
+	top: 80%;
+	left: 5%;
+}
+
+#d10prev3{
+	position: absolute;
+	top: 10%;
+	left: 90%;
+}
+
+#d10prev4{
+	position: absolute;
+	top: 60%;
+	left: 60%;
 }
 
 /*e10*/

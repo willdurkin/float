@@ -40,7 +40,7 @@ $(document).ready(function() {
         $.localScroll({
             target: '#content', // could be a selector or a jQuery object too.
             queue:true,
-            duration:1200,
+            duration:2000,
             hash:true,
             onBefore:function( e, anchor, $target ){
                     // The 'this' is the settings object, can be modified
@@ -51,6 +51,8 @@ $(document).ready(function() {
         });
 	});
 
+	// bounce
+
 	function bounce(id) {
 	    setInterval(function() {
 	    	$(id).effect( "bounce", { distance: 5, times: 2 }, id, 100)
@@ -58,6 +60,14 @@ $(document).ready(function() {
 	};
 
 	bounce("#start");
+
+	// welcome
+
+	$('#welcome').click(function(){
+		$('#welcomeAudio')[0].play();
+	})
+
+	// cubetunnel
 
 	var $h10prev = $('#h10prev')
 
@@ -132,7 +142,8 @@ $(document).ready(function() {
 		$(this).fadeOut();
 		smileCount ++;
 		console.log(smileCount);
-		if (smileCount === 10) {
+		if (smileCount === 4) {
+			$('.clickRemove').delay(1000).fadeOut(400);
 			$('#h10prev').delay(1000).fadeIn(400);
 		}
 	})
@@ -155,15 +166,13 @@ $(document).ready(function() {
 
 	$('#tree3').click(function() {
 		$(this).effect( "bounce", { distance: 15, times: 3})
-	});
-
+	})
 	$('#cloud3').click(function() {
 		$(this)
 		.css('pointer-events', 'none')
-		.animate({'left':'+=25px'}, 1000, 'linear')
 		.animate({'top':'+=25px'}, 1000, 'linear')
-		.animate({'left':'+=500px'}, 3500, 'swing')
-		.animate({'top':'+=50px'}, 2000, 'linear')
+		.animate({'left':'+=500px'}, 4000, 'linear')
+		.animate({'top':'+=150px'}, 4000, 'linear')
 		.animate({'left':'+=2000px'}, 25000, 'linear')
 		.fadeOut(3000);
 	});
@@ -172,6 +181,28 @@ $(document).ready(function() {
 		width: 500,
 		height: 10,
 		speed: 20000
+	});
+
+	$('#cloud1').rotate({bind:{
+	  click: function(){
+	    $(this).rotate({	
+	      duration:2000,
+	      angle: 0,
+	      animateTo:180
+	      })
+	    }
+	  }
+	});
+
+	$('#cloud2').rotate({bind:{
+	  click: function(){
+	    $(this).rotate({	
+	      duration:2000,
+	      angle: 0,
+	      animateTo:360
+	      })
+	    }
+	  }
 	});
 
 	$('#cloud2').jqFloat({
@@ -317,7 +348,7 @@ $(document).ready(function() {
 	$('#floater2').click(function() {
 		if(float2Click === 1){
 			$(this)	
-				.animate({'left':'+=40%'}, 1200, 'linear')
+				.animate({'left':'+=45%'}, 1200, 'linear')
 				.prependTo('#content')
 			float2Click++;
 		// } else if(float1Click === 2) {
@@ -334,24 +365,9 @@ $(document).ready(function() {
 				height: 800,
 				speed: 5000
 			});
+			$('#e10prev').delay(1000).fadeIn(400);
 		}
 	});
-
-	// car
-
-	// $('#car').mouseenter(function(){
-	// 	console.log('open');
-	// 	$('#box1').addClass('open');
-	// })
-	// $('#car').mouseleave(function(){
-	// 	$('#box1').removeClass('open');
-	// })
-	
-	// $('#car').jqFloat({
-	// 	width: 3000,
-	// 	height: 30,
-	// 	speed: 2000,
-	// });
 
 	// Rotate ////////////
 
@@ -370,8 +386,24 @@ $(document).ready(function() {
 		$(id).fadeOut(400);
 	}
 	
+	// d10
 
-	// e10
+	function d10prevLoop() {
+		$('#d10prev1').fadeOut(400);
+		$('#d10prev2').delay(1000).fadeIn(600).delay(500).fadeOut(600);
+		$('#d10prev3').delay(3000).fadeIn(600).delay(500).fadeOut(600);
+		$('#d10prev1').delay(5000).fadeIn(600).delay(500).fadeOut(600);
+		$('#d10prev4').delay(8000).fadeIn(600).delay(500).fadeOut(600);
+		
+		d10prevLoop();
+	}
+
+	$('#d10prev1').click(function(){
+		d10prevLoop();
+	});
+
+
+	// b10
 
 	var $b10prev = $('.b10prev');
 
@@ -386,14 +418,21 @@ $(document).ready(function() {
 	  }
 	});
 
-	
-	
-	// bounce('#welcome');
+	// car
 
-	$('#welcome').click(function(){
-		$('#welcomeAudio')[0].play();
-		// $('#i2 div .down').delay(1000).fadeIn(400);
-	})
+	// $('#car').mouseenter(function(){
+	// 	console.log('open');
+	// 	$('#box1').addClass('open');
+	// })
+	// $('#car').mouseleave(function(){
+	// 	$('#box1').removeClass('open');
+	// })
+	
+	// $('#car').jqFloat({
+	// 	width: 3000,
+	// 	height: 30,
+	// 	speed: 2000,
+	// });
 
 	// CARL ///////
 
