@@ -291,9 +291,9 @@ a:clicked {
 	left: 50%;
 }
 
-/*a10*/
+/*a9*/
 
-#a10 .bg-h {
+#a9 .bg-h {
 	height: 100vh;
 	overflow: hidden;
 	position: absolute;
@@ -308,39 +308,7 @@ a:clicked {
 	-moz-border-radius: 50%;
 	-webkit-border-radius: 50%;
 	border-radius: 50%;
-	background-color: green;
 }
-
-/*#eye1 {
-	position: absolute;
-	height: 150px;
-	width: 150px;
-	border-radius: 2px;
-	background-color: black;
-	top: 200px;
-	left: 350px;
-}
-
-#eye2 {
-	position: absolute;
-	height: 150px;
-	width: 150px;
-	border-radius: 2px;
-	background-color: black;
-	top: 200px;
-	left: 200px;
-}
-
-#mouth {
-	position: absolute;
-	height: 150px;
-	width: 600px;
-	border-radius: 2px;
-	background-color: black;
-	top: 500px;
-	left: 350px;
-}*/
-
 
 /*b10*/
 
@@ -400,7 +368,6 @@ a:clicked {
 	width: 100px;
 	height: 100px;
 	background-color: #79c1e0;
-	z-index: 1;
 	border-radius: 3px;
 	box-shadow: 6px 6px 6px #0b8def;
 }
@@ -416,7 +383,6 @@ a:clicked {
 	width: 100px;
 	height: 100px;
 	background-color: #fcd2cf;
-	z-index: 1;
 	border-radius: 3px;
 	box-shadow: 6px 6px 6px #0b8def;
 }
@@ -436,7 +402,6 @@ a:clicked {
 	left: 38%;
 	width: 100px;
 	height: 100px;
-	z-index: 1;	
 
 }
 

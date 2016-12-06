@@ -240,6 +240,7 @@ $(document).ready(function() {
 	var $ie = $('#ie');
 	var ieFloat = true;
 	var ieFloat2 = false;
+	var ieSpin = false;
 
 	var rotation = function (){
 	  $("#ie").rotate({
@@ -253,39 +254,34 @@ $(document).ready(function() {
 	  });
 	}
 
-	$ie.click(function() {
-		if(ieFloat) {
-			$ie
-				.animate({'left':'+=6%'}, 4000)
-				.animate({'top':'+=39%'}, 100)
-				.delay(400)
-				.animate({'left':'-=150%'}, 200)
-				.animate({'left':'+=500%'}, 700)
-				.animate({'top':'-=250%'}, 500)
-				.animate({'left':'-=352%'}, 200)
-				.animate({'top':'+=250%'}, 10000)
-				.prependTo('#content')
-				.effect( "bounce", { distance: 15, times: 3})
-			ieFloat = false;
-			ieFloat2 = true;
-		} else if(ieFloat2){
-			$('#ie').jqFloat({
-				width: 1000,
-				height: 1000,
-				speed: 5000,
-			})
-			ieFloat2 = false;
-		}
-	});
-
-	var ieSpin = false;
-
 	$("#ie").rotate({
 	  bind:
 	  {
 	    click : function() {
+	    	if(ieFloat) {
+	    		$ie
+	    			.animate({'left':'+=6%'}, 4000)
+	    			.animate({'top':'+=39%'}, 100)
+	    			.delay(400)
+	    			.animate({'left':'-=150%'}, 200)
+	    			.animate({'left':'+=500%'}, 700)
+	    			.animate({'top':'-=250%'}, 500)
+	    			.animate({'left':'-=352%'}, 200)
+	    			.animate({'top':'+=250%'}, 1000)
+	    			.appendTo('#content')
+	    			.effect( "bounce", { distance: 15, times: 3})
+	    		ieFloat = false;
+	    		ieFloat2 = true;
+	    	} else if(ieFloat2){
+	    		$('#ie').jqFloat({
+	    			width: 1000,
+	    			height: 1000,
+	    			speed: 5000,
+	    		})
+	    		ieFloat2 = false;
+	    	}
+			
 			if(ieSpin === false) {
-				$('#ieAudio')[0].play();  
 			    $(this).rotate({
 			    	animateTo:360,
 			    	duration:3000,
@@ -296,7 +292,7 @@ $(document).ready(function() {
 			    	}
 			    })
 			   	ieSpin = true;
-			} else {
+			} else if(ieSpin === true) {
 				console.log('else')
 				$(this).stopRotate();
 				$(this).rotate({
@@ -355,9 +351,9 @@ $(document).ready(function() {
 			$(this)	
 				.animate({'top':'-=2%'}, 'slow')
 				.delay(500)
-				.animate({'top':'-=55%'},'fast')
+				.animate({'top':'-=25%'},'fast')
 				.animate({'left':'-=100px'}, 300)
-				.prependTo('#content')
+				.appendTo('#content')
 				$('#hide1').fadeOut();
 			float1Click++;
 		// } else if(float1Click === 2) {
@@ -388,7 +384,7 @@ $(document).ready(function() {
 		if(float2Click === 1){
 			$(this)	
 				.animate({'left':'+=15%'}, 1200, 'linear')
-				.prependTo('#content')
+				.appendTo('#content')
 			float2Click++;
 		// } else if(float1Click === 2) {
 		// 	$('#face1')
@@ -551,6 +547,11 @@ $(document).ready(function() {
 			carlID += 1;
 			return carlLines[carlID];
 		})
+	})
+
+	$('#b10prev').click(function(){
+		$('#floater1').appendTo('#carl-button');
+		$('#floater2').appendTo('#carl-button');
 	})
 
 	$('#sun-button').click(function(){
