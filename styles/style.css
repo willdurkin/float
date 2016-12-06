@@ -76,8 +76,8 @@ html, body {
 .speech {
 	color: white;
 	font-family: sans-serif;
-	font-style: italic;
 	font-size: 20px;
+	letter-spacing: 1px;
 	text-shadow: 2px 2px #333333;
 	text-decoration: none;
 	z-index: 1;
@@ -251,7 +251,7 @@ a:clicked {
 	/*background-position-y: 40%;*/ 
 }
 
-/*22*/
+/*h2*/
 
 #h2 .speech {
 	position: absolute;
@@ -259,9 +259,59 @@ a:clicked {
 	left: 65%;
 }
 
+/*d9*/
+
+#d10prev2 {
+	position: absolute;
+	top: 80%;
+	left: 5%;
+}
+
+#dprev3 {
+	position: absolute;
+	top: 5%;
+	left: 90%;
+}
+
+#d10prev4 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+#d10prev5 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+#d10prev5 {
+	position: absolute;
+	top: 5%;
+	left: 50%;
+}
+
 /*a10*/
 
-#eye1 {
+#a10 .bg-h {
+	height: 100vh;
+	overflow: hidden;
+	position: absolute;
+}
+
+#sun-button {
+	width: 400px;
+	height: 400px;
+	position: absolute;
+	top: 28%;
+	left: 20%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	background-color: green;
+}
+
+/*#eye1 {
 	position: absolute;
 	height: 150px;
 	width: 150px;
@@ -289,37 +339,44 @@ a:clicked {
 	background-color: black;
 	top: 500px;
 	left: 350px;
+}*/
+
+
+/*b10*/
+
+#b10 .container {
+	display: block;
+}
+
+#carl-box {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: 20%;
+	left: 44%;
+	text-align: center;
+}
+
+#carl-button {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: 43%;
+	left: 44%;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
 }
 
 /*d10*/
 
-#d10prev2{
-	position: absolute;
-	top: 80%;
-	left: 5%;
-}
-
-#d10prev3{
-	position: absolute;
-	top: 10%;
-	left: 90%;
-}
-
-#d10prev4{
-	position: absolute;
-	top: 60%;
-	left: 60%;
-}
-
-/*e10*/
-
-#b10 .container {
+#d10 .container {
 	position: absolute;
 	flex-wrap: wrap;
 	background-color: #00E9DA;
 }
 
-#b10 .prev {
+#d10 .prev {
 	position: relative;
 	flex: 0 1 auto;
 	top: 0;
@@ -327,7 +384,14 @@ a:clicked {
 	margin: 20px;	
 }
 
-/*f10*/
+#d10special2 {
+	position: absolute;
+	left: 49.5%;
+	top: 49.5%;
+	font-size: 22px;
+}
+
+/*e10*/
 
 #floater1 {
 	position: absolute;
@@ -347,7 +411,7 @@ a:clicked {
 
 #floater2 {
 	position: absolute;
-	top: 30%;
+	top: 40%;
 	left: -110px;
 	width: 100px;
 	height: 100px;
@@ -367,20 +431,26 @@ a:clicked {
 /*f10*/
 
 #ie {
-	display: none;
 	position: absolute;
-	top: 550px;
-	left: 615px;
+	top: 5%;
+	left: 38%;
 	width: 100px;
 	height: 100px;
 	z-index: 1;	
 
 }
 
+#side-tree2 {
+	position: absolute;
+	top: 20px;
+	left: -50px;
+	width: 400px;
+}
+
 #bird2 {
 	position: absolute;
-	top: 277px;
-	left: 615px;
+	top: 212px;
+	left: 247px;
 	width: 50px;
 	z-index: 2;
 }
@@ -421,9 +491,9 @@ a:clicked {
 
 #cloud3 {
 	position: absolute;
-	top: 150px;
-	left: -800px;
-	width: 1500px;
+	top: -20px;
+	left: -1200px;
+	height: 1000px;
 }
 
 #side-tree {

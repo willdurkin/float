@@ -5,6 +5,10 @@ $(document).ready(function() {
 	// audio.autoplay;
 	audio.loop = true;
 
+	var audioArray = [
+
+	]
+
 	// WAYPOINTS ////
 
 	// var $i10wp = $('#i10wp');
@@ -30,7 +34,7 @@ $(document).ready(function() {
         $.localScroll.hash({
             target: '#content', // Could be a selector or a jQuery object too.
             queue:true,
-            duration:1200,
+            duration:1000,
         });
         
         /**
@@ -40,7 +44,7 @@ $(document).ready(function() {
         $.localScroll({
             target: '#content', // could be a selector or a jQuery object too.
             queue:true,
-            duration:2000,
+            duration:1500,
             hash:true,
             onBefore:function( e, anchor, $target ){
                     // The 'this' is the settings object, can be modified
@@ -170,9 +174,9 @@ $(document).ready(function() {
 	$('#cloud3').click(function() {
 		$(this)
 		.css('pointer-events', 'none')
-		.animate({'top':'+=25px'}, 1000, 'linear')
-		.animate({'left':'+=500px'}, 4000, 'linear')
-		.animate({'top':'+=150px'}, 4000, 'linear')
+		// .animate({'top':'+=25px'}, 1000, 'linear')
+		// .animate({'left':'+=500px'}, 4000, 'linear')
+		// .animate({'top':'+=150px'}, 4000, 'linear')
 		.animate({'left':'+=2000px'}, 25000, 'linear')
 		.fadeOut(3000);
 	});
@@ -183,15 +187,20 @@ $(document).ready(function() {
 		speed: 20000
 	});
 
+	var cloudFlip = false;
+
 	$('#cloud1').rotate({bind:{
-	  click: function(){
-	    $(this).rotate({	
-	      duration:2000,
-	      angle: 0,
-	      animateTo:180
-	      })
-	    }
-	  }
+		click: function(){
+	  		if(cloudFlip === false){
+		  		$(this).rotate({	
+		  		  duration:2000,
+		  		  angle: 0,
+		  		  animateTo:180
+		  		})	
+		  	cloudFlip = true;
+	  		}
+	  	}
+	}
 	});
 
 	$('#cloud2').rotate({bind:{
@@ -211,7 +220,7 @@ $(document).ready(function() {
 		speed: 17000
 	});
 
-// g10
+// f10
 
 	// rock
 	
@@ -220,6 +229,8 @@ $(document).ready(function() {
 	$('#bird2').click(function() {
 		if(birdClick === 4) {
 			$(this).toggleClass('flip-h').animate({'left':'+=1000px'}).fadeOut();
+			$('#f10prev').fadeIn(400);
+			bounce('#f10prev');
 		} else {
 			$(this).toggleClass('flip-h');
 			birdClick++;	
@@ -227,42 +238,8 @@ $(document).ready(function() {
 	});
 
 	var $ie = $('#ie');
-
-	var ieFloat = false;
-
-	$('#rock').click(function() {
-		if(ieFloat === false) {
-			$('#ie')
-				.css('display', 'block')
-				.animate({'top':'-=300px'}, 'fast')
-				.animate({'left':'+=150px'}, 'fast')
-				.animate({'top':'+=80px'}, 'fast')
-				.animate({'left':'-=1500px'}, 'fast')
-				.animate({'left':'+=1350px'}, 'fast')
-				.prependTo('#content')
-				.effect( "bounce", { distance: 15, times: 3})
-			ieFloat = true;
-		} 
-	});
-
-	// ie
-
+	var ieFloat = true;
 	var ieFloat2 = false;
-
-	$ie.click(function() {
-		if(ieFloat2 === false) {
-			$('#ie').jqFloat({
-				width: 1500,
-				height: 1000,
-				speed: 5000,
-				minHeight: 125
-			}).css('z-index', 2);
-			var $f10prev = $('#f10 .prev')
-			$f10prev.delay(1000).fadeIn();
-			bounce($f10prev);
-			ieFloat2 = true;
-		};
-	});
 
 	var rotation = function (){
 	  $("#ie").rotate({
@@ -275,6 +252,71 @@ $(document).ready(function() {
 	    }
 	  });
 	}
+
+	$ie.click(function() {
+		if(ieFloat) {
+			$ie
+				.animate({'left':'+=6%'}, 4000)
+				.animate({'top':'+=39%'}, 100)
+				.delay(400)
+				.animate({'left':'-=150%'}, 200)
+				.animate({'left':'+=500%'}, 700)
+				.animate({'top':'-=250%'}, 500)
+				.animate({'left':'-=352%'}, 200)
+				.animate({'top':'+=250%'}, 10000)
+				.prependTo('#content')
+				.effect( "bounce", { distance: 15, times: 3})
+			ieFloat = false;
+			ieFloat2 = true;
+		} else if(ieFloat2){
+			$('#ie').jqFloat({
+				width: 1000,
+				height: 1000,
+				speed: 5000,
+			})
+			ieFloat2 = false;
+		} else {
+
+		}
+	});
+
+	// ie
+
+	
+
+	// $ie.click(function() {
+	// 	if(ieFloat2 === false) {
+	// 		$ie.rotate({
+	//   bind:
+	//   {
+	//     click : function() {
+	// 		if(ieSpin === false) {
+	// 			$('#ieAudio')[0].play();  
+	// 		    $(this).rotate({
+	// 		    	animateTo:360,
+	// 		    	duration:3000,
+	// 		    	callback: rotation,
+	// 		    	easing: function (x,t,b,c,d){        
+	// 		    	// t: current time, b: begInnIng value, c: change In value, d: duration
+	// 		    	  return c*(t/d)+b;
+	// 		    	}
+	// 		    })
+	// 		   	ieSpin = true;
+	// 		} else {
+	// 			console.log('else')
+	// 			$(this).stopRotate();
+	// 			$(this).rotate({
+	// 				animate: 0
+	// 			});
+	// 			ieSpin = false;
+	// 		}
+	// 	}
+	//   }
+	// });
+	// 	};
+	// });
+
+	
 
 	var ieSpin = false;
 
@@ -294,7 +336,7 @@ $(document).ready(function() {
 			    	}
 			    })
 			   	ieSpin = true;
-			} else {
+			} else if(ieSpin === true) {
 				console.log('else')
 				$(this).stopRotate();
 				$(this).rotate({
@@ -337,7 +379,7 @@ $(document).ready(function() {
 				speed: 5000
 			});
 			if(float2Out === false){
-				$('#floater2').delay(1000).animate({'left':'+=39px'}, 1000);
+				$('#floater2').delay(3000).animate({'left':'+=39px'}, 1000);
 				float2Out =true;
 			}
 		}
@@ -346,9 +388,10 @@ $(document).ready(function() {
 	var float2Click = 1;
 
 	$('#floater2').click(function() {
+		$('#floater2Audio')[0].play(); 
 		if(float2Click === 1){
 			$(this)	
-				.animate({'left':'+=45%'}, 1200, 'linear')
+				.animate({'left':'+=15%'}, 1200, 'linear')
 				.prependTo('#content')
 			float2Click++;
 		// } else if(float1Click === 2) {
@@ -359,13 +402,13 @@ $(document).ready(function() {
 		// 	
 		// 	console.log(float1Click);
 		// 	float1Click++;
-		} else {
+		} else if(float2Click === 2) {
 			$(this).jqFloat({
 				width: 800,
 				height: 800,
 				speed: 5000
 			});
-			$('#e10prev').delay(1000).fadeIn(400);
+			$('#e10prev').delay(2000).fadeIn(400);
 		}
 	});
 
@@ -388,28 +431,34 @@ $(document).ready(function() {
 	
 	// d10
 
-	function d10prevLoop() {
-		$('#d10prev1').fadeOut(400);
-		$('#d10prev2').delay(1000).fadeIn(600).delay(500).fadeOut(600);
-		$('#d10prev3').delay(3000).fadeIn(600).delay(500).fadeOut(600);
-		$('#d10prev1').delay(5000).fadeIn(600).delay(500).fadeOut(600);
-		$('#d10prev4').delay(8000).fadeIn(600).delay(500).fadeOut(600);
-		
-		d10prevLoop();
-	}
+	// var d10array = [
+	// 	$('#d10prev2').delay(1000).fadeIn(400).fadeOut(400),
+	// 	$('#d10prev3').delay(3000).fadeIn(600).fadeOut(400),
+	// 	$('#d10prev1').delay(5000).fadeIn(600).fadeOut(400),
+	// 	$('#d10prev4').delay(6000).fadeIn(600).fadeOut(400),
+	// 	$('#d10prev5').delay(10000).fadeIn(600).fadeOut(400),
+	// 	$('#d10prev6').delay(12000).fadeIn(600).fadeOut(400),		
+	// ]
 
-	$('#d10prev1').click(function(){
-		d10prevLoop();
-	});
+	// function d10Loop(array) {
+	// 	for (i = 0; i < array.length; i++) {
+	// 	    array_of_functions[i]();
+	// 	}
+	// }
+
+	// $('#d10prev1').click(function(){
+	// 	$(this).fadeOut(400);
+	// 	d10prevLoop(d10array);
+	// });
 
 
 	// b10
 
-	var $b10prev = $('.b10prev');
+	var $d10prev = $('.d10prev');
 
-	$b10prev.rotate({bind:{
+	$d10prev.rotate({bind:{
 	  click: function(){
-	    $b10prev.rotate({	
+	    $d10prev.rotate({	
 	      duration:6000,
 	      angle: 0,
 	      animateTo:360
@@ -417,6 +466,53 @@ $(document).ready(function() {
 	    }
 	  }
 	});
+
+	var $d10special = $('#d10special');
+	var $d10special2 = $('#d10special2');
+
+	$d10special.click(function(){
+		$d10prev.fadeOut(2000);
+		$d10special.effect( "bounce", { distance: 7, times: 3}).fadeOut(2000);
+		$d10special2.delay(2500).fadeIn(2000)
+
+	})
+
+	// var d10up = true;
+
+	// $d10special2.click(function(){
+	// 	if (d10up) {
+	// 		$d10special2.rotate({
+	// 			duration:4000,
+	// 			animateTo:90
+	// 		});
+	// 		$d10special2.setAttribute('href', '#d9');
+	// 		d10up = false;
+	// 		console.log(d10up);
+	// 	}
+	// })
+
+	// var d10Count = 0;
+
+	// $d10special.bind({
+ //  		click: function(){
+	//   		if(d10Count === 0){	
+	//   			$d10special.rotate({	
+	// 	  		    duration:3000,
+	// 	  		    animateTo:90
+	//   		  	});
+	//   		  	$d10prev.fadeOut(3000);
+	//   		  	d10Count += 1;
+	//   		} else if(d10Count === 1){
+	//   			$d10prev.fadeOut(2000);
+	//   			// $d10prev.rotate({
+	//   			// 	duration:1080);
+	//   			$d10special.fadeOut(2000);
+	//   			d10Count += 1;
+	//   		}
+ //  		}
+	// });
+
+	
 
 	// car
 
@@ -437,24 +533,43 @@ $(document).ready(function() {
 	// CARL ///////
 
 	var carlLines = [
-		'Hi',
-		"It's nice to see you",
-		'Bye' 
+		"#",
+		'Who are you?',
+		'Where are you going?',
+		'What do you seek?',
+		'Ah... I see',
+		'Good luck' 
 	];
 
 	var carlLinesLength = carlLines.length;
-	var carlId
+	var carlID = 0;
+
+	$('#carl-button').click(function() {
+		if (carlID === 5) {
+			$('#carl-box').fadeOut(3000);
+			$('#b10prev').fadeIn(400);
+			bounce('#b10prev');
+		}
+		console.log('carl');
+		$('#carl-box').text(function() {
+			carlID += 1;
+			return carlLines[carlID];
+		})
+	})
+
+	$('#sun-button').click(function(){
+		$('#a10up').fadeIn(400);
+		bounce('#a10up');
+	})
+});
 
 	// $('#carl-button').click(function() {
 	// 	console.log('carl');
-	// 	var carlID = 0
 	// 	$('#carl-box').text(function() {
-	// 		return carlLines[carlID];
-	// 		carlID++;
-			
+	// 		$('carl-box').html('<p>' + carlLines[carlID] + '</p>');
+	// 		carlID += 1;
 	// 	})
 	// })
-});
 
 
 
