@@ -275,9 +275,37 @@ $(document).ready(function() {
 				speed: 5000,
 			})
 			ieFloat2 = false;
-		} else {
-
 		}
+	});
+
+	var ieSpin = false;
+
+	$("#ie").rotate({
+	  bind:
+	  {
+	    click : function() {
+			if(ieSpin === false) {
+				$('#ieAudio')[0].play();  
+			    $(this).rotate({
+			    	animateTo:360,
+			    	duration:3000,
+			    	callback: rotation,
+			    	easing: function (x,t,b,c,d){        
+			    	// t: current time, b: begInnIng value, c: change In value, d: duration
+			    	  return c*(t/d)+b;
+			    	}
+			    })
+			   	ieSpin = true;
+			} else {
+				console.log('else')
+				$(this).stopRotate();
+				$(this).rotate({
+					animate: 0
+				});
+				ieSpin = false;
+			}
+		}
+	  }
 	});
 
 	// ie
@@ -315,38 +343,6 @@ $(document).ready(function() {
 	// });
 	// 	};
 	// });
-
-	
-
-	var ieSpin = false;
-
-	$("#ie").rotate({
-	  bind:
-	  {
-	    click : function() {
-			if(ieSpin === false) {
-				$('#ieAudio')[0].play();  
-			    $(this).rotate({
-			    	animateTo:360,
-			    	duration:3000,
-			    	callback: rotation,
-			    	easing: function (x,t,b,c,d){        
-			    	// t: current time, b: begInnIng value, c: change In value, d: duration
-			    	  return c*(t/d)+b;
-			    	}
-			    })
-			   	ieSpin = true;
-			} else if(ieSpin === true) {
-				console.log('else')
-				$(this).stopRotate();
-				$(this).rotate({
-					animate: 0
-				});
-				ieSpin = false;
-			}
-		}
-	  }
-	});
 
 	// f10
 
