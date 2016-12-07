@@ -1,5 +1,11 @@
 $(document).ready(function() {
 
+	// unveil
+
+	$("img").unveil(200);
+
+	// music
+
 	var audio = document.getElementById('audio');
 	
 	// audio.autoplay;
@@ -146,7 +152,8 @@ $(document).ready(function() {
 		$(this).fadeOut();
 		smileCount ++;
 		console.log(smileCount);
-		if (smileCount === 4) {
+		if (smileCount === 5) {
+			$('.clickRemove').effect( "bounce", { distance: 15, times: 3});
 			$('.clickRemove').delay(1000).fadeOut(400);
 			$('#h10prev').delay(1000).fadeIn(400);
 		}
@@ -228,7 +235,7 @@ $(document).ready(function() {
 
 	$('#bird2').click(function() {
 		if(birdClick === 4) {
-			$(this).toggleClass('flip-h').animate({'left':'+=1000px'}).fadeOut();
+			$(this).toggleClass('flip-h').animate({'left':'+=400px'}).fadeOut();
 			$('#f10prev').fadeIn(400);
 			bounce('#f10prev');
 		} else {
@@ -261,13 +268,9 @@ $(document).ready(function() {
 	    	if(ieFloat) {
 	    		$ie
 	    			.animate({'left':'+=6%'}, 4000)
-	    			.animate({'top':'+=39%'}, 100)
-	    			.delay(400)
-	    			.animate({'left':'-=150%'}, 200)
-	    			.animate({'left':'+=500%'}, 700)
-	    			.animate({'top':'-=250%'}, 500)
-	    			.animate({'left':'-=352%'}, 200)
-	    			.animate({'top':'+=250%'}, 1000)
+	    			.animate({'top':'+=200%'}, 700)
+	    			.animate({'top':'-=170%'}, 1000)
+	    			.animate({'left':'-=15%'}, 200)
 	    			.appendTo('#content')
 	    			.effect( "bounce", { distance: 15, times: 3})
 	    		ieFloat = false;
@@ -351,8 +354,8 @@ $(document).ready(function() {
 			$(this)	
 				.animate({'top':'-=2%'}, 'slow')
 				.delay(500)
-				.animate({'top':'-=25%'},'fast')
-				.animate({'left':'-=100px'}, 300)
+				.animate({'top':'-=65%'},'fast')
+				.animate({'left':'-=15%'}, 300)
 				.appendTo('#content')
 				$('#hide1').fadeOut();
 			float1Click++;
@@ -383,7 +386,8 @@ $(document).ready(function() {
 		$('#floater2Audio')[0].play(); 
 		if(float2Click === 1){
 			$(this)	
-				.animate({'left':'+=15%'}, 1200, 'linear')
+				.animate({'left':'+=65%'}, 1200, 'linear')
+				.animate({'top':'+=10%'}, 500, 'linear')
 				.appendTo('#content')
 			float2Click++;
 		// } else if(float1Click === 2) {
@@ -526,38 +530,46 @@ $(document).ready(function() {
 
 	var carlLines = [
 		"#",
-		'Who are you?',
-		'Where are you going?',
-		'What do you seek?',
-		'Ah... I see',
-		'Good luck' 
+		'<p class="speech">Who are you</p>',
+		'<p class="speech">You... should not be here</p>',
+		'<p class="speech">He will find you</p>',
+		'<p class="speech">...</p>',
+		'<p class="speech">..</p>',
+		'<p class="speech">...</p>',
+		'<p class="speech">..</p>',
+		'<p class="speech">...</p>',
+		'<p class="speech">..</p>',
+		'<p class="speech">Very well...</p>',
+		'<p class="speech">I will show you the way</p>',
+		'<p class="speech">Now go</p>',
 	];
 
 	var carlLinesLength = carlLines.length;
 	var carlID = 0;
 
 	$('#carl-button').click(function() {
-		if (carlID === 5) {
+		if (carlID === 11) {
 			$('#carl-box').fadeOut(3000);
-			$('#b10prev').fadeIn(400);
-			bounce('#b10prev');
+			$('#a10up').fadeIn(400);
+			bounce('#a10up');
 		}
 		console.log('carl');
 		$('#carl-box').text(function() {
 			carlID += 1;
-			return carlLines[carlID];
+			$('#carl-box').html(carlLines[carlID]);
 		})
 	})
 
-	$('#b10prev').click(function(){
+	$('#a10up').click(function(){
 		$('#floater1').appendTo('#carl-button');
 		$('#floater2').appendTo('#carl-button');
 	})
 
-	$('#sun-button').click(function(){
-		$('#a10up').fadeIn(400);
-		bounce('#a10up');
+	$('#laughter').click(function(){
+		$('#laughterAudio')[0].play(); 
 	})
+
+	console.log('hi');
 });
 
 	// $('#carl-button').click(function() {
@@ -570,7 +582,6 @@ $(document).ready(function() {
 
 
 
-console.log('hi');
 
 // var waypoint = new Waypoint({
 //   element: document.getElementById('i10'),
