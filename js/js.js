@@ -6,10 +6,10 @@ $(document).ready(function() {
 
 	// music
 
-	var audio = document.getElementById('audio');
+	var andras1Audio = document.getElementById('andras1Audio');
 	
 	// audio.autoplay;
-	audio.loop = true;
+	andras1Audio.loop = true;
 
 	var audioArray = [
 
@@ -228,14 +228,12 @@ $(document).ready(function() {
 	});
 
 // f10
-
-	// rock
 	
 	var birdClick = 0;
 
 	$('#bird2').click(function() {
 		if(birdClick === 4) {
-			$(this).toggleClass('flip-h').animate({'left':'+=400px'}).fadeOut();
+			$(this).toggleClass('flip-h').animate({'left':'+=200%'}, 1000).fadeOut();
 			$('#f10prev').fadeIn(400);
 			bounce('#f10prev');
 		} else {
@@ -243,6 +241,15 @@ $(document).ready(function() {
 			birdClick++;	
 		}
 	});
+
+
+	$('#f10prev').click(function(){
+		console.log('stop');
+		andras1Audio.pause();
+		andras2Audio.play();
+	})
+
+	// ie
 
 	var $ie = $('#ie');
 	var ieFloat = true;
@@ -343,7 +350,7 @@ $(document).ready(function() {
 	// 	};
 	// });
 
-	// f10
+	// e10
 
 	var float1Click = 1;
 	var float2Out = false;
@@ -473,6 +480,10 @@ $(document).ready(function() {
 
 	})
 
+	$('#c4prev').click(function(){
+		$ie.appendTo('#c4');
+	})
+
 	// var d10up = true;
 
 	// $d10special2.click(function(){
@@ -526,6 +537,11 @@ $(document).ready(function() {
 	// 	speed: 2000,
 	// });
 
+	$('#c10prev').click(function(){
+		$('#floater1').appendTo('#c10');
+		$('#floater2').appendTo('#c10');
+	})
+
 	// CARL ///////
 
 	var carlLines = [
@@ -560,9 +576,10 @@ $(document).ready(function() {
 		})
 	})
 
+	
 	$('#a10up').click(function(){
-		$('#floater1').appendTo('#carl-button');
-		$('#floater2').appendTo('#carl-button');
+		andras2Audio.pause();
+		dreamaticAudio.play();
 	})
 
 	$('#laughter').click(function(){
