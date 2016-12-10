@@ -4,26 +4,10 @@ $(document).ready(function() {
 
 	$("img").unveil(200);
 
-	// music
+	// music //
 
-	var andras1Audio = document.getElementById('andras1Audio');
-	
-	// audio.autoplay;
-	andras1Audio.loop = true;
 
-	var audioArray = [
-
-	]
-
-	// WAYPOINTS ////
-
-	// var $i10wp = $('#i10wp');
-
-	// $i10wp.waypoint(function() {
-	// 	console.log('waypoint!');
-	// })
-
-	// LocalScroll /////////////////
+	// LocalScroll //
 	
 	jQuery(function( $ ){
         /**
@@ -34,7 +18,7 @@ $(document).ready(function() {
         
         // The default axis is 'y', but in this demo, I want to scroll both
         // You can modify any default like this
-        $.localScroll.defaults.axis = 'xy';
+        $.localScroll.defaults.axis = 'yx';
         
         // Scroll initially if there's a hash (.something) in the url 
         $.localScroll.hash({
@@ -94,6 +78,7 @@ $(document).ready(function() {
 			animateTo: 90000,
 			duration:4000000,
 		});
+		$('#spin2').fadeIn(4500);
 	});
 
 	$('#spin2').on('click', function() {
@@ -249,109 +234,7 @@ $(document).ready(function() {
 		andras2Audio.play();
 	})
 
-	// ie
-
-	var $ie = $('#ie');
-	var ieFloat = true;
-	var ieFloat2 = false;
-	var ieSpin = false;
-
-	var rotation = function (){
-	  $("#ie").rotate({
-	    angle:0,
-	    animateTo:360,
-	    duration:3000,
-	    callback: rotation,
-	    easing: function (x,t,b,c,d){        // t: current time, b: begInnIng value, c: change In value, d: duration
-	      return c*(t/d)+b;
-	    }
-	  });
-	}
-
-	$("#ie").rotate({
-	  bind:
-	  {
-	    click : function() {
-	    	if(ieFloat) {
-	    		$ie
-	    			.animate({'left':'+=6%'}, 4000)
-	    			.animate({'top':'+=200%'}, 700)
-	    			.animate({'top':'-=170%'}, 1000)
-	    			.animate({'left':'-=15%'}, 200)
-	    			.appendTo('#content')
-	    			.effect( "bounce", { distance: 15, times: 3})
-	    		ieFloat = false;
-	    		ieFloat2 = true;
-	    	} else if(ieFloat2){
-	    		$('#ie').jqFloat({
-	    			width: 1000,
-	    			height: 1000,
-	    			speed: 5000,
-	    		})
-	    		ieFloat2 = false;
-	    	}
-			
-			if(ieSpin === false) {
-			    $(this).rotate({
-			    	animateTo:360,
-			    	duration:3000,
-			    	callback: rotation,
-			    	easing: function (x,t,b,c,d){        
-			    	// t: current time, b: begInnIng value, c: change In value, d: duration
-			    	  return c*(t/d)+b;
-			    	}
-			    })
-			   	ieSpin = true;
-			} else if(ieSpin === true) {
-				console.log('else')
-				$(this).stopRotate();
-				$(this).rotate({
-					animate: 0
-				});
-				ieSpin = false;
-			}
-		}
-	  }
-	});
-
-	// ie
-
 	
-
-	// $ie.click(function() {
-	// 	if(ieFloat2 === false) {
-	// 		$ie.rotate({
-	//   bind:
-	//   {
-	//     click : function() {
-	// 		if(ieSpin === false) {
-	// 			$('#ieAudio')[0].play();  
-	// 		    $(this).rotate({
-	// 		    	animateTo:360,
-	// 		    	duration:3000,
-	// 		    	callback: rotation,
-	// 		    	easing: function (x,t,b,c,d){        
-	// 		    	// t: current time, b: begInnIng value, c: change In value, d: duration
-	// 		    	  return c*(t/d)+b;
-	// 		    	}
-	// 		    })
-	// 		   	ieSpin = true;
-	// 		} else {
-	// 			console.log('else')
-	// 			$(this).stopRotate();
-	// 			$(this).rotate({
-	// 				animate: 0
-	// 			});
-	// 			ieSpin = false;
-	// 		}
-	// 	}
-	//   }
-	// });
-	// 	};
-	// });
-
-	// e10
-
 	var float1Click = 1;
 	var float2Out = false;
 
@@ -415,7 +298,6 @@ $(document).ready(function() {
 		}
 	});
 
-	// Rotate ////////////
 
 	$("#floater2").rotate({bind:{
 	  click: function(){
@@ -434,41 +316,21 @@ $(document).ready(function() {
 	
 	// d10
 
-	// var d10array = [
-	// 	$('#d10prev2').delay(1000).fadeIn(400).fadeOut(400),
-	// 	$('#d10prev3').delay(3000).fadeIn(600).fadeOut(400),
-	// 	$('#d10prev1').delay(5000).fadeIn(600).fadeOut(400),
-	// 	$('#d10prev4').delay(6000).fadeIn(600).fadeOut(400),
-	// 	$('#d10prev5').delay(10000).fadeIn(600).fadeOut(400),
-	// 	$('#d10prev6').delay(12000).fadeIn(600).fadeOut(400),		
-	// ]
-
-	// function d10Loop(array) {
-	// 	for (i = 0; i < array.length; i++) {
-	// 	    array_of_functions[i]();
-	// 	}
-	// }
-
-	// $('#d10prev1').click(function(){
-	// 	$(this).fadeOut(400);
-	// 	d10prevLoop(d10array);
-	// });
-
-
-	// b10
-
 	var $d10prev = $('.d10prev');
 
-	$d10prev.rotate({bind:{
-	  click: function(){
-	    $d10prev.rotate({	
-	      duration:6000,
-	      angle: 0,
-	      animateTo:360
-	      })
-	    }
-	  }
-	});
+	var d10count = 0;
+
+	$d10prev.on('click', function() {
+		$d10prev.rotate({
+			angle: 0,
+			animateTo: 360,
+			duration: 6000,
+		});
+		d10count+=1;
+		if(d10count === 5) {
+			alert('Which one is different?');
+		}
+	})
 
 	var $d10special = $('#d10special');
 	var $d10special2 = $('#d10special2');
@@ -480,69 +342,93 @@ $(document).ready(function() {
 
 	})
 
+	
+	// ie
+
+	var $ie = $('#ie');
+	var ieFloat = true;
+	var ieFloat2 = false;
+	var ieSpin = true;
+	var c10prev = true;
+
+	var rotation = function (){
+	  $("#ie").rotate({
+	    angle:0,
+	    animateTo:360,
+	    duration:3000,
+	    callback: rotation,
+	    easing: function (x,t,b,c,d){        // t: current time, b: begInnIng value, c: change In value, d: duration
+	      return c*(t/d)+b;
+	    }
+	  });
+	}
+
+	rotation();
+
+	$("#ie").rotate({
+	  bind:
+	  {
+	    click : function() {
+	    	if(ieFloat) {
+	    		$ie
+	    			.animate({'left':'+=65%'}, 4000)
+	    			.animate({'top':'+=200%'}, 400)
+	    			.delay(400)
+	    			.animate({'top':'-=170%'}, 300)
+	    			.appendTo('#content')
+	    			.effect( "bounce", { distance: 15, times: 3})
+	    		ieFloat = false;
+	    		ieFloat2 = true;
+	    	} else if(ieFloat2){
+	    		$('#ie').jqFloat({
+	    			width: 1000,
+	    			height: 1000,
+	    			speed: 5000,
+	    		})
+	    		ieFloat2 = false;
+	    		$('#c2prev').delay(1000).fadeIn(400);
+	    		bounce('#c2prev');
+	    	}
+			
+			if(ieSpin === false) {
+			    $(this).rotate({
+			    	animateTo:360,
+			    	duration:3000,
+			    	callback: rotation,
+			    	easing: function (x,t,b,c,d){        
+			    	// t: current time, b: begInnIng value, c: change In value, d: duration
+			    	  return c*(t/d)+b;
+			    	}
+			    })
+			   	ieSpin = true;
+			} else if(ieSpin === true) {
+				console.log('else')
+				
+				$(this).stopRotate();
+				$(this).rotate({
+					animate: 0
+				});
+				ieSpin = false;
+			}
+		}
+	  }
+	});
+
+	// c4 //
+
 	$('#c4prev').click(function(){
 		$ie.appendTo('#c4');
 	})
 
-	// var d10up = true;
 
-	// $d10special2.click(function(){
-	// 	if (d10up) {
-	// 		$d10special2.rotate({
-	// 			duration:4000,
-	// 			animateTo:90
-	// 		});
-	// 		$d10special2.setAttribute('href', '#d9');
-	// 		d10up = false;
-	// 		console.log(d10up);
-	// 	}
-	// })
-
-	// var d10Count = 0;
-
-	// $d10special.bind({
- //  		click: function(){
-	//   		if(d10Count === 0){	
-	//   			$d10special.rotate({	
-	// 	  		    duration:3000,
-	// 	  		    animateTo:90
-	//   		  	});
-	//   		  	$d10prev.fadeOut(3000);
-	//   		  	d10Count += 1;
-	//   		} else if(d10Count === 1){
-	//   			$d10prev.fadeOut(2000);
-	//   			// $d10prev.rotate({
-	//   			// 	duration:1080);
-	//   			$d10special.fadeOut(2000);
-	//   			d10Count += 1;
-	//   		}
- //  		}
-	// });
-
-	
-
-	// car
-
-	// $('#car').mouseenter(function(){
-	// 	console.log('open');
-	// 	$('#box1').addClass('open');
-	// })
-	// $('#car').mouseleave(function(){
-	// 	$('#box1').removeClass('open');
-	// })
-	
-	// $('#car').jqFloat({
-	// 	width: 3000,
-	// 	height: 30,
-	// 	speed: 2000,
-	// });
+	// c10 //
 
 	$('#c10prev').click(function(){
 		$('#floater1').appendTo('#c10');
 		$('#floater2').appendTo('#c10');
 	})
 
-	// CARL ///////
+	// CARL //
 
 	var carlLines = [
 		"#",
@@ -579,6 +465,7 @@ $(document).ready(function() {
 	
 	$('#a10up').click(function(){
 		andras2Audio.pause();
+		andras1Audio.pause();
 		dreamaticAudio.play();
 	})
 
@@ -609,3 +496,18 @@ $(document).ready(function() {
 //   offset: '5%'
 // })
 
+// car
+
+	// $('#car').mouseenter(function(){
+	// 	console.log('open');
+	// 	$('#box1').addClass('open');
+	// })
+	// $('#car').mouseleave(function(){
+	// 	$('#box1').removeClass('open');
+	// })
+	
+	// $('#car').jqFloat({
+	// 	width: 3000,
+	// 	height: 30,
+	// 	speed: 2000,
+	// });
