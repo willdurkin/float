@@ -227,10 +227,11 @@ $(document).ready(function() {
 		}
 	});
 
+		$andras1Audio = $('#andras1Audio');
 
 	$('#f10prev').click(function(){
 		console.log('stop');
-		andras1Audio.pause();
+		$andras1Audio.animate({volume: 0}, 1000);;
 		andras2Audio.play();
 	})
 
@@ -462,7 +463,6 @@ $(document).ready(function() {
 		})
 	})
 
-	
 	$('#a10up').click(function(){
 		andras2Audio.pause();
 		andras1Audio.pause();
