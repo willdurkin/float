@@ -38,7 +38,6 @@ html, body {
 .slide {
 	width: 100vw;
 	height: 100vh;
-	/*margin-right: 40px;*/
 	position: relative;
 	overflow: hidden;
 	
@@ -237,8 +236,27 @@ a:clicked {
 /*Slide h1***/
 
 
-/*h2*/
+/*a5*/
 
+#form-container {
+	
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+#form {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+#laughter {
+	height: 40px;
+	width: 300px;
+	margin-top: 49%;
+	margin-left: auto;
+}
 
 /*d9*/
 
@@ -315,6 +333,13 @@ a:clicked {
 	-moz-border-radius: 50px;
 	-webkit-border-radius: 50px;
 	border-radius: 50px;
+}
+
+/*c10*/
+
+#water-div {
+	height: 100px;
+	width: 100px;
 }
 
 /*d10*/
