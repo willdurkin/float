@@ -10,6 +10,37 @@
     <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Catamaran" rel="stylesheet">
 </head>
 <body>
+
+	<audio id='andras1Audio' autoplay>
+	  <source src="music/andras.mp3" type="audio/mpeg">
+	</audio>
+
+		<!-- jquery -->
+
+		<!-- <script src="http://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script> -->
+
+		<script type="text/javascript" src='js/jquery-3.1.1.js'></script>
+			<!-- float -->
+		<script type='text/javascript' src='js/jqfloat.js'></script> 
+
+		<!-- jquery ui -->
+		<script   src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"   integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="   crossorigin="anonymous"></script>
+		<!-- waypoints -->
+		<script type='text/javascript' src='js/jquery.waypoints.js'></script>
+		<!-- scrollTo -->
+		<script type='text/javascript' src='js/jquery.scrollTo.js'></script>
+		<!-- Load LocalScroll -->
+	    <script type='text/javascript' src='js/jquery.localScroll.min.js'></script> 
+		<!-- rotate -->
+		<script type="text/javascript" src='js/jQueryRotate.js'></script>
+		<!-- eye -->
+		<script type="text/javascript" src="js/jqeye.js"></script>
+		<!-- unveil -->
+		<script type="text/javascript" src='js/jquery.unveil.js'></script>
+		<!-- js -->
+		<script type="text/javascript" src='js/js.js'></script>
+
+
 	<!-- slides -->
 	<div id='content'>
 			
@@ -95,19 +126,19 @@
 		</ul>
 		<ul class='row' id='row2'>
 			<li class='slide' id='a2'>
-				<img class="bg" src='img/twister-yellow.gif'>
+				<img class="bg" src='bg/twister-yellow.gif'>
 				<div class='container'>
 			        <a href='#b3' class='text down'>^</a>
 				</div>
 			</li>
 			<li class='slide' id='b2'>
-				<img class="bg flip-h" src='img/cloud-field.gif'>
+				<img class="bg flip-h" src='bg/cloud-field.gif'>
 				<div class='container'>
 			        <a href='#a2' class='text prev'><</a>
 				</div>
 			</li>
 			<li class='slide' id='c2'>
-				<img class="bg" src='img/cloud-above.gif'>
+				<img class="bg" src='bg/cloud-above.gif'>
 				<div class='container'>
 					<img class='point' id='ie' src="img2/ie.png">
 			        <a href='#b2' class='text prev none' id='c2prev'><</a>
@@ -158,26 +189,27 @@
 			<li class='slide' id='j2'>
 				<img class="bg" src='bg/effigy.gif'>
 				<div class='container'>
-			       <p class='center speech point' id='laughter'>Hello again</p>
+			       
 				</div>
 			</li>
 		</ul>
 		<ul class='row' id='row3'>
 			<li class='slide' id='a3'>
-				<img class="bg" src='img/another-world.gif'>
+				<img class="bg" src='bg/another-world.gif'>
 				<div class='container'>
+					<a href='#b3' class='text next'>></a>
 				</div>
 			</li>
 			<li class='slide' id='b3'>
-				<img class="bg" src='img/twister-bw2.gif'>
+				<img class="bg" src='bg/twister-bw2.gif'>
 				<div class='container'>
 			        <a href='#c3' class='text next'>></a>
 				</div>
 			</li>
 			<li class='slide' id='c3'>
-				<img class="bg flip-h" src='img/twister-bw.jpg'>
+				<img class="bg flip-h" src='bg/twister-bw.jpg'>
 				<div class='container'>
-			        <a href='#c10' class='text down'>^</a>
+			        <a href='#c10' class='text down' id='c3prev'>^</a>
 				</div>
 			</li>
 			<li class='slide' id='d3'>
@@ -298,7 +330,16 @@
 			<li class='slide' id='a5'>
 				<img class="bg" src='bg/effigy.gif'>
 				<div class='container'>
-			    	<p class='center speech point' id='laughter'>Hello again</p>
+			    	<p class='speech point' id='laughter'>Hello again</p>
+			    	<div id="form-container">
+				    	<h2>End of Part 1</h2>
+				    	<h3>Stay tuned:</h3>
+				    	<form id='form' method="POST" action="http://formspree.io/willdurkin@gmail.com">
+				    	  <input type="email" name="email" placeholder="your email">
+				    	  <textarea name="message" placeholder="say whatever you like'"></textarea>
+				    	  <button type="submit">ok</button>
+				    	</form>
+			    	</div>
 				</div>
 			</li>
 			<li class='slide' id='b5'>
@@ -310,13 +351,13 @@
 				</div>
 			</li>
 			<li class='slide' id='c5'>
-				<img class="bg" src='img/hexatunnel.gif'>
+				<img class="bg" src='bg/another-world.gif'>
 				<div class='container'>
 			        <a href='#c10' class='text down'>^</a>
 				</div>
 			</li>
 			<li class='slide' id='d5'>
-				<img class="bg" src='bg/bike-girl-kaneda.gif'>
+				<img class="bg" src='bg/another-world.gif'>
 				<div class='container'>
 			        <a href='#c5' class='text prev'><</a>
 			        <a href='#e5' class='text next'>></a>
@@ -324,7 +365,7 @@
 				</div>
 			</li>
 			<li class='slide' id='e5'>
-				<img class="bg" src='bg/bike-girl.gif'>
+				<img class="bg" src='bg/another-world.gif'>
 				<div class='container'>
 			        <a href='#d5' class='text prev'><</a>
 			        <a href='#f5' class='text next'>></a>
@@ -332,7 +373,7 @@
 				</div>
 			</li>
 			<li class='slide' id='f5'>
-				<img class="bg " src='img/bike-swerve.gif'>
+				<img class="bg " src='bg/another-world.gif'>
 				<div class='container'>
 			        <a href='#e5' class='text prev'><</a>
 			        <a href='#g5' class='text next'>></a>
@@ -340,7 +381,7 @@
 				</div>
 			</li>
 			<li class='slide' id='g5'>
-				<img class="bg" src='bg/bike-trash.gif'>
+				<img class="bg" src='bg/another-world.gif'>
 				<div class='container'>
 			        <a href='#f5' class='text prev'><</a>
 			        <<!-- a href='#h5' class='text next'>></a> -->
@@ -348,7 +389,7 @@
 				</div>
 			</li>
 			<li class='slide' id='h5'>
-				<img class="bg" src='bg/bike-swerve.gif'>
+				<img class="bg" src='bg/another-world.gif'>
 				<div class='container'>
 			        <a href='#g5' class='text prev'><</a>
 			        <!-- <a href='#i5' class='text next'>></a> -->
@@ -364,7 +405,7 @@
 				</div>
 			</li>
 			<li class='slide' id='j5'>
-				<img class="bg" src='bg/city-rain-umbrella.gif'>
+				<img class="bg" src='bg/another-world.gif'>
 				<div class='container'>
 			        <a href='#i5' class='text prev'><</a>
 			        <a href='#k5' class='text next'>></a>
@@ -446,7 +487,7 @@
 				</div>
 			</li>
 			<li class='slide' id='j6'>
-				<img class="bg" src='bg/akira.gif'>
+				<img class="bg" src='bg/another-world.gif'>
 				<div class='container'>
 					<a href='#j5' class='text up'>^</a>
 			        <a href='#k6' class='text next'>></a>
@@ -543,9 +584,8 @@
 		</ul>
 		<ul class='row' id='row8'>
 			<li class='slide' id='a8'>
-				<img class="bg" src='bg/effigy.gif'>
+				<img class="bg" src='bg/another-world.gif'>
 				<div class='container'>
-			        <p class='center speech point' id='laughter'>Hello again</p>
 				</div>
 			</li>
 			<li class='slide' id='b8'>
@@ -555,29 +595,28 @@
 				</div>
 			</li>
 			<li class='slide' id='c8'>
-				<img class="bg" src='bg/eye.gif'>
+				<img class="bg" src='bg/another-world.gif'>
 				<div class='container'>
 			        <a href='#b8' class='text prev'><</a>
 			        <a href='#d8' class='text next'>></a>
 				</div>
 			</li>
 			<li class='slide' id='d8'>
-				<img class="bg" src='bg/bike-girl-kaneda.gif'>
+				<img class="bg" src='bg/another-world.gif'>
 				<div class='container'>
 			        <a href='#c8' class='text prev'><</a>
 			        <a href='#e8' class='text next'>></a>
 				</div>
 			</li>
 			<li class='slide' id='e8'>
-				<img class="bg" src='bg/bike-girl.gif'>
+				<img class="bg" src='bg/another-world.gif'>
 				<div class='container'>
-					<p class="center speech">Son of a bitch</p>
 			        <a href='#d8' class='text prev'><</a>
 			        <a href='#f8' class='text next'>></a>
 				</div>
 			</li>
 			<li class='slide' id='f8'>
-				<img class="bg" src='bg/bike-trash.gif'>
+				<img class="bg" src='bg/another-world.gif'>
 				<div class='container'>
 			        <a href='#e8' class='text prev'><</a>
 				</div>
@@ -617,7 +656,7 @@
 		</ul>
 		<ul class='row' id='row9'>
 			<li class='slide' id='a9'>
-				<img class="bg-h" src='img/lawrence-sun.gif'>
+				<img class="bg-h" src='bg/lawrence-sun.gif'>
 				<div class='container'>
 			        <a href='#j9'><div class='point' id="sun-button">
 			        </div></a>
@@ -683,7 +722,7 @@
 		</ul>
 		<ul class='row' id='row10'>
 			<li class='slide' id='a10'>
-				<img class="bg" src='img/lawrence-black.gif'>
+				<img class="bg" src='bg/lawrence-black.gif'>
 				<div class='container'>
 					<div id="carl-box">
 						<p id="carl-speech"></p>
@@ -694,14 +733,14 @@
 				</div>
 			</li>
 			<li class='slide' id='b10'>
-				<img class="bg flip-h" src='img/lawrence-dune.gif'>
+				<img class="bg flip-h" src='bg/lawrence-dune.gif'>
 				<div class='container'>
 			        <a href='#a10' class='text prev'><</a>
 			        <a href='#c10' class='text next'>></a>
 				</div>
 			</li>
 			<li class='slide' id='c10'>
-				<img class="bg" src='img/waves.gif'>
+				<img class="bg" src='bg/waves.gif'>
 				<div class='container'>
 			        <a href='#b10' class='text prev' id='c10prev'><</a>
 				</div>
@@ -1206,11 +1245,10 @@
 		        	<a href="#d10" class="text prev d10prev"><</a>
 		        	<a href="#d10" class="text prev d10prev"><</a>
 		        </div> 
-				</li>
+			</li>
 			<li class='slide' id='e10'>
-				<img class="bg" src='img/woods.jpg'>
+				<img class="bg" src='img/snow-white.gif'>
 				<div class='container'>
-			        <!-- <div id="hide1"></div> -->
 			        <div id="hide2"></div>
 			        <div class='point' id='floater2'>
 			        	<p class='text' id='face2'>: p</p>
@@ -1290,9 +1328,7 @@
 	</div>
 
 	<!-- music -->
-	<audio id='andras1Audio' autoplay>
-	  <source src="music/andras.mp3" type="audio/mpeg">
-	</audio>
+	
 
 	<audio id='andras2Audio' >
 	  <source src="music/driftwood.mp3" type="audio/mpeg">
@@ -1324,27 +1360,6 @@
 		<source src="speech/laughter.m4a" type="">
 	</audio>	
 
-	<!-- jquery -->
-	<!-- <script src="http://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script> -->
-	<script type="text/javascript" src='js/jquery-3.1.1.js'></script>
-		<!-- float -->
-	<script type='text/javascript' src='js/jqfloat.js'></script> 
-
-	<!-- jquery ui -->
-	<script   src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"   integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="   crossorigin="anonymous"></script>
-	<!-- waypoints -->
-	<script type='text/javascript' src='js/jquery.waypoints.js'></script>
-	<!-- scrollTo -->
-	<script type='text/javascript' src='js/jquery.scrollTo.js'></script>
-	<!-- Load LocalScroll -->
-    <script type='text/javascript' src='js/jquery.localScroll.min.js'></script> 
-	<!-- rotate -->
-	<script type="text/javascript" src='js/jQueryRotate.js'></script>
-	<!-- eye -->
-	<script type="text/javascript" src="js/jqeye.js"></script>
-	<!-- unveil -->
-	<script type="text/javascript" src='js/jquery.unveil.js'></script>
-	<!-- js -->
-	<script type="text/javascript" src='js/js.js'></script>
+	
 </body>
 </html>

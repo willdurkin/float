@@ -227,7 +227,7 @@ $(document).ready(function() {
 		}
 	});
 
-		$andras1Audio = $('#andras1Audio');
+	$andras1Audio = $('#andras1Audio');
 
 	$('#f10prev').click(function(){
 		console.log('stop');
@@ -235,13 +235,18 @@ $(document).ready(function() {
 		andras2Audio.play();
 	})
 
+// floaters //
 	
-	var float1Click = 1;
+	var float1Click = true;
+	var float1Go = true;
 	var float2Out = false;
 
-	$('#floater1').click(function() {
+
+	var $floater1 = $('#floater1');
+
+	$floater1.click(function() {
 		$('#floater1Audio')[0].play();  
-		if(float1Click === 1){
+		if(float1Click){
 			$(this)	
 				.animate({'top':'-=2%'}, 'slow')
 				.delay(500)
@@ -249,53 +254,50 @@ $(document).ready(function() {
 				.animate({'left':'-=15%'}, 300)
 				.appendTo('#content')
 				$('#hide1').fadeOut();
-			float1Click++;
-		// } else if(float1Click === 2) {
-		// 	$('#face1')
-		// 		.addClass('flip-h')
-		// 		.delay(1000)
-		// 		.removeClass('flip-h');
-		// 	
-		// 	console.log(float1Click);
-		// 	float1Click++;
-		} else {
+			float1Click = false;
+		} else if(float1Go) {
 			$(this).jqFloat({
 				width: 500,
 				height: 500,
 				speed: 5000
 			});
+			float1Go = false;
 			if(float2Out === false){
 				$('#floater2').delay(3000).animate({'left':'+=39px'}, 1000);
 				float2Out =true;
 			}
+		} else if(float1Go === false) {
+			console.log(float1Go);
+			$floater1.stop();
+			$floater1.draggable();
+			float1Go = true;
 		}
 	});
 
+	var $floater2 = $('#floater2')
 	var float2Click = 1;
+	var float2Go = true;
 
-	$('#floater2').click(function() {
+	$floater2.click(function() {
 		$('#floater2Audio')[0].play(); 
 		if(float2Click === 1){
 			$(this)	
 				.animate({'left':'+=65%'}, 1200, 'linear')
-				.animate({'top':'+=10%'}, 500, 'linear')
 				.appendTo('#content')
 			float2Click++;
-		// } else if(float1Click === 2) {
-		// 	$('#face1')
-		// 		.addClass('flip-h')
-		// 		.delay(1000)
-		// 		.removeClass('flip-h');
-		// 	
-		// 	console.log(float1Click);
-		// 	float1Click++;
-		} else if(float2Click === 2) {
+		} else if(float2Go) {
 			$(this).jqFloat({
 				width: 800,
 				height: 800,
 				speed: 5000
 			});
+			$('#floater2').draggable();
 			$('#e10prev').delay(2000).fadeIn(400);
+			float2Go = false;
+		} else if(float2Go === false) {
+			$floater2.stop();
+			$floater2.draggable();
+			float2Go = true;
 		}
 	});
 
@@ -372,7 +374,7 @@ $(document).ready(function() {
 	    click : function() {
 	    	if(ieFloat) {
 	    		$ie
-	    			.animate({'left':'+=65%'}, 4000)
+	    			.animate({'left':'+=65%'}, 500)
 	    			.animate({'top':'+=200%'}, 400)
 	    			.delay(400)
 	    			.animate({'top':'-=170%'}, 300)
@@ -412,13 +414,13 @@ $(document).ready(function() {
 				ieSpin = false;
 			}
 		}
-	  }
+	}
 	});
 
 	// c4 //
 
-	$('#c4prev').click(function(){
-		$ie.appendTo('#c4');
+	$('#c3prev').click(function(){
+		$ie.appendTo('#c3');
 	})
 
 
@@ -436,6 +438,9 @@ $(document).ready(function() {
 		'<p class="speech">Who are you</p>',
 		'<p class="speech">You... should not be here</p>',
 		'<p class="speech">He will find you</p>',
+		'<p class="speech">He...</p>',
+		'<p class="speech">...</p>',
+		'<p class="speech">probably knows I\'m talking to you now</p>',
 		'<p class="speech">...</p>',
 		'<p class="speech">..</p>',
 		'<p class="speech">...</p>',
@@ -451,7 +456,7 @@ $(document).ready(function() {
 	var carlID = 0;
 
 	$('#carl-button').click(function() {
-		if (carlID === 11) {
+		if (carlID === 14) {
 			$('#carl-box').fadeOut(3000);
 			$('#a10up').fadeIn(400);
 			bounce('#a10up');
@@ -463,14 +468,17 @@ $(document).ready(function() {
 		})
 	})
 
+	var $andras2Audio = $('#andras2Audio');
+
 	$('#a10up').click(function(){
-		andras2Audio.pause();
-		andras1Audio.pause();
+		$andras1Audio.animate({volume: 0}, 1000);;
+		$andras2Audio.animate({volume: 0}, 1000);;
 		dreamaticAudio.play();
 	})
 
 	$('#laughter').click(function(){
 		$('#laughterAudio')[0].play(); 
+		console.log('laugh');
 	})
 
 	console.log('hi');
