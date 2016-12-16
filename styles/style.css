@@ -204,7 +204,8 @@ a:clicked {
 	letter-spacing: 2px;
 	margin: auto;
 	padding-bottom: 95px;
-	
+	width: 250px;
+	text-align: center;
 }
 
 #start {
@@ -238,24 +239,74 @@ a:clicked {
 
 /*a5*/
 
+#a5 .container {
+	display: block;
+}
+
+#laughter {
+	height: 40px;
+	width: 300px;
+	margin: 360px auto;
+	margin-bottom: 200px;
+	text-align: center;
+}
+
 #form-container {
-	
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
+}
+
+#form-container h2 {
+	font-size: 24px;
+	text-shadow: 2px 2px #333333;
+	font-family: 'Bungee Inline', cursive;
+	color: white;
+	margin-bottom: 20px;
+	align-self: center;
+}
+
+#form-container h3 {
+	font-size: 16px;
+	text-shadow: 2px 2px #333333;
+	font-family: sans-serif;
+	color: white;
+	margin-bottom: 10px;
+	align-self: center;
+	font-style: italic;
 }
 
 #form {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
+	align-self: center;
+	width: 500px;
 }
 
-#laughter {
+#form input {
+	height: 30px;
+	margin-bottom: 15px;
+	text-align: center;
+	background: none;
+	border-radius: 3px;
+	border: 1px dotted white;
+	color:  white;
+}
+
+#form button {
+	width: 200px;
 	height: 40px;
-	width: 300px;
-	margin-top: 49%;
-	margin-left: auto;
+	margin-left: 29.5%;
+	background: none;
+	border-radius: 3px;
+	border: 1px dotted white;
+	color:  white;
+}
+
+#form button:hover {
+	background: white;
+	color: black;
 }
 
 /*d9*/
