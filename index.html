@@ -10,35 +10,96 @@
     <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Catamaran" rel="stylesheet">
 </head>
 <body>
-
+	
 	<audio id='andras1Audio'>
-	  <source src="music/andras.mp3" type="audio/mpeg">
+	  <source id='trackLoad' src="music/andras.mp3" type="audio/mpeg">
 	</audio>
 
-		<!-- jquery -->
+	<div class="loader">
+		<p class="text">Loading...</p>
+		<div class="loader-icon">
+			<svg xmlns="http://www.w3.org/2000/svg" 
+			   width="80px" height="60px"
+			   viewBox="5 0 80 60">
+			  <path id="wave" 
+			      fill="none" 
+			      stroke="#262626" 
+			      stroke-width="4"
+			      stroke-linecap="round">
+			  </path>
+			</svg>
 
-		<!-- <script src="http://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script> -->
+			<script type="text/javascript">
+				var ankleSnap = document.getElementById('andras1Audio')
+				ankleSnap.load();
+				ankleSnap.play();
+				const path = document.querySelector('#wave');
+				const animation = document.querySelector('#moveTheWave');
+				const m = 0.512286623256592433;
 
-		<script type="text/javascript" src='js/jquery-3.1.1.js'></script>
-			<!-- float -->
-		<script type='text/javascript' src='js/jqfloat.js'></script> 
+				function buildWave(w, h) {
+				  
+				  const a = h / 4;
+				  const y = h / 2;
+				  
+				  const pathData = [
+				    'M', w * 0, y + a / 2, 
+				    'c', 
+				      a * m, 0,
+				      -(1 - a) * m, -a, 
+				      a, -a,
+				    's', 
+				      -(1 - a) * m, a,
+				      a, a,
+				    's', 
+				      -(1 - a) * m, -a,
+				      a, -a,
+				    's', 
+				      -(1 - a) * m, a,
+				      a, a,
+				    's', 
+				      -(1 - a) * m, -a,
+				      a, -a,
+				    
+				    's', 
+				      -(1 - a) * m, a,
+				      a, a,
+				    's', 
+				      -(1 - a) * m, -a,
+				      a, -a,
+				    's', 
+				      -(1 - a) * m, a,
+				      a, a,
+				    's', 
+				      -(1 - a) * m, -a,
+				      a, -a,
+				    's', 
+				      -(1 - a) * m, a,
+				      a, a,
+				    's', 
+				      -(1 - a) * m, -a,
+				      a, -a,
+				    's', 
+				      -(1 - a) * m, a,
+				      a, a,
+				    's', 
+				      -(1 - a) * m, -a,
+				      a, -a,
+				    's', 
+				      -(1 - a) * m, a,
+				      a, a,
+				    's', 
+				      -(1 - a) * m, -a,
+				      a, -a
+				  ].join(' ');
+				  
+				  path.setAttribute('d', pathData);
+				}
 
-		<!-- jquery ui -->
-		<script   src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"   integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="   crossorigin="anonymous"></script>
-		<!-- waypoints -->
-		<script type='text/javascript' src='js/jquery.waypoints.js'></script>
-		<!-- scrollTo -->
-		<script type='text/javascript' src='js/jquery.scrollTo.js'></script>
-		<!-- Load LocalScroll -->
-	    <script type='text/javascript' src='js/jquery.localScroll.min.js'></script> 
-		<!-- rotate -->
-		<script type="text/javascript" src='js/jQueryRotate.js'></script>
-		<!-- eye -->
-		<script type="text/javascript" src="js/jqeye.js"></script>
-		<!-- unveil -->
-		<script type="text/javascript" src='js/jquery.unveil.js'></script>
-		<!-- js -->
-		<script type="text/javascript" src='js/js.js'></script>
+				buildWave(90, 60);
+			</script>
+		</div>
+	</div>
 
 
 	<!-- slides -->
@@ -325,8 +386,8 @@
 			    	<p class='speech point' id='laughter'>Hello again</p>
 			    	<div id="form-container">
 				    	<h2>End of Part 1</h2>
-				    	<h3>Stay tuned:</h3>
-				    	<form id='form' method="POST" action="http://formspree.io/willdurkin@gmail.com">
+				    	<h3>stay tuned:</h3>
+				    	<form id='form' method="POST" target='#' action="http://formspree.io/willdurkin@gmail.com">
 				    	  <input type="email" name="email" placeholder="your email">
 				    	  <button type="submit">ok</button>
 				    	</form>
@@ -1347,17 +1408,41 @@
 	</audio>
 
 	<audio id='floater1Audio'>
-		<source src="speech/wah.m4a" type="">
+		<source src="speech/wah.m4a" type="audio/mpeg">
 	</audio>
 
 	<audio id='floater2Audio'>
-		<source src="speech/alamo.m4a" type="">
+		<source src="speech/alamo.m4a" type="audio/mpeg">
 	</audio>
 
 	<audio id='laughterAudio'>
-		<source src="speech/laughter.m4a" type="">
+		<source src="speech/laughter.m4a" type="audio/mpeg">
 	</audio>	
 
+		<!-- jquery -->
+
+		<script type="text/javascript" src='js/jquery-3.1.1.js'></script>
+
+		<!-- <script src="http://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script> -->
+			<!-- float -->
+		<script type='text/javascript' src='js/jqfloat.js'></script> 
+
+		<!-- jquery ui -->
+		<script   type='text/javascript' src="js/jquery-ui.min.js"></script>
+		<!-- waypoints -->
+		<script type='text/javascript' src='js/jquery.waypoints.js'></script>
+		<!-- scrollTo -->
+		<script type='text/javascript' src='js/jquery.scrollTo.js'></script>
+		<!-- Load LocalScroll -->
+	    <script type='text/javascript' src='js/jquery.localScroll.min.js'></script> 
+		<!-- rotate -->
+		<script type="text/javascript" src='js/jQueryRotate.js'></script>
+		<!-- eye -->
+		<script type="text/javascript" src="js/jqeye.js"></script>
+		<!-- unveil -->
+		<script type="text/javascript" src='js/jquery.unveil.js'></script>
+		<!-- js -->
+		<script type="text/javascript" src='js/js.js'></script>
 	
 </body>
 </html>

@@ -1,8 +1,20 @@
 $(document).ready(function() {
 
+
+	$('#andras1Audio').ready(function() {
+		console.log('loader')
+		$('.loader').fadeOut(2000);	
+	});
+
+	// loader
+
+	
+
 	// unveil
 
-	$("img").unveil(200);
+	$("img").unveil(400, function() {
+		console.log('unveil');
+	});
 
 	// music //
 
@@ -78,7 +90,7 @@ $(document).ready(function() {
 			animateTo: 90000,
 			duration:4000000,
 		});
-		$('#spin2').fadeIn(4500);
+		$('#spin2').fadeIn(7500);
 	});
 
 	$('#spin2').on('click', function() {
@@ -134,7 +146,7 @@ $(document).ready(function() {
 	var $clickRemove = $('.clickRemove')
 
 	$clickRemove.click(function(){
-		$(this).fadeOut();
+		$(this).effect( "bounce", { distance: 15, times: 3}).fadeOut();
 		smileCount ++;
 		console.log(smileCount);
 		if (smileCount === 5) {
@@ -245,7 +257,7 @@ $(document).ready(function() {
 	var $floater1 = $('#floater1');
 
 	$floater1.click(function() {
-		$('#floater1Audio')[0].play();  
+		// $('#floater1Audio')[0].play();  
 		if(float1Click){
 			$(this)	
 				.animate({'top':'-=2%'}, 'slow')
@@ -279,7 +291,7 @@ $(document).ready(function() {
 	var float2Go = true;
 
 	$floater2.click(function() {
-		$('#floater2Audio')[0].play(); 
+		// $('#floater2Audio')[0].play(); 
 		if(float2Click === 1){
 			$(this)	
 				.animate({'left':'+=65%'}, 1200, 'linear')
@@ -438,9 +450,6 @@ $(document).ready(function() {
 		'<p class="speech">Who are you</p>',
 		'<p class="speech">You... should not be here</p>',
 		'<p class="speech">He will find you</p>',
-		'<p class="speech">He...</p>',
-		'<p class="speech">...</p>',
-		'<p class="speech">probably knows I\'m talking to you now</p>',
 		'<p class="speech">...</p>',
 		'<p class="speech">..</p>',
 		'<p class="speech">...</p>',
@@ -456,9 +465,9 @@ $(document).ready(function() {
 	var carlID = 0;
 
 	$('#carl-button').click(function() {
-		if (carlID === 14) {
+		if (carlID === 11) {
 			$('#carl-box').fadeOut(3000);
-			$('#a10up').fadeIn(400);
+			$('#a10up').fadeIn(2000);
 			bounce('#a10up');
 		}
 		console.log('carl');
@@ -471,14 +480,23 @@ $(document).ready(function() {
 	var $andras2Audio = $('#andras2Audio');
 
 	$('#a10up').click(function(){
-		$andras1Audio.animate({volume: 0}, 1000);;
-		$andras2Audio.animate({volume: 0}, 1000);;
+		$andras1Audio.animate({volume: 0}, 4000);;
+		$andras2Audio.animate({volume: 0}, 4000);;
+		// dreamaticAudio.play();
+	})
+
+	$('#sun-button').click(function(){
 		dreamaticAudio.play();
 	})
 
+	var laughCount = 0;
+
 	$('#laughter').click(function(){
 		$('#laughterAudio')[0].play(); 
-		console.log('laugh');
+		laughCount += 1;
+		if(laughCount === 3) {
+			$('#form-container').fadeIn(2000).css({'display':'flex'});
+		}
 	})
 
 	console.log('hi');

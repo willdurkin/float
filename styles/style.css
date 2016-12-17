@@ -4,6 +4,61 @@ html, body {
 	overflow: hidden;
 }
 
+/*body {
+	align-items: center; 
+	display: flex; 
+}*/
+
+.loader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9998;
+	background-color: white;
+}
+
+.loader p {
+	height: 30px;
+	width: 200px;
+	text-align: center;
+	z-index: 9999;
+	margin: 20% auto 0 auto;
+	font-size: 20px;
+}
+
+.loader-icon {
+	align-items: center;
+	border: 4px solid #262626;
+	display: flex;
+	height: 110px;
+	width: 110px;
+	z-index: 9999;
+	margin: 10px auto;
+}
+
+.loader-icon svg { 
+  margin: 0 auto; 
+  overflow: hidden;
+}
+
+#wave {
+  stroke-dasharray: 0 16 101 16;
+  animation: moveTheWave 2400ms linear infinite;  
+}
+
+@keyframes moveTheWave {
+  0% { 
+    stroke-dashoffset: 0; 
+    transform: translate3d(0, 0, 0);
+  }
+  100% { 
+    stroke-dashoffset: -133;
+    transform: translate3d(-90px, 0, 0);
+  }
+}
+
 #left-rail a{
 	color: white;
 	text-decoration: none;
@@ -252,9 +307,10 @@ a:clicked {
 }
 
 #form-container {
-	display: flex;
+	display: none;
 	flex-direction: column;
 	flex-wrap: wrap;
+	align-self:center;
 }
 
 #form-container h2 {
