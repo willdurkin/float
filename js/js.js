@@ -3,7 +3,7 @@ $(document).ready(function() {
 
 	$('#andras1Audio').ready(function() {
 		console.log('loader')
-		$('.loader').fadeOut(2000);	
+		$('.loader').delay(3000).fadeOut(2000);	
 	});
 
 	// loader
@@ -90,7 +90,7 @@ $(document).ready(function() {
 			animateTo: 90000,
 			duration:4000000,
 		});
-		$('#spin2').fadeIn(7500);
+		$('#spin2').fadeIn(6500);
 	});
 
 	$('#spin2').on('click', function() {
@@ -110,7 +110,7 @@ $(document).ready(function() {
 			duration:4000000,
 		});
 		$('#spin3').fadeOut(5000);
-		$('#spin2').fadeOut(5000);
+		$('#spin2').fadeOut(3500);
 		$('#smile1').delay(8000).fadeIn(100)
 			.animate({'left': '+=58%'}, 5000, 'linear')
 	});
@@ -151,8 +151,9 @@ $(document).ready(function() {
 		console.log(smileCount);
 		if (smileCount === 5) {
 			$('.clickRemove').effect( "bounce", { distance: 15, times: 3});
-			$('.clickRemove').delay(1000).fadeOut(400);
+			$('.clickRemove').delay(500).fadeOut(400);
 			$('#h10prev').delay(1000).fadeIn(400);
+			bounce($h10prev);
 		}
 	})
 
@@ -181,7 +182,7 @@ $(document).ready(function() {
 		// .animate({'top':'+=25px'}, 1000, 'linear')
 		// .animate({'left':'+=500px'}, 4000, 'linear')
 		// .animate({'top':'+=150px'}, 4000, 'linear')
-		.animate({'left':'+=2000px'}, 25000, 'linear')
+		.animate({'left':'+=8000px'}, 130000, 'linear')
 		.fadeOut(3000);
 	});
 
@@ -252,37 +253,47 @@ $(document).ready(function() {
 	var float1Click = true;
 	var float1Go = true;
 	var float2Out = false;
+	var floater1Box = false;
 
 
 	var $floater1 = $('#floater1');
 
 	$floater1.click(function() {
-		// $('#floater1Audio')[0].play();  
-		if(float1Click){
-			$(this)	
-				.animate({'top':'-=2%'}, 'slow')
-				.delay(500)
-				.animate({'top':'-=65%'},'fast')
-				.animate({'left':'-=15%'}, 300)
-				.appendTo('#content')
-				$('#hide1').fadeOut();
-			float1Click = false;
-		} else if(float1Go) {
-			$(this).jqFloat({
-				width: 500,
-				height: 500,
-				speed: 5000
-			});
-			float1Go = false;
-			if(float2Out === false){
-				$('#floater2').delay(3000).animate({'left':'+=39px'}, 1000);
-				float2Out =true;
+		$('#floater1Audio')[0].play();  
+		if(floater1Box === false) {
+			if(float1Click){
+				$(this)	
+					.animate({'top':'-=65%'},'fast')
+					.animate({'left':'-=15%'}, 300)
+					.appendTo('#content')
+					$('#hide1').fadeOut();
+				float1Click = false;
+			} else if(float1Go) {
+				$(this).jqFloat({
+					width: 500,
+					height: 500,
+					speed: 5000
+				});
+				float1Go = false;
+				if(float2Out === false){
+					$('#floater2').delay(3000).animate({'left':'+=39px'}, 1000);
+					float2Out = true;
+				}
+			} else if(float1Go === false) {
+				$floater1.stop();
+				$floater1.draggable({
+					drag: function() {
+						$('#car').mouseenter(function(){
+							console.log('enter');
+							$floater1.draggable({ containment: "#car", scroll: false });
+							floater1Box = true;
+						})
+					}
+				});
+				float1Go = true;
+			} else if (floater1Box) {
+				
 			}
-		} else if(float1Go === false) {
-			console.log(float1Go);
-			$floater1.stop();
-			$floater1.draggable();
-			float1Go = true;
 		}
 	});
 
@@ -305,6 +316,7 @@ $(document).ready(function() {
 			});
 			$('#floater2').draggable();
 			$('#e10prev').delay(2000).fadeIn(400);
+			bounce('#e10prev');
 			float2Go = false;
 		} else if(float2Go === false) {
 			$floater2.stop();
@@ -443,6 +455,12 @@ $(document).ready(function() {
 		$('#floater2').appendTo('#c10');
 	})
 
+	// car //
+
+	var $car = $('#car');
+
+	$car
+
 	// CARL //
 
 	var carlLines = [
@@ -524,16 +542,10 @@ $(document).ready(function() {
 
 // car
 
-	// $('#car').mouseenter(function(){
-	// 	console.log('open');
-	// 	$('#box1').addClass('open');
-	// })
-	// $('#car').mouseleave(function(){
-	// 	$('#box1').removeClass('open');
-	// })
-	
-	// $('#car').jqFloat({
-	// 	width: 3000,
-	// 	height: 30,
-	// 	speed: 2000,
-	// });
+	$('#car').mouseenter(function(){
+		console.log('open');
+		$('#box1').addClass('open');
+	})
+	$('#car').mouseleave(function(){
+		$('#box1').removeClass('open');
+	})

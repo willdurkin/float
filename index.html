@@ -16,7 +16,7 @@
 	</audio>
 
 	<div class="loader">
-		<p class="text">Loading...</p>
+		<p class='text' id='loading' >Loading...</p>
 		<div class="loader-icon">
 			<svg xmlns="http://www.w3.org/2000/svg" 
 			   width="80px" height="60px"
@@ -99,6 +99,7 @@
 				buildWave(90, 60);
 			</script>
 		</div>
+		<p class='text' id='please'>please turn up your volume</p>
 	</div>
 
 
@@ -131,33 +132,32 @@
 			<li class='slide' id='d1'>
 				<img class="bg" src='bg/hand.gif'>
 				<div class='container'>
-			        <a href='#c1' class='text prev'><</a>
+					<a href='#c1' class='text prev'><</a>
 			        <a href='#d2' class='text down'>^</a>
 				</div>
 			</li>
 			<li class='slide' id='e1'>
-				<img class="bg flip-h" src='bg/bike-eyes.gif'>
+				<img class="bg flip-h" src='bg/another-world.gif'>
 				<div class='container'>
-					<p class="center speech">Come with me</p>
 			        <a href='#c2' class='text prev'><</a>
 			        <a href='#f1' class='text next'>></a>
 				</div>
 			</li>
 			<li class='slide' id='f1'>
-				<img class="bg" src='bg/city-raindrops.gif'>
+				<img class="bg" src='bg/another-world.gif'>
 				<div class='container'>
 			        <a href='#e1' class='text prev'><</a>
 			        <a href='#g1' class='text next'>></a>
 				</div>
 			</li>
 			<li class='slide' id='g1'>
-				<img class="bg flip-h" src='bg/bike-trash.gif'>
+				<img class="bg flip-h" src='bg/another-world.gif'>
 				<div class='container'>
 			        <a href='#h1' class='text next'>></a>
 				</div>
 			</li>
 			<li class='slide' id='h1'>
-				<img class="bg flip-h" src='bg/bike-girl.gif'>
+				<img class="bg flip-h" src='bg/another-world.gif'>
 				<div class='container'>
 			        <a href='#g1' class='text prev'><</a>
 			        <a href='#i1' class='text next'>></a>
@@ -200,28 +200,25 @@
 			<li class='slide' id='d2'>
 				<img class="bg" src='bg/eye-close.gif'>
 				<div class='container'>
+					<a href='#d1' class='text up'>^</a>
 			        <a href='#e2' class='text next'>></a>
-			        <a href='#d1' class='text up'>^</a>
 				</div>
 			</li>
 			<li class='slide' id='e2'>
 				<img class="bg" src='bg/sunset-lines.gif'>
 				<div class='container'>
-			        <a href='#d2' class='text prev'><</a>
 			        <a href='#f2' class='text next'>></a>
 				</div>
 			</li>
 			<li class='slide' id='f2'>
 				<img class="bg" src='bg/run-lines.gif'>
 				<div class='container'>
-			        <a href='#e2' class='text prev'><</a>
 			        <a href='#g2' class='text next'>></a>
 				</div>
 			</li>
 			<li class='slide' id='g2'>
 				<img class="bg flip-h" src='bg/run.gif'>
 				<div class='container'>
-			        <a href='#f2' class='text prev'><</a>
 			        <a href='#h2' class='text next'>></a>
 				</div>
 			</li>
@@ -788,7 +785,13 @@
 				<img class="bg flip-h" src='bg/lawrence-dune.gif'>
 				<div class='container'>
 			        <a href='#a10' class='text prev'><</a>
-			        <a href='#c10' class='text next'>></a>
+			        <div id="car">
+		        		<div class="flat" id="box1"></div>
+		        		<div class="vert" id="box2"></div>
+		        		<div class="flat" id="box3"></div>
+		        		<div class="vert" id="box4"></div>
+		        	</div>
+
 				</div>
 			</li>
 			<li class='slide' id='c10'>
@@ -800,7 +803,7 @@
 			<li class='slide' id='d10'>
 			        <!-- DO NOT DELETE -->
 		        <div class='container'>
-		        	<a href="#c2" class="text none" id='d10special2'>:)</a>
+		        	<a href="#c2" class="text up none" id='d10special2'>^</a>
 		        	<a href="#d10" class="text prev d10prev"><</a>
 		        	<a href="#d10" class="text prev d10prev"><</a>
 		        	<a href="#d10" class="text prev d10prev"><</a>
@@ -1299,7 +1302,7 @@
 		        </div> 
 			</li>
 			<li class='slide' id='e10'>
-				<img class="bg" src='img/snow-white.gif'>
+				<img class="bg" src='bg/snow-white.gif'>
 				<div class='container'>
 			        <div id="hide2"></div>
 			        <div class='point' id='floater2'>
@@ -1378,13 +1381,6 @@
 			</li>
 		</ul>
 	</div>
-
-	<!-- <div id="car">
-			<div class="flat" id="box1"></div>
-			<div class="vert" id="box2"></div>
-			<div class="flat" id="box3"></div>
-			<div class="vert" id="box4"></div>
-		</div> -->
 
 	<!-- music -->
 	
