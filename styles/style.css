@@ -465,23 +465,24 @@ a:clicked {
 
 /*b10*/
 
-/*car*/
+/*box*/
 
-#car {
+#box {
 	margin: auto;
 	height: 200px;
 	width: 200px;
 	position: relative;
 }
 
-#car div {
+#box div {
 	position: absolute;
 	background: white;
-/*	box-shadow: 6px 6px 6px #262626*/;
-	z-index: 2;
+/*	box-shadow: 6px 6px 6px #262626*/
 }
 
-
+.ui-state-hover {
+	background-color: #333;
+}
 
 .vert {
 	height: 200px;

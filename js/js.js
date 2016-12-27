@@ -249,65 +249,92 @@ $(document).ready(function() {
 	})
 
 // floaters //
+
+	$('#box').mouseover(function(){
+		console.log('open');
+		$('#box1').addClass('open');
+	})
+	$('#box').mouseout(function(){
+		$('#box1').removeClass('open');
+	})
+
 	
-	var float1Click = true;
-	var float1Go = true;
+	var float1Enter = true;
+	var floater1Go = true;
 	var float2Out = false;
 	var floater1Box = false;
 
-
 	var $floater1 = $('#floater1');
+
+	var boxEnter = false;
+
+	$('#box').mouseenter(function() {
+		boxEnter = true;
+		console.log('box true')
+	});
+	$('#box').mouseout(function() {
+		boxEnter = false;
+		console.log('box false')
+	});	
+
+
 
 	$floater1.click(function() {
 		$('#floater1Audio')[0].play();  
 		if(floater1Box === false) {
-			if(float1Click){
+			if(float1Enter){
 				$(this)	
 					.animate({'top':'-=65%'},'fast')
 					.animate({'left':'-=15%'}, 300)
 					.appendTo('#content')
 					$('#hide1').fadeOut();
-				float1Click = false;
-			} else if(float1Go) {
+				float1Enter = false;
+			} else if(floater1Go) {
 				$(this).jqFloat({
 					width: 500,
 					height: 500,
 					speed: 5000
 				});
-				float1Go = false;
 				if(float2Out === false){
 					$('#floater2').delay(3000).animate({'left':'+=39px'}, 1000);
 					float2Out = true;
 				}
-			} else if(float1Go === false) {
+				floater1Go = false;
+			} else if(floater1Go === false) {
 				$floater1.stop();
-				$floater1.draggable({
-					drag: function() {
-						$('#car').mouseenter(function(){
-							console.log('enter');
-							$floater1.draggable({ containment: "#car", scroll: false });
-							floater1Box = true;
-						})
-					}
-				});
-				float1Go = true;
-			} else if (floater1Box) {
-				
+				$floater1.draggable();
+				floater1Go = true;
+				console.log('stop');
 			}
 		}
 	});
 
+	function handleDrop(event, ui) {
+		ui.draggable.draggable({ containment: "#box", scroll: false });
+		floater1Box = true;
+		console.log('ggg')
+	}
+
+	$('#box').droppable({
+	  hoverClass: 'box-hover',
+	  classes: {
+	          "ui-droppable-hover": "ui-state-hover"
+	        },
+	  drop: handleDrop
+	});
+
+
 	var $floater2 = $('#floater2')
-	var float2Click = 1;
+	var float2Enter = 1;
 	var float2Go = true;
 
 	$floater2.click(function() {
 		// $('#floater2Audio')[0].play(); 
-		if(float2Click === 1){
+		if(float2Enter === 1){
 			$(this)	
 				.animate({'left':'+=65%'}, 1200, 'linear')
 				.appendTo('#content')
-			float2Click++;
+			float2Enter++;
 		} else if(float2Go) {
 			$(this).jqFloat({
 				width: 800,
@@ -455,11 +482,6 @@ $(document).ready(function() {
 		$('#floater2').appendTo('#c10');
 	})
 
-	// car //
-
-	var $car = $('#car');
-
-	$car
 
 	// CARL //
 
@@ -542,10 +564,3 @@ $(document).ready(function() {
 
 // car
 
-	$('#car').mouseenter(function(){
-		console.log('open');
-		$('#box1').addClass('open');
-	})
-	$('#car').mouseleave(function(){
-		$('#box1').removeClass('open');
-	})
