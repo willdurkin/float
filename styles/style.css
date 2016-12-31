@@ -467,21 +467,22 @@ a:clicked {
 
 /*box*/
 
+.ui-state-hover {
+	background-color: #fff;
+}
+
 #box {
 	margin: auto;
 	height: 200px;
 	width: 200px;
 	position: relative;
+	background-color: transparent;
 }
 
 #box div {
 	position: absolute;
 	background: white;
 /*	box-shadow: 6px 6px 6px #262626*/
-}
-
-.ui-state-hover {
-	background-color: #333;
 }
 
 .vert {
