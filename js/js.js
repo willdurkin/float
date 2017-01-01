@@ -250,6 +250,8 @@ $(document).ready(function() {
 
 // box
 
+	var boxCount = 0;
+
 	function whiteBox(){
 		$('#box').css({'background-color': '#fff'});
 	}
@@ -266,9 +268,10 @@ $(document).ready(function() {
 		ui.draggable.draggable('disable');
 		
 		ui.draggable.fadeOut(3000, function(){
-			$('#box').css({'background-color':'transparent'});
+			$('#box').removeAttr('style');
 		});
-		console.log('ggg')
+		boxCount += 1;
+		console.log(boxCount)
 	}
 
 	$('#box').droppable({
@@ -473,10 +476,7 @@ $(document).ready(function() {
 
 	// c10 //
 
-	$('#c10prev').click(function(){
-		$('#floater1').appendTo('#c10');
-		$('#floater2').appendTo('#c10');
-	})
+
 
 
 	// CARL //

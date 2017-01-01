@@ -476,8 +476,7 @@ a:clicked {
 	height: 200px;
 	width: 200px;
 	position: relative;
-	background-color: transparent;
-}
+	}
 
 #box div {
 	position: absolute;
