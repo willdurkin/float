@@ -465,6 +465,15 @@ a:clicked {
 
 /*b10*/
 
+#b10cont p {
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+#b10cont div {
+	margin: 6% auto;
+}
+
 /*box*/
 
 .ui-state-hover {
@@ -534,7 +543,7 @@ a:clicked {
 #d10 .container {
 	position: absolute;
 	flex-wrap: wrap;
-	background-color: #00E9DA;
+	background-color: #003316;
 }
 
 #d10 .prev {
