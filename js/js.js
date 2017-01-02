@@ -234,50 +234,6 @@ $(document).ready(function() {
 		andras2Audio.play();
 	})
 
-// box
-
-	var boxCount = 0;
-
-	function whiteBox(){
-		$('#box').css({'background-color': '#fff'});
-	}
-
-	function handleDrop(event, ui) {
-		whiteBox();
-
-		var dragger = ui.draggable
-		if(dragger.is('#floater1')){
-			floater1Box = true;
-		} else if(dragger.is('#floater2')){
-			floater2Box = true;
-		} else if(dragger.is('#ie')){
-			ieBox = true;
-		};
-
-		ui.draggable.draggable('disable');
-		
-		ui.draggable.fadeOut(3000, function(){
-			$('#box').removeAttr('style');
-		});
-		boxCount += 1;
-		console.log(boxCount)
-	}
-
-	$('#box').droppable({
-	  classes: {
-	          "ui-droppable-hover": "ui-state-hover"
-	        },
-	  drop: handleDrop
-	});
-
-	$('#box').mouseover(function(){
-		console.log('open');
-		$('#box1').addClass('open');
-	})
-	$('#box').mouseout(function(){
-		$('#box1').removeClass('open');
-	})
-	
 // floaters //
 
 	var $floater1 = $('#floater1');
@@ -468,24 +424,72 @@ $(document).ready(function() {
 	})
 
 //d10
-	
 
 	//d10cont
 
-	$b10prev1 = $('#b10cont a')
+	$b10prev1 = $('#b10prev1')
 	$b10div = $('#b10cont div')
 	$b10prev1.click(function(){
 		$(this).fadeOut(2000);
-		$('#b10cont').css('pointer-events', 'none')
+		// $('#b10cont').css('pointer-events', 'none')
 		$b10div
+			.delay(3000)
 			.fadeIn(2000)
 			.delay(2000)
 			.fadeOut(3000);
-		$('#box').delay(5000).fadeIn(3000);
-		
+		$('#box').delay(1000).fadeIn(3000)
 	})
 
-	// CARL //
+	// box
+
+		var boxCount = 0;
+
+		function whiteBox(){
+			$('#box').css({'background-color': '#fff'});
+		}
+
+		function handleDrop(event, ui) {
+			whiteBox();
+			var dragger = ui.draggable
+			if(dragger.is('#floater1')){
+				floater1Box = true;
+			} else if(dragger.is('#floater2')){
+				floater2Box = true;
+			} else if(dragger.is('#ie')){
+				ieBox = true;
+			};
+
+			ui.draggable.draggable('disable');
+			
+			ui.draggable.fadeOut(3000, function(){
+				$('#box').removeAttr('style');
+			});
+			boxCount += 1;
+			console.log(boxCount)
+			if(boxCount === 3) {
+				$('#b10prev').delay(4000).fadeIn(400, function() {
+					bounce('#b10prev');	
+				});
+				
+			}
+		}
+
+		$('#box').droppable({
+		  classes: {
+		          "ui-droppable-hover": "ui-state-hover"
+		        },
+		  drop: handleDrop
+		});
+
+		$('#box').mouseover(function(){
+			console.log('open');
+			$('#box1').addClass('open');
+		})
+		$('#box').mouseout(function(){
+			$('#box1').removeClass('open');
+		})
+
+// CARL //
 
 	var carlLines = [
 		"#",
@@ -518,6 +522,8 @@ $(document).ready(function() {
 			$('#carl-box').html(carlLines[carlID]);
 		})
 	})
+		
+//sun
 
 	var $andras2Audio = $('#andras2Audio');
 

@@ -465,6 +465,10 @@ a:clicked {
 
 /*b10*/
 
+#b10cont {
+	pointer-events: none;
+}
+
 #b10cont p {
 	text-align: center;
 	margin-bottom: 5px;
