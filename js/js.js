@@ -90,7 +90,7 @@ $(document).ready(function() {
 			animateTo: 90000,
 			duration:4000000,
 		});
-		$('#spin2').fadeIn(6500);
+		$('#spin2').fadeIn(3000);
 	});
 
 	$('#spin2').on('click', function() {
@@ -109,9 +109,9 @@ $(document).ready(function() {
 			animateTo: 90000,
 			duration:4000000,
 		});
-		$('#spin3').fadeOut(5000);
+		$('#spin3').fadeOut(9000);
 		$('#spin2').fadeOut(3500);
-		$('#smile1').delay(8000).fadeIn(100)
+		$('#smile1').delay(13000).fadeIn(100)
 			.animate({'left': '+=58%'}, 5000, 'linear')
 	});
 
@@ -258,12 +258,15 @@ $(document).ready(function() {
 
 	function handleDrop(event, ui) {
 		whiteBox();
+
 		var dragger = ui.draggable
 		if(dragger.is('#floater1')){
 			floater1Box = true;
 		} else if(dragger.is('#floater2')){
 			floater2Box = true;
-		}
+		} else if(dragger.is('#ie')){
+			ieBox = true;
+		};
 
 		ui.draggable.draggable('disable');
 		
@@ -369,6 +372,84 @@ $(document).ready(function() {
 	  }
 	});
 
+	// ie
+
+	var $ie = $('#ie');
+
+	var rotation = function (){
+	  $ie.rotate({
+	    angle:0,
+	    animateTo:360,
+	    duration:3000,
+	    callback: rotation,
+	    easing: function (x,t,b,c,d){        // t: current time, b: begInnIng value, c: change In value, d: duration
+	      return c*(t/d)+b;
+	    }
+	  });
+	}
+
+	rotation();
+
+	var ieGo = true;
+	var ieFloat = false;
+	var ieBox = false;
+
+	$ie.rotate({
+	  bind:
+	  {
+	    click : function() {
+	    	$('#ieAudio')[0].play(); 
+	    	if(ieBox === false){
+		    	if(ieGo) {
+		    		$ie
+		    			.animate({'left':'+=10%'}, 90)
+		    			.animate({'top':'-=40%'}, 300)
+		    			.delay(500)
+		    			.animate({'left':'-=200%'}, 400)
+		    			.animate({'top':'-=100%'}, 900)
+		    			.animate({'left':'+=200%'}, 400)
+		    			.delay(2000)
+		    			.animate({'top':'+=100%'}, 900)
+		    			.appendTo('#content')
+		    			.effect( "bounce", { distance: 15, times: 3})
+		    		ieGo = false;
+		    		ieFloat = true;
+		    	} else if(ieFloat){
+		    		$('#ie').jqFloat({
+		    			width: 1000,
+		    			height: 1000,
+		    			speed: 5000,
+		    		})
+		    		$(this).rotate({
+		    			animateTo:360,
+		    			duration:3000,
+		    			callback: rotation,
+		    			easing: function (x,t,b,c,d){        
+		    			// t: current time, b: begInnIng value, c: change In value, d: duration
+		    			  return c*(t/d)+b;
+		    			}
+		    		})
+		    		
+		    		$('#c2prev').delay(1000).fadeIn(400);
+		    		bounce('#c2prev');
+
+		    		ieFloat = false;
+		    		
+		    	} else if(ieFloat === false) {
+					$(this).stopRotate();
+					$(this).rotate({
+						animate: 0
+					});
+					$ie.stop();
+					$ie.draggable();
+
+					ieFloat = true;
+				}
+			}
+		}
+	}
+	});
+
 	function fadeOut(id) {
 		$(id).fadeOut(400);
 	}
@@ -386,7 +467,7 @@ $(document).ready(function() {
 			duration: 6000,
 		});
 		d10count+=1;
-		if(d10count === 5) {
+		if(d10count === 9) {
 			alert('Which one is different?');
 		}
 	})
@@ -402,77 +483,7 @@ $(document).ready(function() {
 	})
 
 	
-	// ie
-
-	var $ie = $('#ie');
-	var ieFloat = true;
-	var ieFloat2 = false;
-	var ieSpin = true;
-	var c10prev = true;
-
-	var rotation = function (){
-	  $("#ie").rotate({
-	    angle:0,
-	    animateTo:360,
-	    duration:3000,
-	    callback: rotation,
-	    easing: function (x,t,b,c,d){        // t: current time, b: begInnIng value, c: change In value, d: duration
-	      return c*(t/d)+b;
-	    }
-	  });
-	}
-
-	rotation();
-
-	$("#ie").rotate({
-	  bind:
-	  {
-	    click : function() {
-	    	$('#ieAudio')[0].play(); 
-	    	if(ieFloat) {
-	    		$ie
-	    			.animate({'left':'+=65%'}, 500)
-	    			.animate({'top':'+=200%'}, 400)
-	    			.delay(400)
-	    			.animate({'top':'-=170%'}, 300)
-	    			.appendTo('#content')
-	    			.effect( "bounce", { distance: 15, times: 3})
-	    		ieFloat = false;
-	    		ieFloat2 = true;
-	    	} else if(ieFloat2){
-	    		$('#ie').jqFloat({
-	    			width: 1000,
-	    			height: 1000,
-	    			speed: 5000,
-	    		})
-	    		ieFloat2 = false;
-	    		$('#c2prev').delay(1000).fadeIn(400);
-	    		bounce('#c2prev');
-	    	}
-			
-			if(ieSpin === false) {
-			    $(this).rotate({
-			    	animateTo:360,
-			    	duration:3000,
-			    	callback: rotation,
-			    	easing: function (x,t,b,c,d){        
-			    	// t: current time, b: begInnIng value, c: change In value, d: duration
-			    	  return c*(t/d)+b;
-			    	}
-			    })
-			   	ieSpin = true;
-			} else if(ieSpin === true) {
-				console.log('else')
-				
-				$(this).stopRotate();
-				$(this).rotate({
-					animate: 0
-				});
-				ieSpin = false;
-			}
-		}
-	}
-	});
+	
 
 	// c10 //
 

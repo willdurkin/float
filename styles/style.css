@@ -322,7 +322,7 @@ a:clicked {
 #laughter {
 	height: 40px;
 	width: 300px;
-	margin: 360px auto;
+	margin: 30% auto 5% auto;
 	margin-bottom: 200px;
 	text-align: center;
 }
@@ -590,8 +590,8 @@ a:clicked {
 
 #ie {
 	position: absolute;
-	top: 5%;
-	left: 5%;
+	top: 74%;
+	left: 53%;
 	width: 100px;
 	height: 100px;
 
