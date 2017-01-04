@@ -1,23 +1,24 @@
 $(document).ready(function() {
 
+	// music //
 
-	$('#andras1Audio').ready(function() {
+	var $andras1 = $('#andras1Audio');
+	var $andras2 = $('#andras2Audio');
+
+	$andras1.ready(function() {
 		console.log('loader')
 		$('.loader').delay(3000).fadeOut(2000);	
 	});
 
-	// loader
-
-	
-
-	// unveil
-
-	$("img").unveil(400, function() {
-		console.log('unveil');
+	$andras1.bind('ended', function() {
+		console.log('v glad')
+		$('#gladAudio')[0].play();
 	});
 
-	// music //
-
+	$andras2.bind('ended', function() {
+		console.log('v glad')
+		$('#gladAudio')[0].play();
+	});
 
 	// LocalScroll //
 	
@@ -25,7 +26,7 @@ $(document).ready(function() {
         $.localScroll.defaults.axis = 'yx';
         $.localScroll.hash({
             target: '#content', 
-            queue:true,
+            queue:true,	
             duration:1000,
         });
         
@@ -232,10 +233,10 @@ $(document).ready(function() {
 
 	$andras1Audio = $('#andras1Audio');
 
-	$('#f10prev').click(function(){
+	$('#d10special2').click(function(){
 		console.log('stop');
 		$andras1Audio.animate({volume: 0}, 1000);;
-		andras2Audio.play().loop();
+		andras2Audio.play();
 	})
 
 // floaters //
@@ -444,12 +445,12 @@ $(document).ready(function() {
 	$d10special.click(function(){
 		$d10prev.fadeOut(2000);
 		$d10special.effect( "bounce", { distance: 7, times: 3}).fadeOut(2000);
-		$d10special2.delay(2500).fadeIn(2000)
+		$d10special2.delay(2500).fadeIn(3000)
 	})
 
-//d10
+//b10
 
-	//d10cont
+	//b10cont
 
 	$b10prev1 = $('#b10prev1')
 	$b10div = $('#b10cont div')
@@ -457,8 +458,8 @@ $(document).ready(function() {
 		$(this).fadeOut(2000);
 		// $('#b10cont').css('pointer-events', 'none')
 		$b10div
-			.delay(3000)
-			.fadeIn(2000)
+			.delay(1000)
+			.fadeIn(3000)
 			.delay(4000)
 			.fadeOut(3000);
 		$('#box').delay(1000).fadeIn(3000)
@@ -466,53 +467,51 @@ $(document).ready(function() {
 
 	// box
 
-		var boxCount = 0;
+	var boxCount = 0;
 
-		function whiteBox(){
-			$('#box').css({'background-color': '#fff'});
-		}
+	function whiteBox(){
+		$('#box').css({'background-color': '#fff'});
+	}
 
-		function handleDrop(event, ui) {
-			whiteBox();
-			var dragger = ui.draggable
-			if(dragger.is('#floater1')){
-				floater1Box = true;
-			} else if(dragger.is('#floater2')){
-				floater2Box = true;
-			} else if(dragger.is('#ie')){
-				ieBox = true;
-			};
+	function handleDrop(event, ui) {
+		whiteBox();
+		var dragger = ui.draggable
+		if(dragger.is('#floater1')){
+			floater1Box = true;
+		} else if(dragger.is('#floater2')){
+			floater2Box = true;
+		} else if(dragger.is('#ie')){
+			ieBox = true;
+		};
 
-			ui.draggable.draggable('disable');
-			
-			ui.draggable.fadeOut(3000, function(){
-				$('#box').removeAttr('style');
-			});
-			boxCount += 1;
-			console.log(boxCount)
-			if(boxCount === 3) {
-				$('#b10prev').delay(4000).fadeIn(400, function() {
-					$($b10prev1).hide();
-					bounce('#b10prev');	
-				});
-				
-			}
-		}
-
-		$('#box').droppable({
-		  classes: {
-		          "ui-droppable-hover": "ui-state-hover"
-		        },
-		  drop: handleDrop
+		ui.draggable.draggable('disable');
+		
+		ui.draggable.fadeOut(3000, function(){
+			$('#box').removeAttr('style');
 		});
+		boxCount += 1;
+		console.log(boxCount)
+		if(boxCount === 3) {
+			$('#b10prev').delay(4000).fadeIn(400, function() {
+				$($b10prev1).hide();
+				bounce('#b10prev');	
+			});
+		}
+	}
 
-		$('#box').mouseenter(function(){
-			console.log('open');
-			$('#box1').addClass('open');
-		})
-		$('#box').mouseout(function(){
-			$('#box1').removeClass('open');
-		})
+	$('#box').droppable({
+	  classes: {
+	          "ui-droppable-hover": "ui-state-hover"
+	        },
+	  drop: handleDrop
+	});
+	$('#box').mouseenter(function(){
+		console.log('open');
+		$('#box1').addClass('open');
+	})
+	$('#box').mouseout(function(){
+		$('#box1').removeClass('open');
+	})
 
 // CARL //
 
